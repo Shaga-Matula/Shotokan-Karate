@@ -16,11 +16,6 @@
     
 }
 
-.japan-wall-paper-bg{
-background-image: url("/static/images/full_logo_with_tiger.png");
-background-repeat: no-repeat;
-background-size: cover;
-}
 
 .footer{
     position: fixed;
