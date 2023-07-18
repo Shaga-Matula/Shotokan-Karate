@@ -1,0 +1,50 @@
+.testcss, bg-dark{
+    color:red
+}
+
+.shoto_logo{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* .navbar-header{
+    background-color: black;
+} */
+
+.contacts-page{
+    background-color: grey;
+    
+}
+
+.japan-wall-paper-bg{
+background-image: url("/static/images/full_logo_with_tiger.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Botton at bottom of account/login.html */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.form-box{
+    height: auto;
+    background-color: grey;
+    justify-self: center;
+    align-items: center;
+}
