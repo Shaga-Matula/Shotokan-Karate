@@ -5,6 +5,7 @@ from .forms import StudentForm
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
 from django.urls import reverse
+from django.views.generic.base import TemplateView
 
 # Create your views here.
 
@@ -16,13 +17,12 @@ class firstpage(View):
 
 from django.urls import reverse
 
-# Other code...
 
 class StudentRegesterView(FormView):
     template_name = 'student_regester.html'
     form_class = StudentForm
-    success_url = reverse_lazy('success')
-
+    success_url = 'success.html'
+    
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
@@ -30,5 +30,5 @@ class StudentRegesterView(FormView):
     def get_success_url(self):
         return reverse('success')
 
-    def get(self, request, *args, **kwargs):
-        return render(request, 'success.html')
+    # def get(self, request, *args, **kwargs):
+    #     return render(request, 'success.html')
