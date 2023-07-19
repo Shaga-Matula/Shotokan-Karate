@@ -3,19 +3,18 @@ from django.shortcuts import render
 from .models import StudentInfoMod
 from .forms import StudentForm
 from django.views.generic.edit import FormView
-from django.urls import reverse_lazy
 from django.urls import reverse
 from django.views.generic.base import TemplateView
+
 
 # Create your views here.
 
 class firstpage(View):
-    def get(self, request):
-        context = {}
+    def get(self, request, *args, **kwargs):
+        context = {
+            'username': request.user.username,
+        }
         return render(request, 'index.html', context)
-
-
-from django.urls import reverse
 
 
 class StudentRegesterView(FormView):

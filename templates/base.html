@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Shotokan Karate</title>
 </head>
@@ -34,7 +35,7 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">User Creation</a>
+                    <a class="nav-link" href="{% url 'StudentRegister' %}">Register Student</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Kyu Creation</a>
@@ -62,7 +63,7 @@
     {% endblock content %}
 
 
-    <div class="container mt-auto footer py-3 dark-bg">
+    <div class="#">
 
         <footer class="text-center text-white ">
             <!-- Grid container -->
@@ -70,7 +71,7 @@
                 <!-- Section: Social media -->
                 <section class="mb-">
                     <!-- Facebook -->
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    <a class="btn btn-link btn-floating btn-lg bg-white m-1" href="#!" role="button"
                         data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 
                     <!-- Twitter -->
