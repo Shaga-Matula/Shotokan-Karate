@@ -17,19 +17,16 @@ class StudentForm(forms.ModelForm):
             ]
 
 
-
-
-# class kyu_creation_form(forms.ModelForm):
-#     class Meta:
-#         model = Student_Lvl
-#         fields = [
-#             'kyu_level',
-#             'belt_color',
-#             'kata_name',
-#             'kata_image',
-#             'syllabus_image',
-#             ]
-
+class KyuRegisterForm(forms.ModelForm):
+    class Meta:
+        model = StudentLevelMod
+        fields = [
+            'kyu_level',
+            'belt_color',
+            'kata_name',
+            'kata_image',
+            'syllabus_image',
+            ]
 
 # class UpdateStudentForm(forms.ModelForm):
 #     class Meta:

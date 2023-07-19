@@ -36,19 +36,16 @@
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'StudentRegister' %}">Register Student</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'kyuregister' %}">Kyu Creation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kyu Creation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">View Stydent List</a>
+                    <a class="nav-link" href="{% url 'studentlist' %}">Student List</a>
                 </li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>

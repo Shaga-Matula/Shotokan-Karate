@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Student List</h1>
+<div class="table-responsive-sm">
+<table class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
+    <thead ></thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>Post Code</th>
+            <th>Student Grade</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obj in student %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.first_name }}</td>
+            <td>{{ obj.last_name }}</td>
+            <td>{{ obj.date_of_birth }}</td>
+            <td>{{ obj.email }}</td>
+            <td>{{ obj.address_1 }}</td>
+            <td>{{ obj.address_2 }}</td>
+            <td>{{ obj.post_code }}</td>
+            <td>{{ obj.student_grade }}</td>
+            <td><a href="#">Edit</a></td>
+            <td><a href="#">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<p><strong> Hello Get Table !</strong></p>
+
+
+{% endblock %}
