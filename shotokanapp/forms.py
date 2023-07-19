@@ -1,0 +1,46 @@
+from django import forms
+from .models import StudentInfoMod, StudentLevelMod
+
+
+class StudentForm(forms.ModelForm):
+    class Meta:
+        model = StudentInfoMod
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'address_1',
+            'address_2',
+            'date_of_birth',
+            'post_code',
+            'student_grade',
+            ]
+
+
+
+
+# class kyu_creation_form(forms.ModelForm):
+#     class Meta:
+#         model = Student_Lvl
+#         fields = [
+#             'kyu_level',
+#             'belt_color',
+#             'kata_name',
+#             'kata_image',
+#             'syllabus_image',
+#             ]
+
+
+# class UpdateStudentForm(forms.ModelForm):
+#     class Meta:
+#         model = Student_info
+#         fields = [
+#             'first_name',
+#             'last_name',
+#             'Date_of_birth',
+#             'Email',
+#             'Address_1',
+#             'Address_2',
+#             'Post_code',
+#             'Student_Grade',
+#         ]

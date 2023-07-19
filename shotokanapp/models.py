@@ -5,8 +5,7 @@ from cloudinary.models import CloudinaryField
 # These are the Models for my Karate School Database 
 
 
-
-    # This Model is for Karate Grade Information 
+# This Model is for Karate Grade Information 
 
 class StudentLevelMod(models.Model):
     kyu_level = models.CharField(max_length=10, verbose_name='Kyu Level')
@@ -27,10 +26,10 @@ class StudentLevelMod(models.Model):
 class StudentInfoMod(models.Model):
     first_name = models.CharField(max_length=50, verbose_name='First Name')
     last_name = models.CharField(max_length=50, verbose_name='Last Name')
-    date_of_birth = models.DateField(verbose_name='Date of Birth')
     email = models.EmailField(verbose_name='Email Address')
     address_1 = models.CharField(max_length=50, verbose_name='Address Line One')
     address_2 = models.CharField(max_length=50, verbose_name='Address Line Two', blank=True, null=True)
+    date_of_birth = models.DateField(verbose_name='Date of Birth')
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     updated_on = models.DateTimeField(auto_now=True, verbose_name='Updated On')
     student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.CASCADE, default=9, verbose_name='Student Grade')
