@@ -1,9 +1,9 @@
 from django.views.generic import View
 from django.shortcuts import render
 from .models import StudentInfoMod
-from .forms import StudentForm, KyuRegisterForm
-from django.views.generic.edit import FormView
-from django.urls import reverse
+from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
+from django.views.generic.edit import FormView, UpdateView
+from django.urls import reverse, reverse_lazy
 from django.views.generic.base import TemplateView
 
 
@@ -53,3 +53,17 @@ class StudentListView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['student'] = StudentInfoMod.objects.all()
         return context
+
+class UpdateStudentView(UpdateView):
+    model = StudentInfoMod
+    template_name = 'edit_record.html'
+    form_class = UpdateStudentForm
+    success_url = reverse_lazy('success')
+
+    # def get_object(self, queryset=None):
+    #     obj = get_object_or_404(self.model, Student_ID=self.kwargs['Student_ID'])
+    #     return obj
+
+    # def form_valid(self, form):
+    #     form.save()
+    #     return super().form_valid(form)

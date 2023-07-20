@@ -28,16 +28,16 @@ class KyuRegisterForm(forms.ModelForm):
             'syllabus_image',
             ]
 
-# class UpdateStudentForm(forms.ModelForm):
-#     class Meta:
-#         model = Student_info
-#         fields = [
-#             'first_name',
-#             'last_name',
-#             'Date_of_birth',
-#             'Email',
-#             'Address_1',
-#             'Address_2',
-#             'Post_code',
-#             'Student_Grade',
-#         ]
+class UpdateStudentForm(forms.ModelForm):
+    class Meta:
+        model = StudentInfoMod
+        fields = [
+            'first_name',
+            'last_name',
+            'date_of_birth',
+            'email',
+            'address_1',
+            'address_2',
+            'post_code',
+            'student_grade',
+        ]
