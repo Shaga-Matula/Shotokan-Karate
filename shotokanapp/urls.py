@@ -10,7 +10,6 @@ urlpatterns = [
     path('success/', TemplateView.as_view(template_name="success.html"), name='success'),
     path('addkyu/', views.KyuRegisterView.as_view(), name='kyuregister'),
     path('student-list/', views.StudentListView.as_view(), name='studentlist'),
-    # path('edit_record/<int:id>/', views.UpdateStudentView.as_view(), name='edit_record'),
     path('edit_record/<int:pk>', views.UpdateStudentView.as_view(), name='edit_record'),
 
 ]
