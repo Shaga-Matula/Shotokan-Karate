@@ -32,8 +32,9 @@
                 <td>{{ obj.address_2 }}</td>
                 <td>{{ obj.post_code }}</td>
                 <td>{{ obj.student_grade }}</td>
+                <td><a href="{% url 'delete_record' pk=obj.id %}">Delete</a></td>
                 <td><a href="{% url 'edit_record' pk=obj.id %}">Edit</a></td>
-                <td><a href="#">Delete</a></td>
+             
             </tr>
             {% endfor %}
         </tbody>

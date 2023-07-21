@@ -7,6 +7,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.contrib import messages
+from django.views.generic.edit import DeleteView
 
 # Create your views here.
 
@@ -71,3 +72,22 @@ class UpdateStudentView(UpdateView):
     
     def get_success_url(self):
         return reverse('studentlist')
+
+
+class DeleteStudentView(DeleteView):
+    model = StudentInfoMod
+    form_class = UpdateStudentForm
+    template_name = 'delete_record.html'
+    success_url = reverse_lazy('success')
+
+    # def get_object(self, queryset=None):
+    #     obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
+    #     return obj
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['pk'] = self.kwargs['pk']
+    #     return context
+    
+    # def get_success_url(self):
+    #     return reverse('studentlist')

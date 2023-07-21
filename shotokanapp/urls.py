@@ -11,5 +11,9 @@ urlpatterns = [
     path('addkyu/', views.KyuRegisterView.as_view(), name='kyuregister'),
     path('student-list/', views.StudentListView.as_view(), name='studentlist'),
     path('edit_record/<int:pk>', views.UpdateStudentView.as_view(), name='edit_record'),
+    path('delete_record/<int:pk>', views.DeleteStudentView.as_view(), name='delete_record')
+
+
+    
 
 ]
