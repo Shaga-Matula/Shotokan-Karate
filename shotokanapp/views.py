@@ -1,6 +1,6 @@
 from django.views.generic import View
 from django.shortcuts import render, get_object_or_404
-from .models import StudentInfoMod
+from .models import StudentInfoMod, StudentLevelMod
 from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
 from django.views.generic.edit import FormView, UpdateView
 from django.urls import reverse, reverse_lazy
@@ -55,6 +55,49 @@ class StudentListView(TemplateView):
         return context
 
 
+
+
+# class StudentPageView(DetailView):
+#     model = StudentLevelMod
+#     template_name = 'student_page.html'
+#     context_object_name = 'student_page'
+
+# def get_object(self, queryset=None):
+#     obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
+#     return obj
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['pk'] = self.kwargs['pk']
+#         return context
+
+
+# # class StudentPageView(DetailView):
+# #     model = StudentLevelMod
+# #     template_name = 'students_page.html'
+# #     context_object_name = 'student_level'
+
+# #     def get_object(self, queryset=None):
+# #         pk = self.kwargs.get('pk')
+# #         return self.model.objects.get(pk=pk)
+
+
+
+
+# # class StudentPageView(View):
+# #     model = StudentLevelMod
+# #     template_name = 'students_page.html'
+
+# #     def get_object(self, queryset=None):
+# #         obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
+# #         return obj
+
+# #     def get_context_data(self, **kwargs):
+# #         context = super().get_context_data(**kwargs)
+# #         context['pk'] = self.kwargs['pk']
+# #         return context
+
+
 class UpdateStudentView(UpdateView):
     model = StudentInfoMod
     form_class = UpdateStudentForm
@@ -69,9 +112,9 @@ class UpdateStudentView(UpdateView):
         context = super().get_context_data(**kwargs)
         context['pk'] = self.kwargs['pk']
         return context
-    
+
     def get_success_url(self):
-        return reverse('studentlist')
+        return reverse('success')
 
 
 class DeleteStudentView(DeleteView):
@@ -88,6 +131,6 @@ class DeleteStudentView(DeleteView):
     #     context = super().get_context_data(**kwargs)
     #     context['pk'] = self.kwargs['pk']
     #     return context
-    
+
     # def get_success_url(self):
     #     return reverse('studentlist')

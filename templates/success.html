@@ -6,7 +6,10 @@
 <div class="bg-dark text-white text-center">
     <h1>Form submitted successfully!</h1>
     <p>Thank you for submitting the form.</p>
-    <a href="{% url 'home' %}" class="btn btn-info" role="button">Home</a>
+    <a href="{% url 'home' %}" class="btn btn-info btn-success" role="button">Home</a>
+    <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To Student's List</a>
+    <a href="{% url 'StudentRegister' %}" class="btn btn-info btn btn-success" role="button">Register Another Student</a>
+
 </div>
 
 {% endblock %}

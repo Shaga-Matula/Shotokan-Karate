@@ -1,56 +1,58 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
-<p>Hello edit</p>
-
-<h1>Student List</h1>
-<div class="table-responsive-sm">
-    <form method="POST">
+<div class="container ">
+    <form method="POST" class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm " >
         {% csrf_token %}
 
-        <table class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
+        <table
+            class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm fieldsform-2">
             <tr>
                 <td>Student ID</td>
-                <td><input type="text" name="Student_ID" value="{{ pk }}" readonly="true"></td>
+                <td class="fieldsform-2"><input type="text" name="Student_ID" value="{{ pk }}" readonly></td>
             </tr>
             <tr>
                 <td>First Name</td>
-                <td>{{ form.first_name }}</td>
+                <td>{{ form.first_name|as_crispy_field }}</td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td>{{  form.last_name }}</td>
+                <td>{{ form.last_name|as_crispy_field }}</td>
             <tr>
                 <td>Date of Birth</td>
-                <td>{{ form.date_of_birth }}</td>
+                <td> {{ form.date_of_birth|as_crispy_field }}</td>
             </tr>
             <tr>
                 <td>Email Address</td>
-                <td>{{ form.email }}</td>
+                <td>{{ form.email|as_crispy_field }}</td>
             <tr>
                 <td>Address 1</td>
-                <td>{{ form.address_1 }}</td>
+                <td>{{ form.address_1|as_crispy_field }}</td>
             </tr>
             <tr>
                 <td>Address 2</td>
-                <td>{{ form.address_2 }}</td>
+                <td>{{ form.address_2|as_crispy_field }}</td>
             <tr>
                 <td>Post Code</td>
-                <td>{{ form.post_code }}</td>
+                <td>{{ form.post_code|as_crispy_field }}</td>
             <tr>
                 <td>Student Grade</td>
-                <td>{{ form.student_grade }}</td>
+                <td>{{ form.student_grade|as_crispy_field }}</td>
+            </tr>
+            <tr>
+             
             </tr>
             <tr>
                 <td>
-
-                </td>
-                <td>
                     <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To
                         Student's</a>
-                        &nbsp
-                    <button class="btn btn-success" type="submit">Save changes</button>
+                        <td>
+                            <button class="btn btn-success" type="submit">Save changes</button>
+                        </td>
+
                 </td>
 
             </tr>
