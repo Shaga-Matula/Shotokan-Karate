@@ -57,19 +57,13 @@ class StudentListView(TemplateView):
 
 
 
-# class StudentPageView(DetailView):
-#     model = StudentLevelMod
-#     template_name = 'student_page.html'
-#     context_object_name = 'student_page'
+class StudentPageView(TemplateView):
+    template_name = 'student_page.html'
 
-# def get_object(self, queryset=None):
-#     obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
-#     return obj
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['pk'] = self.kwargs['pk']
-#         return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student_page'] = StudentLevelMod.objects.all()
+        return context
 
 
 # # class StudentPageView(DetailView):
