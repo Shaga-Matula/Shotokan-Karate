@@ -16,12 +16,14 @@
     
 }
 
+/* Keeps footer at botom of screen  */
 
-.footer{
-    position: fixed;
+.footer {
+    position: absolute;
+    width: 100%;
+    min-height: 320px;
     bottom: 0;
     left: 0;
-    right: 0;
 }
 
 /* Botton at bottom of account/login.html */
@@ -50,4 +52,13 @@
 
 .fieldsform-2{
     width: 50%;
+}
+
+.spacer{
+    margin: 10px
+}
+
+.page_box{
+    max-width: 600px;
+    min-height: 600px;
 }

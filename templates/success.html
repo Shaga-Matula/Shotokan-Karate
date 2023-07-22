@@ -3,13 +3,28 @@
 {% block content %}
 
 
-<div class="bg-dark text-white text-center">
-    <h1>Form submitted successfully!</h1>
+<div class="bg-info">
+    <h1 class="d-flex align-text-center">Form submitted successfully!</h1>
     <p>Thank you for submitting the form.</p>
-    <a href="{% url 'home' %}" class="btn btn-info btn-success" role="button">Home</a>
-    <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To Student's List</a>
-    <a href="{% url 'StudentRegister' %}" class="btn btn-info btn btn-success" role="button">Register Another Student</a>
-
+    <div class="bg-warning">
+        <div class="d-md-flex col-sm-1 align-self-auto">
+            <div class="">
+                <a href="{% url 'home' %}" class="btn btn-info btn-success btn-block spacer" role="button">Home</a>
+            </div>
+            <div class="  ">
+                <a href="{% url 'kyuregister' %}" class="btn btn-info btn-success btn-block spacer" role="button">Kyu
+                    Register</a>
+            </div>
+            <div class=" ">
+                <a href="{% url 'studentlist' %}" class="btn btn-info btn-success btn-block spacer" role="button">Student's
+                    List</a>
+            </div>
+            <div class="  ">
+                <a href="{% url 'StudentRegister' %}" class="btn btn-info btn-success btn-block spacer" role="button">Register
+                    Student</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
