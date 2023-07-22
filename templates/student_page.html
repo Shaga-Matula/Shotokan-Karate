@@ -9,9 +9,9 @@
             <tr>
                 <th>Student ID</th>
                 <th>Kyu Level</th>
-                <th>Belt Color</th>
+                <th>Current Belt Color</th>
                 <th>Kata Name</th>
-                <th>Kata Image</th>
+            
             </tr>
         </thead>
         <tbody>
@@ -21,17 +21,30 @@
                 <td>{{ obj.kyu_level }}</td>
                 <td>{{ obj.belt_color }}</td>
                 <td>{{ obj.kata_name }}</td>
-                <td>
-                
-                <img src="{% static 'images/grades/kionimage.png'   %}" alt="">
-                    
-                    
-                </td>
-            </tr>
-            {% endfor %}
+              
+                    {% load static   %}
+
+
+
         </tbody>
     </table>
-   
+
+    </tr>
+    {% load static   %}
+
+    <div class="row justify-content-evenly col-sm-1">
+        <div class="col-md-4">
+            <img src="{% static 'images/grades/kionpage.png'  %}" alt="">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/grades/kionimage.png'  %}" alt="">
+        </div>
+    </div>
+
+
+    {% endfor %}
+
+
 </div>
 
 {% endblock %}
