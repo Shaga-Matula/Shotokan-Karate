@@ -4,31 +4,28 @@
 
 
 <div class="bg-info">
-    <div>
-        <h1 class="d-flex align-text-center">Form submitted successfully!</h1>
-        <p>Thank you for submitting the form.</p>
-    </div>
-    <div class="container bg-warning align-content-center">
-        <div class="d-md-flex align-self-sm-center row-cols-md-4 align-content-center">
-            <div class="d-flex align-items-center justify-content-cente">
-                <a href="{% url 'home' %}" class="btn btn-info btn-success btn-block spacer" role="button">Home</a>
-            </div>
-            <div class="d-flex align-items-center justify-content-cente">
-                <a href="{% url 'kyuregister' %}" class="btn btn-info btn-success btn-block spacer" role="button">Kyu
-                    Register</a>
-            </div>
-            <div class="d-flex align-items-center justify-content-cente">
-                <a href="{% url 'studentlist' %}" class="btn btn-info btn-success btn-block spacer"
-                    role="button">Student's
-                    List</a>
-            </div>
-            <div class="d-flex align-items-center justify-content-cente">
-                <a href="{% url 'StudentRegister' %}" class="btn btn-info btn-success btn-block spacer"
-                    role="button">Register
-                    Student</a>
-            </div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="text-center">
+          <h1 class="">Success!</h1>
+          <p>Thank you for using Karate School Web.</p>
         </div>
-    </div>
+      </div>
+      <div class="container bg-warning">
+        <div class="d-flex align-items-center justify-content-center row row-cols-md-4">
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="{% url 'home' %}" class="btn btn-info btn-success btn-block spacer text-center" role="button">Home</a>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="{% url 'kyuregister' %}" class="btn btn-info btn-success btn-block spacer text-center" role="button">Kyu Register</a>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="{% url 'studentlist' %}" class="btn btn-info btn-success btn-block spacer text-center" role="button">Student's List</a>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="{% url 'StudentRegister' %}" class="btn btn-info btn-success btn-block spacer text-center" role="button">Register Student</a>
+          </div>
+        </div>
+      </div>
 </div>
 
 {% endblock %}
