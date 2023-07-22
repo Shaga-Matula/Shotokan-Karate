@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<div class="container bg-secondary text-white d-flex justify-content-sm-center">
-    <form class="mt-5 mb-5 px-2" method="post">
+<div class="container bg-secondary text-white d-flex justify-content-center">
+    <form class="mt-5 mb-5" method="post">
         {% csrf_token %}
         <div class="form-group mt-2 w-75">
             {{ form.kyu_level|as_crispy_field }}
