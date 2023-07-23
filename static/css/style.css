@@ -56,11 +56,15 @@
 
 .spacer{
     margin: 10px;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .page_box{
-    max-width: 600px;
     height: 100vh;
 }
+
+/* .button_text_width{
+    white-space: nowrap;
+    text-align: center;
+} */
