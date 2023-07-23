@@ -1,19 +1,27 @@
-.testcss{
-    color:red
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 
-.shoto_logo{
+body {
+    background-image: url('/static/images/grades/japan-back.jpg');
+    background-size: cover;
+}
+
+body {
+    height: 100vh;
+}
+
+.shoto_logo {
     margin-right: 10px;
     margin-left: 10px;
 }
 
-/* .navbar-header{
-    background-color: black;
-} */
+.grey-transparent-background {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: black;
 
-.contacts-page{
-    background-color: grey;
-    
 }
 
 /* Keeps footer at botom of screen  */
@@ -39,36 +47,32 @@
     color: #23BBBB;
 }
 
-.form-box{
+.form-box {
     height: auto;
     background-color: grey;
     justify-self: center;
     align-items: center;
 }
 
-.fieldsform-1{
+.fieldsform-1 {
     width: 30%;
 }
 
-.fieldsform-2{
+.fieldsform-2 {
     width: 50%;
 }
 
-.spacer{
+.spacer {
     margin: 10px;
     /* display: flex;
     align-items: center; */
 }
 
-.page_box{
+/* .page_box {
     height: 100vh;
-}
-
-/* .button_text_width{
-    white-space: nowrap;
-    text-align: center;
 } */
 
-.testclass{
+
+.testclass {
     background-color: darkgreen;
 }
