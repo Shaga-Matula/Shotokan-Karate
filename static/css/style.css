@@ -13,6 +13,17 @@ body {
     height: 100vh;
 }
 
+/* Note to rember */
+
+.force-height{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
 .shoto_logo {
     margin-right: 10px;
     margin-left: 10px;
@@ -21,8 +32,10 @@ body {
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.5);
     color: black;
-
+    margin: auto;
+    /* flex-grow: 1; */
 }
+
 
 /* Keeps footer at botom of screen  */
 
