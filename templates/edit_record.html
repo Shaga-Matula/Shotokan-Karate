@@ -5,11 +5,10 @@
 {% block content %}
 
 <div class="container ">
-    <form method="POST" class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm " >
+    <form method="POST" class="#" >
         {% csrf_token %}
 
-        <table
-            class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm fieldsform-2">
+        <table class="d-flex align-items-center justify-content-center">
             <tr>
                 <td>Student ID</td>
                 <td class="fieldsform-2"><input type="text" name="Student_ID" value="{{ pk }}" readonly></td>

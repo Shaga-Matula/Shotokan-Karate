@@ -81,6 +81,16 @@ body {
     align-items: center; */
 }
 
+
+
+.card{
+    white-space: nowrap;
+    width: 200px;
+    flex-wrap: nowrap;
+    margin: 10px;
+
+}
+
 /* .page_box {
     height: 100vh;
 } */
