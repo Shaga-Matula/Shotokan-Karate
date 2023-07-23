@@ -1,1 +1,1 @@
-web: gunicorn Shotokanproject.wsgi
+web: gunicorn shotokanproject.wsgi
