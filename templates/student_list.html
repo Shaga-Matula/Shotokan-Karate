@@ -1,49 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main class="w-75 p-3 grey-transparent-background">
-    <h1>Student List</h1>
-    <div class="table-responsive-sm text-black-100 d-flex justify-content-center ">
-        <table class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
-            <thead></thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Date of Birth</th>
-                <th>Email</th>
-                <th>Address 1</th>
-                <th>Address 2</th>
-                <th>Post Code</th>
-                <th>Student Grade</th>
-                <th>Student ID</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for obj in student %}
-                <tr>
-
-                    <td>{{ obj.first_name }}</td>
-                    <td>{{ obj.last_name }}</td>
-                    <td>{{ obj.date_of_birth }}</td>
-                    <td>{{ obj.email }}</td>
-                    <td>{{ obj.address_1 }}</td>
-                    <td>{{ obj.address_2 }}</td>
-                    <td>{{ obj.post_code }}</td>
-                    <td>{{ obj.student_grade }}</td>
-                    <td>{{ obj.id }}</td>
-                    <td><a class="btn btn-success" href="{% url 'edit_record' pk=obj.id %}">Edit</a></td>
-                    <td><a class="btn btn-danger" href="{% url 'delete_record' pk=obj.id %}">Delete</a></td>
-
-
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<main class="d-flex justify-content-center">
+    
+    <div class="row screen-border-left-rignt">
+        <h1>Student List</h1>
+        {% for obj in student %}
+        <div class="col-md-4 ">
+            <div class="card grey-transparent-background">
+                <div class="card-body ">
+                    <h5 class="card-title">{{ obj.first_name }} {{ obj.last_name }}</h5>
+                    <p class="card-text">{{ obj.date_of_birth }}</p>
+                    <p class="card-text">{{ obj.email }}</p>
+                    <p class="card-text">{{ obj.address_1 }}</p>
+                    <p class="card-text">{{ obj.address_2 }}</p>
+                    <p class="card-text">{{ obj.post_code }}</p>
+                    <p class="card-text">{{ obj.student_grade }}</p>
+                    <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Edit</a>
+                    <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </main>
-
-
-
 {% endblock %}
