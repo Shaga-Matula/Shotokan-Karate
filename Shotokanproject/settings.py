@@ -15,9 +15,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import mimetypes
 
-mimetypes.add_type("text/css", ".css", True)
 
 if os.path.isfile("env.py"):
     import env
