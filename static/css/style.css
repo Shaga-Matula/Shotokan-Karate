@@ -3,11 +3,10 @@ body {
     height: 100%;
     margin: 0;
 }
-
-body {
-    background-image: url('/static/images/grades/japan-back.jpg');
-    background-size: cover;
-}
+/* 
+/* body {
+    /* background-image: url('{% static "images/grades/japan-back.jpg" %}');
+    background-size: cover; */ */ */
 
 body {
     height: 100vh;
@@ -88,6 +87,7 @@ body {
     width: 300px;
     flex-wrap: nowrap;
     margin: 10px;
+    background-color: brown;
 
 }
 
