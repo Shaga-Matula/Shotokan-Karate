@@ -91,6 +91,12 @@ body {
 
 }
 
+.kar-image-back-g{
+    background-image: url('{% static "images/japan-back-jpg" %}');
+    background-size: cover;
+    background-position: center;
+  }
+
 /* .page_box {
     height: 100vh;
 } */

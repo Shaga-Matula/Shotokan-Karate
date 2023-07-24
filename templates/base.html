@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
     <title>Shotokan Karate</title>
 </head>
 
-<body>
-    <main class="force-height">
+
+    <main class="force-height" style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')">
+    
+       
         <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark">
             <!-- Brand -->
             <a class="navbar-brand" href="#">Shotokan</a>
@@ -56,14 +60,14 @@
                 </ul>
             </div>
         </nav>
+        
+       
+            {% block content %}
+            <!-- Content Goes here -->
+            {% endblock content %}
 
-
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-
-
-
+    
+       
         <footer class="container bg-dark mx-auto text-white text-center col-12">
             <div class="container mx-auto">
                 <div class="row justify-content-center">
