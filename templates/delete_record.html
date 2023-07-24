@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<main>
+  <header class="text-center">
+      <h1>Delete Record ?</h1>
+  </header>
 
-<p>Hello edit</p>
-
-<h1>Delete Record</h1>
-<div class="table-responsive-sm">
-
-    <form method="post" onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
-
-
-        {% csrf_token %}
-
-        <p>Are you sure you want to delete record ID:"{{ object.id }}", Student Name:"{{ object }}"?</p>
-
-        <input class="btn btn-info btn btn-danger" type="submit" value="Confirm">
-        <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To Student</a>
-
-</div>
-
+  <section class="make-center-hoz-ver text-black-100">
+      <form method="post" onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
+          {% csrf_token %}
+          <h3>Are you sure you want to delete record ID: {{ object.id }}</h3>
+          <h3 class="text-center" > Student Name: "{{ object }}"</h3>&nbsp
+          <div>
+          <button class="btn btn-danger" type="submit">Confirm</button>
+          &nbsp
+        
+          <a href="{% url 'studentlist' %}" class="btn btn-success" role="button">Back To Student</a>
+      </form>
+  </section>
+</main>
 {% endblock %}

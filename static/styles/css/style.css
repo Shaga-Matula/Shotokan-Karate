@@ -19,7 +19,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+
     
+}
+
+.make-center-hoz-ver{
+    display: flex;
+    flex-direction: column;   
 }
 
 
@@ -87,15 +94,13 @@ body {
     width: 300px;
     flex-wrap: nowrap;
     margin: 10px;
-    background-color: brown;
-
 }
 
-.kar-image-back-g{
+/* .kar-image-back-g{
     background-image: url('{% static "images/japan-back-jpg" %}');
     background-size: cover;
     background-position: center;
-  }
+  } */
 
 /* .page_box {
     height: 100vh;
