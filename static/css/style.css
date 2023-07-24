@@ -32,7 +32,9 @@ body {
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.5);
     color: black;
-    margin: auto;
+    margin: 30px;
+    width: fit-content;
+    white-space: nowrap
     /* flex-grow: 1; */
 }
 
@@ -84,11 +86,7 @@ body {
 
 
 .card{
-    white-space: nowrap;
-    width: 200px;
-    flex-wrap: nowrap;
-    margin: 10px;
-
+    
 }
 
 /* .page_box {
