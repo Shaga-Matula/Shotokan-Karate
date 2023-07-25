@@ -4,10 +4,10 @@
 
 {% load static %}
 
-
-<div class=" container grey-transparent-background">
+<!-- order-1 order-md-1 col-sm-12 col-md-6  -->
+<div class=" container grey-transparent-background rounded ">
     <div class="row mx-auto">
-        <div class="order-1 order-md-1 col-sm-12 col-md-12 col-lg-6">
+        <div class="col-lg-8">
             {% load account %}
             {% if user.is_authenticated %}
             <h4 class="align-items-center text-black-50">Welcome, {{ username }}!</h4>

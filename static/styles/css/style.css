@@ -41,16 +41,23 @@ body {
     flex-direction: column;   
 }
 
+.border-padd-test{
+    padding: 20px;
+}
 
 .shoto_logo {
+    color:blue;
     margin-right: 10px;
     margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.5);
     color: black;
     margin: auto;
+    border-radius: 25px;
+
     /* flex-grow: 1; */
 }
 
