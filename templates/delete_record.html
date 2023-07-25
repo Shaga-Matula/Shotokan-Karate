@@ -1,22 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main>
-  <header class="text-center">
-      <h1>Delete Record ?</h1>
-  </header>
+<main class="grey-transparent-background border-padd-grey ">
+    <section >
+        <header class="text-center">
+            <h1>Delete Record ?</h1>
+        </header>
+        <div>
+            <form method="post"
+                onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
+                {% csrf_token %}
+                <h3 class="text-center">Are you sure you want to delete record ID: {{ object.id }}</h3>
+                <h3 class="text-center"> Student Name: "{{ object }}"</h3>&nbsp
+                <div class="d-flex align-items-center justify-content-between">
+                    <button class="btn btn-danger " type="submit">Confirm</button>
+                    &nbsp
 
-  <section class="make-center-hoz-ver text-black-100">
-      <form method="post" onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
-          {% csrf_token %}
-          <h3>Are you sure you want to delete record ID: {{ object.id }}</h3>
-          <h3 class="text-center" > Student Name: "{{ object }}"</h3>&nbsp
-          <div>
-          <button class="btn btn-danger" type="submit">Confirm</button>
-          &nbsp
-        
-          <a href="{% url 'studentlist' %}" class="btn btn-success" role="button">Back To Student</a>
-      </form>
-  </section>
+                    <a href="{% url 'studentlist' %}" class="btn btn-success " role="button">Back To Student</a>
+                </div>
+        </div>
+        </form>
+    </section>
 </main>
 {% endblock %}
