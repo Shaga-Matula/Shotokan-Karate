@@ -20,11 +20,13 @@
     <title>Shotokan Karate</title>
 </head>
 
-
-    <main class="force-height" style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')">
+<body class="#">
+    <!-- style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')" -->
+    <main class="force-height " style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')" >
     
-       
-        <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark">
+
+
+        <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark ">
             <!-- Brand -->
             <a class="navbar-brand" href="#">Shotokan</a>
 
@@ -60,14 +62,14 @@
                 </ul>
             </div>
         </nav>
-        
-       
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
 
-    
-       
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+
+
         <footer class="container bg-dark mx-auto text-white text-center col-12">
             <div class="container mx-auto">
                 <div class="row justify-content-center">
