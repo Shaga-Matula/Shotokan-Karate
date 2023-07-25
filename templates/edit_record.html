@@ -4,11 +4,11 @@
 
 {% block content %}
 
-<div class="container ">
-    <form method="POST" class="#" >
+<div class="container grey-transparent-background  ">
+    <form method="POST" class="#">
         {% csrf_token %}
 
-        <table class="d-flex align-items-center justify-content-center">
+        <table class="d-flex align-items-center justify-content-center table-responsive-sm">
             <tr>
                 <td>Student ID</td>
                 <td class="fieldsform-2"><input type="text" name="Student_ID" value="{{ pk }}" readonly></td>
@@ -41,21 +41,18 @@
                 <td>Student Grade</td>
                 <td>{{ form.student_grade|as_crispy_field }}</td>
             </tr>
-            <tr>
-             
-            </tr>
-            <tr>
-                <td>
-                    <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To
-                        Student's</a>
-                        <td>
-                            <button class="btn btn-success" type="submit">Save changes</button>
-                        </td>
+            <div>
+                <tr class="d-flex align-items-center justify-content-between pt-2">
+                    <td>
+                        <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To
+                            Student's</a>
+                    </td>
 
-                </td>
-
-            </tr>
-
+                    <td>
+                        <button class="btn btn-success" type="submit">Save changes</button>
+                    </td>
+                </tr>
+            </div>
 
         </table>
     </form>
