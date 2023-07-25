@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-10">
-    <form class="border-padd-test" method="post">
+    <form class="border-padd-grey border-5" method="post">
         {% csrf_token %}
         <div class="form-group mb-3">
             {{ form.first_name|as_crispy_field }}
