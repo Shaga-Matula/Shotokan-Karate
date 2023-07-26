@@ -38,7 +38,9 @@ body {
 
 .make-center-hoz-ver{
     display: flex;
-    flex-direction: column;   
+    flex-direction: row;
+    justify-content: center; 
+    margin:auto; 
 }
 
 .border-padd-grey
@@ -115,6 +117,12 @@ body {
     flex-wrap: nowrap;
     margin: 10px;
 }
+
+
+.custom-kate-img {
+    width: 50%;
+}
+
 
 /* .kar-image-back-g{
     background-image: url('{% static "images/japan-back-jpg" %}');

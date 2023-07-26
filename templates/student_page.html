@@ -1,43 +1,36 @@
+
 {% extends "base.html" %}
 
-{% block content %}
 
-<h1>Student List</h1>
-<div class="table-responsive-sm">
-    <table class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
+{% block content %}
+{% load static %}
+<h1 class="text-center">Grade Syllabus</h1>
+<div class="grey-transparent-background">
+    <table class="table table-secondary w-75" >
         <thead>
-            <tr>
-                <th>Student ID</th>
+            <tr class="text-center">
+               
                 <th>Kyu Level</th>
                 <th>Current Belt Color</th>
                 <th>Kata Name</th>
-            
             </tr>
         </thead>
         <tbody>
             {% for obj in student_page %}
-            <tr>
-                <td>{{ obj.id }}</td>
+            <tr class="text-center">
                 <td>{{ obj.kyu_level }}</td>
                 <td>{{ obj.belt_color }}</td>
                 <td>{{ obj.kata_name }}</td>
-              
-                    {% load static   %}
-
-
-
         </tbody>
     </table>
 
     </tr>
-    {% load static   %}
-
-    <div class="row justify-content-evenly col-sm-1">
-        <div class="col-md-4">
-            <img src="{% static 'images/grades/kionpage.png'  %}" alt="">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 make-center-hoz-ver">
+            <img class="img-fluid border border-dark" src="{% static 'images/grades/kionpage.png'  %}" alt="">
         </div>
-        <div class="col-md-4">
-            <img src="{% static 'images/grades/kionimage.png'  %}" alt="">
+        <div class="col-lg-4 col-md-6 col-sm-12 make-center-hoz-ver">
+            <img class="img-fluid border border-dark" src="{% static 'images/grades/kionimage.png'  %}" alt="">
         </div>
     </div>
 
