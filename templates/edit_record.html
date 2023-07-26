@@ -4,57 +4,44 @@
 
 {% block content %}
 
-<div class="container grey-transparent-background  ">
-    <form method="POST" class="#">
+<div class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-10">
+    <form class="border-padd-grey border-5" method="post">
         {% csrf_token %}
+        <div class="form-group mb-3">
+            <p>Edit Student ID : {{ pk }} </p>
+        </div>
 
-        <table class="d-flex align-items-center justify-content-center table-responsive-sm">
-            <tr>
-                <td>Student ID</td>
-                <td class="fieldsform-2"><input type="text" name="Student_ID" value="{{ pk }}" readonly></td>
-            </tr>
-            <tr>
-                <td>First Name</td>
-                <td>{{ form.first_name|as_crispy_field }}</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>{{ form.last_name|as_crispy_field }}</td>
-            <tr>
-                <td>Date of Birth</td>
-                <td> {{ form.date_of_birth|as_crispy_field }}</td>
-            </tr>
-            <tr>
-                <td>Email Address</td>
-                <td>{{ form.email|as_crispy_field }}</td>
-            <tr>
-                <td>Address 1</td>
-                <td>{{ form.address_1|as_crispy_field }}</td>
-            </tr>
-            <tr>
-                <td>Address 2</td>
-                <td>{{ form.address_2|as_crispy_field }}</td>
-            <tr>
-                <td>Post Code</td>
-                <td>{{ form.post_code|as_crispy_field }}</td>
-            <tr>
-                <td>Student Grade</td>
-                <td>{{ form.student_grade|as_crispy_field }}</td>
-            </tr>
-            <div>
-                <tr class="d-flex align-items-center justify-content-between pt-2">
-                    <td>
-                        <a href="{% url 'studentlist' %}" class="btn btn-info btn btn-success" role="button">Back To
-                            Student's</a>
-                    </td>
+        <div class="form-group mb-3">
+            {{ form.first_name|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.last_name|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.email|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.post_code|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.date_of_birth|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.address_1|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.address_2|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.student_grade|as_crispy_field }}
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+            <button class="btn btn-danger " type="submit">Confirm</button>
+            &nbsp
 
-                    <td>
-                        <button class="btn btn-success" type="submit">Save changes</button>
-                    </td>
-                </tr>
-            </div>
+            <a href="{% url 'studentlist' %}" class="btn btn-success " role="button">Back To Student</a>
+        </div>
 
-        </table>
     </form>
 </div>
 

@@ -15,7 +15,7 @@
                     <p class="card-text">Add_2: {{ obj.address_2 }}</p>
                     <p class="card-text">Post Code:{{ obj.post_code }}</p>
                     <p class="card-text">Grade: {{ obj.student_grade }}</p>
-                    <p class="card-text">Unique ID: {{ obj.id }}</p>
+                    <p class="card-text">Student ID: {{ obj.id }}</p>
                     <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Edit</a>
                     <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
                 </div>
