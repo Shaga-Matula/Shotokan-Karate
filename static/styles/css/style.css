@@ -58,12 +58,9 @@ body {
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.5);
     color: black;
-    margin: auto;
+ 
     border-radius: 25px;
-
-    /* flex-grow: 1; */
 }
-
 
 /* Keeps footer at botom of screen  */
 

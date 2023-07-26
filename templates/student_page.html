@@ -1,29 +1,29 @@
-
 {% extends "base.html" %}
 
 
 {% block content %}
 {% load static %}
 <h1 class="text-center">Grade Syllabus</h1>
-<div class="grey-transparent-background">
-    <table class="table table-secondary w-75" >
-        <thead>
-            <tr class="text-center">
-               
-                <th>Kyu Level</th>
-                <th>Current Belt Color</th>
-                <th>Kata Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for obj in student_page %}
-            <tr class="text-center">
-                <td>{{ obj.kyu_level }}</td>
-                <td>{{ obj.belt_color }}</td>
-                <td>{{ obj.kata_name }}</td>
-        </tbody>
-    </table>
+<div class="grey-transparent-background box-g ">
+    <div class="col-lg-10 col-md-11 col-sm-12 box-b">
+        <table class="table table-secondary ">
+            <thead>
+                <tr class="text-center">
 
+                    <th>Kyu Level</th>
+                    <th>Current Belt Color</th>
+                    <th>Kata Name</th>
+                </tr>
+            </thead>
+            <tbody class="rounded-bottom">
+                {% for obj in student_page %}
+                <tr class="text-center">
+                    <td>{{ obj.kyu_level }}</td>
+                    <td>{{ obj.belt_color }}</td>
+                    <td>{{ obj.kata_name }}</td>
+            </tbody>
+        </table>
+    </div>
     </tr>
     <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 make-center-hoz-ver">
