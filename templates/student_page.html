@@ -2,7 +2,11 @@
 
 
 {% block content %}
+
 {% load static %}
+{% for obj in student_page %}
+{% load cloudinary %}
+<img src="{% cloudinary obj.kyu_image.url %}" alt="Kyu Image">
 <h1 class="text-center">Grade Syllabus</h1>
 <div class="row justify-content-center">
     <div class="col-lg-10 col-md-11 col-sm-12">
@@ -16,7 +20,7 @@
                 </tr>
             </thead>
             <tbody class="rounded-bottom">
-                {% for obj in student_page %}
+
                 <tr class="text-center">
                     <td>{{ obj.kyu_level }}</td>
                     <td>{{ obj.belt_color }}</td>
@@ -27,10 +31,10 @@
     </tr>
     <div class="row justify-content-center">
         <div class="col-lg-5 col-md-6 make-center-hoz-ver spacer">
-            <img class="img-fluid border border-dark" src="{% static 'images/grades/kionpage.png'  %}" alt="Karate Syllabus Image">
+            <p> "{% cloudinary obj.kata_image.url %}" </p>
         </div>
-        <div class="col-lg-5 col-md-6 col-sm-12 make-center-hoz-ver spacer">
-            <img class="img-fluid border border-dark" src="{% static 'images/grades/kionimage.png'  %}" alt="Karate Kion Kata Image">
+        <div class="col-lg-6 col-md-6 col-sm-12 make-center-hoz-ver spacer">
+            <p> "{% cloudinary obj.syllabus_image.url %}" </p>
         </div>
     </div>
 
@@ -41,9 +45,3 @@
 </div>
 
 {% endblock %}
-
-<!-- kyu_level = models.CharField(max_length=10, verbose_name='Kyu Level')
-belt_color = models.CharField(max_length=50, verbose_name='Karate Belt Color')
-kata_name = models.CharField(max_length=50, verbose_name='Kata Name')
-kata_image = CloudinaryField('image', default='placeholder')
-syllabus_image = CloudinaryField('image', default='placeholder') -->
