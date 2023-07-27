@@ -11,6 +11,25 @@ from django.views.generic.edit import DeleteView
 
 # Create your views here.
 
+from cloudinary.forms import cl_init_js_callbacks
+
+from .forms import PhotoForm
+
+from django.shortcuts import render
+from .forms import PhotoForm
+
+def upload(request):
+    context = dict(backend_form=PhotoForm())
+
+    if request.method == 'POST':
+        form = PhotoForm(request.POST, request.FILES)
+        context['posted'] = form.instance
+        if form.is_valid():
+            form.save()
+
+    return render(request, 'kyu_regester.html', context)
+
+
 
 class firstpage(View):
     def get(self, request, *args, **kwargs):
@@ -55,8 +74,6 @@ class StudentListView(TemplateView):
         return context
 
 
-
-
 class StudentPageView(TemplateView):
     template_name = 'student_page.html'
 
@@ -74,8 +91,6 @@ class StudentPageView(TemplateView):
 # #     def get_object(self, queryset=None):
 # #         pk = self.kwargs.get('pk')
 # #         return self.model.objects.get(pk=pk)
-
-
 
 
 # # class StudentPageView(View):
