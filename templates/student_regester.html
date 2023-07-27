@@ -1,37 +1,40 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<div class=" d-flex align-items-center justify-content-center spacer ">
+    <div class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="border-padd-grey">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    {{ form.first_name|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.last_name|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.email|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.post_code|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.date_of_birth|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.address_1|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.address_2|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                    {{ form.student_grade|as_crispy_field }}
+                </div>
 
-<div class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-10">
-    <form class="border-padd-grey border-5" method="post">
-        {% csrf_token %}
-        <div class="form-group mb-3">
-            {{ form.first_name|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.last_name|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.email|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.post_code|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.date_of_birth|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.address_1|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.address_2|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.student_grade|as_crispy_field }}
-        </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        
-    </form>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
