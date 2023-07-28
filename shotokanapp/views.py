@@ -1,33 +1,12 @@
-from django.views.generic import View
-from django.shortcuts import render, get_object_or_404
-from .models import StudentInfoMod, StudentLevelMod
-from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
-from django.views.generic.edit import FormView, UpdateView
-from django.urls import reverse, reverse_lazy
-from django.views.generic.base import TemplateView
-from django.views.generic.detail import DetailView
 from django.contrib import messages
-from django.views.generic.edit import DeleteView
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse, reverse_lazy
+from django.views.generic import View, TemplateView, DetailView, DeleteView
+from django.views.generic.edit import FormView, UpdateView
+from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
+from .models import StudentInfoMod, StudentLevelMod
 
-# Create your views here.
 
-from cloudinary.forms import cl_init_js_callbacks
-
-from .forms import PhotoForm
-
-from django.shortcuts import render
-from .forms import PhotoForm
-
-def upload(request):
-    context = dict(backend_form=PhotoForm())
-
-    if request.method == 'POST':
-        form = PhotoForm(request.POST, request.FILES)
-        context['posted'] = form.instance
-        if form.is_valid():
-            form.save()
-
-    return render(request, 'kyu_regester.html', context)
 
 
 
@@ -74,6 +53,8 @@ class StudentListView(TemplateView):
         return context
 
 
+
+
 class StudentPageView(TemplateView):
     template_name = 'student_page.html'
 
@@ -91,6 +72,8 @@ class StudentPageView(TemplateView):
 # #     def get_object(self, queryset=None):
 # #         pk = self.kwargs.get('pk')
 # #         return self.model.objects.get(pk=pk)
+
+
 
 
 # # class StudentPageView(View):
