@@ -2,12 +2,12 @@
 name: Check Boxes
 about: Story with Task, Acceptance Criteria and Check - boxes
 title: ''
-labels: ''
-assignees: ''
+labels: good first issue
+assignees: Shaga-Matula
 
 ---
 
-As a User I want  to be presented with a landing  page  so the  I can clearly see header and footer of page in Heroku
+As a "" I want  to ""   so that I ""
 
 ## Estimation of Effort :
 . 8 Hours
