@@ -2,8 +2,8 @@
 name: Check Boxes
 about: Story with Task, Acceptance Criteria and Check - boxes
 title: ''
-labels: ''
-assignees: ''
+labels: good first issue
+assignees: Shaga-Matula
 
 ---
 
