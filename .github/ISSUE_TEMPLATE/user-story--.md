@@ -1,22 +1,27 @@
 ---
 name: 'User Story :'
-about: User Story Temp III
-title: ''
-labels: ''
-assignees: ''
+about: This is my default user story template
+title: 'User Story : <Title>'
+labels: good first issue
+assignees: Shaga-Matula
 
 ---
 
-As a "" I want to "" so that ""
+As a "role" I want "capability"  so that I "received benefit"
+
 ## Estimation of Effort :
-. 8 Hours
+TBD
 
 ## Tasks :
-- [x] <label><input type="checkbox" disabled /> Task 1 : #############</label>
-- [x] <label><input type="checkbox" disabled /> Task 2 : ############# </label>
-- [x] <label><input type="checkbox" disabled /> Task 3 :  #############</label>
+ 
+[  ] Task 1 :
+[  ] Task 2 :
+[  ] Task 3 :
+[  ] Task 4 :
+
 
 ## Acceptance Criteria :
-- [x] <label><input type="checkbox" disabled /> Criteria 1 :   ############# </label>
-- [x] <label><input type="checkbox" disabled /> Criteria 1 :   ############# </label>
-- [x] <label><input type="checkbox" disabled /> Criteria 1 :  #############  </label>
+Acceptance Criteria :
+Acceptance Criteria :
+Acceptance Criteria :
+Acceptance Criteria :
