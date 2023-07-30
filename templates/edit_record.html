@@ -5,44 +5,28 @@
 {% block content %}
 
 <div class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-10">
-    <form class="border-padd-grey border-5" method="post">
+    <form class="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group mb-3">
-            <p>Edit Student ID : {{ pk }} </p>
+            {{ form.kyu_level|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.belt_color|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.kata_name|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.kata_image|as_crispy_field }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form.syllabus_image|as_crispy_field }}
         </div>
 
-        <div class="form-group mb-3">
-            {{ form.first_name|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.last_name|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.email|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.post_code|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.date_of_birth|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.address_1|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.address_2|as_crispy_field }}
-        </div>
-        <div class="form-group mb-3">
-            {{ form.student_grade|as_crispy_field }}
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-            <button class="btn btn-danger " type="submit">Confirm</button>
-            &nbsp
-
-            <a href="{% url 'studentlist' %}" class="btn btn-success " role="button">Back To Student</a>
-        </div>
-
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+
 </div>
 
 {% endblock %}

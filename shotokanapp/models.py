@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import Group
 
 # These are the Models for my Karate School Database 
 
@@ -32,7 +33,7 @@ class StudentInfoMod(models.Model):
     date_of_birth = models.DateField(verbose_name='Date of Birth')
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     updated_on = models.DateTimeField(auto_now=True, verbose_name='Updated On')
-    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.DO_NOTHING, default=9, verbose_name='Student Grade')
+    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=9, verbose_name='Student Grade')
 
     class Meta:
         ordering = ["id"]  # Built in "ID PK" will be used for Student_ID
@@ -41,4 +42,7 @@ class StudentInfoMod(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 
+# User Group 
 
+class StudentsGroup(Group):
+    description = models.CharField(max_length=100)

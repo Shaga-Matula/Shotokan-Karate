@@ -92,3 +92,29 @@ class DeleteStudentView(DeleteView):
     form_class = UpdateStudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
+
+
+class DeleteKyuView(DeleteView):
+    model = StudentLevelMod
+    form_class = UpdateStudentForm
+    template_name = 'delete_kyu.html'
+    success_url = reverse_lazy('success')
+
+
+class UpdateKyuView(UpdateView):
+    model = StudentLevelMod
+    form_class = KyuRegisterForm
+    template_name = 'edit_kyu.html'
+    success_url = reverse_lazy('success')
+
+    def get_object(self, queryset=None):
+        obj = get_object_or_404(StudentLevelMod, pk=self.kwargs['pk'])
+        return obj
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = self.kwargs['pk']
+        return context
+
+    def get_success_url(self):
+        return reverse('success')

@@ -2,13 +2,13 @@ from django import forms
 from .models import StudentInfoMod, StudentLevelMod
 
 
-from django.forms import ModelForm
-from .models import StudentLevelMod
+# from django.forms import ModelForm
+# from .models import StudentLevelMod
 
-class PhotoForm(ModelForm):
-    class Meta:
-        model = StudentLevelMod
-        fields = ['kata_image', 'syllabus_image']
+# class PhotoForm(ModelForm):
+#     class Meta:
+#         model = StudentLevelMod
+#         fields = ['kata_image', 'syllabus_image']
 
 
 class StudentForm(forms.ModelForm):
