@@ -1,3 +1,4 @@
+""" Imported modules: """
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -7,18 +8,15 @@ from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
 from .models import StudentInfoMod, StudentLevelMod
 
 
-
-
-
-class firstpage(View):
+class FirstPage(View):
     def get(self, request, *args, **kwargs):
-        context = {
-            'username': request.user.username,
-        }
+        context = {'username': request.user.username, }
         return render(request, 'index.html', context)
 
 
 class StudentRegesterView(FormView):
+    """ A view for registering a new student. """
+
     template_name = 'student_regester.html'
     form_class = StudentForm
     success_url = 'success.html'
@@ -43,6 +41,14 @@ class KyuRegisterView(FormView):
     def get_success_url(self):
         return reverse('success')
 
+class KyuListView(TemplateView):
+    template_name = 'kyu_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['kyu_list'] = StudentLevelMod.objects.all()
+        return context
+
 
 class StudentListView(TemplateView):
     template_name = 'student_list.html'
@@ -53,8 +59,6 @@ class StudentListView(TemplateView):
         return context
 
 
-
-
 class StudentPageView(TemplateView):
     template_name = 'student_page.html'
 
@@ -62,32 +66,6 @@ class StudentPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['student_page'] = StudentLevelMod.objects.all()
         return context
-
-
-# # class StudentPageView(DetailView):
-# #     model = StudentLevelMod
-# #     template_name = 'students_page.html'
-# #     context_object_name = 'student_level'
-
-# #     def get_object(self, queryset=None):
-# #         pk = self.kwargs.get('pk')
-# #         return self.model.objects.get(pk=pk)
-
-
-
-
-# # class StudentPageView(View):
-# #     model = StudentLevelMod
-# #     template_name = 'students_page.html'
-
-# #     def get_object(self, queryset=None):
-# #         obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
-# #         return obj
-
-# #     def get_context_data(self, **kwargs):
-# #         context = super().get_context_data(**kwargs)
-# #         context['pk'] = self.kwargs['pk']
-# #         return context
 
 
 class UpdateStudentView(UpdateView):
@@ -114,15 +92,3 @@ class DeleteStudentView(DeleteView):
     form_class = UpdateStudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
-
-    # def get_object(self, queryset=None):
-    #     obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
-    #     return obj
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['pk'] = self.kwargs['pk']
-    #     return context
-
-    # def get_success_url(self):
-    #     return reverse('studentlist')

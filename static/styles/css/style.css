@@ -58,7 +58,7 @@ body {
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.5);
     color: black;
- 
+   
     border-radius: 25px;
 }
 
@@ -107,7 +107,6 @@ body {
 }
 
 
-
 .card{
     white-space: nowrap;
     width: 300px;
@@ -119,15 +118,4 @@ body {
 .custom-kate-img {
     width: 50%;
 }
-
-
-/* .kar-image-back-g{
-    background-image: url('{% static "images/japan-back-jpg" %}');
-    background-size: cover;
-    background-position: center;
-  } */
-
-/* .page_box {
-    height: 100vh;
-} */
 
