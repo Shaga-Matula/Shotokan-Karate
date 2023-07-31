@@ -11,6 +11,21 @@ from .models import StudentInfoMod, StudentLevelMod
 #         fields = ['kata_image', 'syllabus_image']
 
 
+class user_sign_up(forms.ModelForm):
+    class Meta:
+        model = StudentInfoMod
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'address_1',
+            'address_2',
+            'date_of_birth',
+            'post_code',
+            'student_grade',
+        ]
+
+
 class StudentForm(forms.ModelForm):
     class Meta:
         model = StudentInfoMod
