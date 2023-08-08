@@ -1,108 +1,84 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Paul-Gleeson,
+![Shotokan Logo](static/images/main_logo.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Creator: Paul Gleeson
 
-## Gitpod Reminders
+# Shotokan Karate
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### [Ling to Shotokan github code](https://github.com/Shaga-Matula/Iceberg)
+### [Link to Shotokan Heroku](https://shotokanapp-74a9ccbfcd2b.herokuapp.com)
+&nbsp;
+<hr style="border:1px solid white">
 
-`python3 -m http.server`
+<!-- ![Start screen](assets/images/game_page.png) -->
 
-A blue button should appear to click: _Make Public_,
+&nbsp;
+<hr style="border:1px solid white">
 
-Another blue button should appear to click: _Open Browser_.
+# Introduction
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### The Shotokan website is designed to get potential karitka students interested in Shotokan Karate for a healthery lifestyle and healty state of mind. At first the student is presented with a landing page wich displays a hero image nav bar and for to contact us. If the student decideds to take up lessons there infor mation will be inputed into the registar through a form utilizing Django, Bootstrap and Python along side a postgresSql databae. 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## README Table Content
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1.  [Introduction](#Introduction)
+    1.  [Project Goals](#Project-Goals)
+    2.  [User experience](#User-experience)
+    3.  [Agile Aproach](#Agile-Aproach)
+  
+   
 
-To log into the Heroku toolbelt CLI:
+<hr style="border:1px solid white">
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Project Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Create a site that is user friendly and gives the user a good quality of UX.
+* Create a site that has a form to handle inital inquireys to the website.
+* Use Agile to organise the project: Using methods of Epics\milestones and user stories. 
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## User experience
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* Create an atmosphere using creative writing that embeds the user to the task.
+* Create a game that gives instant and clear feedback to the user during the game.
+* Create a game that tracks and reports all errors with feedback to the user.
+* Create a game that is challenging against a computer opponent.
+* Accept upper and lower case input for letters in coordinates to speed up user experience. 
+* Add help function to game so user can recall help at any time.
+* Add quit game function so user can quit game if so desired.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Agile Aproach
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* User stories are implamented to assist the running of the project
+<hr style="border:1px solid white">
+## Design 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Landing Page
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Landing Page](static/images/readme_images/landing%20_page%20_view.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### DataBase Design
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Normalizing definition
+Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. It's like putting your toys away in a toy box so you can find them easily and don't lose any. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database table is like keeping your room clean and tidy so you can find everything you need quickly and easily.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![First Excel Table draf before Normalizing ](static/images/readme_images/mock_database.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Pre-Normalizing 
+This is the database table named "Students" before normalizing; it stores information about martial arts students. It has 20 fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<img src="static/images/readme_images/first_table.png" width="150" height="300" alt="Pre-Normalizing">
 
-------
 
-## FAQ about the uptime script
+## Tools
+### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
+### QuickDBD : -       https://app.quickdatabasediagrams.com
 
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
