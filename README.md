@@ -90,7 +90,7 @@ Improve website accessibility: This goal involves making the website more access
 * Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. It's like putting your toys away in a toy box so you can find them easily and don't lose any. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database table is like keeping your room clean and tidy so you can find everything you need quickly and easily.
 
 
-<img src="static/images/readme/mock_database.png" width="600" height="300" alt="Pre-Normalizing">
+<img src="static/images/readme/mock_database.png" width="400" height="200" alt="Pre-Normalizing">
 
 
 ### Pre-Normalizing 

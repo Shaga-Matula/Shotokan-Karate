@@ -9,13 +9,21 @@ from .models import StudentInfoMod, StudentLevelMod
 
 
 class FirstPage(View):
+    """
+    This FirstPage class is used to handle the landing page request and display the
+    information in a FormView. The get() method is called when someone visits
+    the page, and it takes in a request object that contains information
+    about the request made by the user. Inside the get() method, the variable called
+    context is created to store the username of the user making the request and
+    display the username on screen when loged in along with the page 'index.html'.
+    """
     def get(self, request, *args, **kwargs):
         context = {'username': request.user.username, }
         return render(request, 'index.html', context)
 
 
 class StudentRegesterView(FormView):
-    """ A view for registering a new student. """
+
 
     template_name = 'student_regester.html'
     form_class = StudentForm
@@ -40,6 +48,7 @@ class KyuRegisterView(FormView):
 
     def get_success_url(self):
         return reverse('success')
+
 
 class KyuListView(TemplateView):
     template_name = 'kyu_list.html'
