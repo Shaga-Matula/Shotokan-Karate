@@ -3,7 +3,7 @@
 ![Shotokan Logo](static/images/readme/main_logo-modified.png)
 
 
-* The creator of the Shotokan project is Paul Gleeson from Code Institute. The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields. The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art.
+* The creator of the Shotokan project is Paul Gleeson from Code Institute. The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields. The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club. 
 
 # Shotokan Karate
 
