@@ -9,8 +9,13 @@ assignees: Shaga-Matula
 
 As a "" I want  to ""   so that I ""
 
-## Estimation of Effort :
-. 8 Hours
+## Estimation  Effort (Fibonacci sequence) :
+- [x] <label><input type="checkbox" disabled /> 1 Hour </label>
+- [x] <label><input type="checkbox" disabled /> 2 Hour </label>
+- [x] <label><input type="checkbox" disabled /> 3 Hour </label>
+- [x] <label><input type="checkbox" disabled /> 5 Hour </label>
+- [x] <label><input type="checkbox" disabled /> 8 Hour </label>
+- [x] <label><input type="checkbox" disabled /> 13 Hour </label>
 
 ## Tasks :
 - [x] <label><input type="checkbox" disabled /> Task 1 : #############</label>
