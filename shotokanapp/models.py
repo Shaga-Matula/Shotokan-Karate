@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.contrib.auth.models import Group
+
 
 # These are the Models for my Karate School Database 
 
@@ -41,8 +41,3 @@ class StudentInfoMod(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
-
-# User Group 
-
-class StudentsGroup(Group):
-    description = models.CharField(max_length=100)
