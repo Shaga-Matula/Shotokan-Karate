@@ -116,6 +116,9 @@ body {
     width: 50%;
 }
 
+.yellow-field {
+    background-color: yellow;
+}
 
 /* Thanks to for thumnail
 https://success.appen.com/hc/en-us/articles/202703155-CSS-Guide-to-Enlarge-Images-on-Hover  */

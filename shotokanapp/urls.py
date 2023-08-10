@@ -16,5 +16,6 @@ urlpatterns = [
     path('kyu_list', views.KyuListView.as_view(), name='kyu_list'),
     path('edit_kyu_list/<int:pk>', views.UpdateKyuView.as_view(), name='edit_kyu_list'),
     path('delete_kyu/<int:pk>', views.DeleteKyuView.as_view(), name='delete_kyu'),
+    path('register/', views.RegisterView.as_view(), name='register'),
 
 ]

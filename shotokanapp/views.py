@@ -4,8 +4,11 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import View, TemplateView, DetailView, DeleteView
 from django.views.generic.edit import FormView, UpdateView
-from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm
-from .models import StudentInfoMod, StudentLevelMod
+from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm, CustomUserCreationForm
+from .models import StudentInfoMod, StudentLevelMod, CustomUser
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.views import View
 
 
 class FirstPage(View):
@@ -24,7 +27,6 @@ class FirstPage(View):
 
 class StudentRegesterView(FormView):
 
-
     template_name = 'student_regester.html'
     form_class = StudentForm
     success_url = 'success.html'
@@ -35,6 +37,9 @@ class StudentRegesterView(FormView):
 
     def get_success_url(self):
         return reverse('success')
+
+
+
 
 
 class KyuRegisterView(FormView):
@@ -59,13 +64,6 @@ class KyuListView(TemplateView):
         return context
 
 
-class StudentListView(TemplateView):
-    template_name = 'student_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['student'] = StudentInfoMod.objects.all()
-        return context
 
 
 class StudentPageView(TemplateView):
@@ -77,23 +75,7 @@ class StudentPageView(TemplateView):
         return context
 
 
-class UpdateStudentView(UpdateView):
-    model = StudentInfoMod
-    form_class = UpdateStudentForm
-    template_name = 'edit_record.html'
-    success_url = reverse_lazy('success')
 
-    def get_object(self, queryset=None):
-        obj = get_object_or_404(StudentInfoMod, pk=self.kwargs['pk'])
-        return obj
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['pk'] = self.kwargs['pk']
-        return context
-
-    def get_success_url(self):
-        return reverse('success')
 
 
 class DeleteStudentView(DeleteView):
@@ -127,3 +109,54 @@ class UpdateKyuView(UpdateView):
 
     def get_success_url(self):
         return reverse('success')
+#########################################################
+#############       Custom User      #################### 
+
+class DeleteStudentView(DeleteView):
+    model = CustomUser
+    form_class = UpdateStudentForm
+    template_name = 'delete_record.html'
+    success_url = reverse_lazy('success')
+
+
+
+
+class UpdateStudentView(UpdateView):
+    model = CustomUser
+    form_class = UpdateStudentForm
+    template_name = 'edit_record.html'
+    success_url = reverse_lazy('success')
+
+    def get_object(self, queryset=None):
+        obj = get_object_or_404(CustomUser, pk=self.kwargs['pk'])
+        return obj
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = self.kwargs['pk']
+        return context
+
+    def get_success_url(self):
+        return reverse('success')
+
+
+class StudentListView(TemplateView):
+    template_name = 'student_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student'] = CustomUser.objects.all()
+        return context
+
+
+class RegisterView(View):
+    def get(self, request):
+        form = CustomUserCreationForm()
+        return render(request, 'register.html', {'form': form})
+    
+    def post(self, request):
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success') 
+        return render(request, 'register.html', {'form': form})
