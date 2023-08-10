@@ -1,6 +1,21 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png">
+<img style="float: right;" src="static/images/readme/main_logo-modified.png">
 
-![Shotokan Logo](static/images/readme/main_logo-modified.png)
+
+
+---
+---
+---
+---
+
+
+
+
+
+
+
+<hr style="border:1px solid white">
+
 
 
 ![Screen Shots](static/images/readme/websitescreens.png)
