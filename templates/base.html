@@ -47,25 +47,25 @@
 
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
 
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-                    </li>
-                    
                     {% if user.is_authenticated %}
 
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'StudentRegister' %}">Register Student</a>
+                        <a class="nav-link" href="{% url 'register' %}">Create Student Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'kyuregister' %}">Kyu Creation</a>
+                        <a class="nav-link" href="{% url 'studentlist' %}">Student Read\Update\Delete</a>
+                    </li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'kyuregister' %}">Creation Kyu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'studentlist' %}">Student List</a>
+                        <a class="nav-link" href="{% url 'kyu_list' %}">Kyu Read\Update\Delete</a>
                     </li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'kyu_list' %}">Belt Kyu List</a>
-                    </li class="nav-item">
+                  
+                  
+                    
                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}

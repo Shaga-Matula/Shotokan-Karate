@@ -2,13 +2,16 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
+
 <div class="container">
+    <h3 class="text-center">User Email: {{ object.email }}</h3>
+    <h3 class="text-center"> Login Name: "{{ object }}"</h3>&nbsp
     <div class="d-flex justify-content-center align-content-center">
         <div
             class="grey-transparent-background text-black-100 d-flex justify-content-center col-lg-4 col-md-6 col-sm-10">
-            {{ user.username }}
+         
             <form class="" method="post" enctype="multipart/form-data">
+                {% load crispy_forms_tags %}
                 {% csrf_token %}
 
                 <div class="form-group mb-3">
