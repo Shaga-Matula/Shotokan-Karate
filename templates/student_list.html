@@ -5,23 +5,27 @@
     <h1 class="text-center">Student List</h1>
     <div class="row d-flex">
         {% for obj in student %}
+        <!-- # Hide Admin from list so not deleted -->
+        {% if obj.username != 'admin' %}
         <div class="col-sm-6 col-md-4 col-lg-2 ">
             <div class="card grey-transparent-background">
                 <div class="card-body accordion-body">
-                    <h5 class="card-title text-light p-2 bg-dark border border-3 rounded">Name: {{ obj.first_name }} {{ obj.last_name }}</h5>
-                    <p class="card-text">User Name:  {{ obj.username }}</p>
-                    <p class="card-text">DOB:  {{ obj.date_of_birth }}</p>
-                    <p class="card-text ">Email:  {{ obj.email }}</p>
-                    <p class="card-text">Add_1:  {{ obj.address_1 }}</p>
-                    <p class="card-text">Add_2:  {{ obj.address_2 }}</p>
-                    <p class="card-text">Post Code:  {{ obj.post_code }}</p>
-                    <p class="card-text">Grade:  {{ obj.student_grade }}</p>
-                    <p class="card-text">Student ID:  {{ obj.id }}</p>
-                    <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Edit</a>
+                    <h5 class="card-title text-light p-2 bg-dark border border-3 rounded">Name: {{ obj.first_name }}
+                        {{ obj.last_name }}</h5>
+                    <p class="card-text">User Name: {{ obj.username }}</p>
+                    <p class="card-text">DOB: {{ obj.date_of_birth }}</p>
+                    <p class="card-text ">Email: {{ obj.email }}</p>
+                    <p class="card-text">Add_1: {{ obj.address_1 }}</p>
+                    <p class="card-text">Add_2: {{ obj.address_2 }}</p>
+                    <p class="card-text">Post Code: {{ obj.post_code }}</p>
+                    <p class="card-text">Grade: {{ obj.student_grade }}</p>
+                    <p class="card-text">Student ID: {{ obj.id }}</p>
+                    <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Update</a>
                     <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </main>

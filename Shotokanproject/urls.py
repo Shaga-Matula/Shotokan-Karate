@@ -21,3 +21,8 @@ urlpatterns = [
     path('', include('shotokanapp.urls'), name='shotokanapp_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+# Configure Admin Titles
+admin.site.site_header = "Shotokan Karate Club Site Administration Page"
+admin.site.site_title = "Shotokan Site"
+admin.site.index_title = "Shotokan Site"

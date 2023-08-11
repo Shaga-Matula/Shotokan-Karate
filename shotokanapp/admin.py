@@ -1,16 +1,20 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import StudentInfoMod, StudentLevelMod, CustomUser
+from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
 
 admin.site.register(StudentInfoMod)
 admin.site.register(StudentLevelMod)
+admin.site.unregister(SocialToken)
+admin.site.unregister(SocialAccount)
+admin.site.unregister(SocialApp)
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserCreationForm, UpdateStudentForm
 from .models import CustomUser
+
+### Custom Admin Model
 
 
 class CustomUserAdmin(UserAdmin):
