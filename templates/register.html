@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load crispy_forms_tags %}
 <div class="container">
-    <h2>Student Register</h2>
-    <div>
-        <form method="post">
-            {% csrf_token %}
+    <h2 class="text-center">Student Register</h2>
+    <div class="d-flex align-content-center grey-transparent-background justify-content-center border-padd-grey ">
+        <div class="col">
+            <div class="mx-auto col-10 col-md-8 col-lg-6 ">
+                <form method="post">
+                    {% csrf_token %}
 
-            {{ form.as_p }}
-            <button type="submit">Register</button>
-        </form>
+                    {% crispy form form.helper %}
+              
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

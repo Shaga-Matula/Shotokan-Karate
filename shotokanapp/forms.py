@@ -1,6 +1,8 @@
 from django import forms
 from .models import StudentInfoMod, StudentLevelMod, CustomUser
 from django.contrib.auth.forms import UserCreationForm
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 
 
 # from django.forms import ModelForm
@@ -69,6 +71,11 @@ class UpdateStudentForm(forms.ModelForm):
 
 
 class CustomUserCreationForm(UserCreationForm):
+    helper = FormHelper()
+    helper.form_method = 'post'
+    helper.add_input(Submit('submit', 'Register'))
+
+
     class Meta:
         model = CustomUser
         fields = UserCreationForm.Meta.fields + ('address_1', 'address_2', 'date_of_birth', 'post_code', 'first_name', 'last_name', 'student_grade','email')
