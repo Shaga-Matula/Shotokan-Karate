@@ -10,7 +10,7 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 # This Model is for Karate Grade Information 
 
 class StudentLevelMod(models.Model):
-    kyu_level = models.CharField(max_length=10, verbose_name='Kyu Level')
+    kyu_level = models.CharField(max_length=15, verbose_name='Kyu Level')
     belt_color = models.CharField(max_length=50, verbose_name='Karate Belt Color')
     kata_name = models.CharField(max_length=50, verbose_name='Kata Name')
     kata_image = CloudinaryField('image', default='placeholder')
