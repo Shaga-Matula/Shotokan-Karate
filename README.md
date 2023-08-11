@@ -120,3 +120,11 @@ Improve website accessibility: This goal involves making the website more access
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
 ### QuickDBD : -       https://app.quickdatabasediagrams.com
 
+## Bugs
+
+### Cant access Admin Panel after creating custom user. 
+* Issue : Error message  
+<img src="static/images/readme/failcreatesuper.png" width="150" height="150" alt="Pre-Normalizing">
+
+* AUTH_USER_MODEL = 'shotokanapp.CustomUser'
+* fix by https://testdriven.io/blog/django-custom-user-model/

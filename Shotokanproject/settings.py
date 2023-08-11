@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shotokanapp-156d7bd78744.herokuapp.com', 'localhost', '8000-shagamatula-shotokankar-6rbxp0qlqp9.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['shotokanapp-156d7bd78744.herokuapp.com', 'localhost', '8000-shagamatula-shotokankar-6rbxp0qlqp9.ws-eu103.gitpod.io']
 
 
 # Application definition
@@ -176,3 +176,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'shotokanapp.CustomUser'
