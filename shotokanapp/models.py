@@ -25,6 +25,14 @@ class StudentLevelMod(models.Model):
 
 class CustomUser(AbstractUser):
     # Custom User Model
+    class Role(models.TextChoices):
+        ADMIN = 'ADMIN', 'Admin'
+        STUDENT = 'STUDENT', 'Student'
+        TEACHER = 'TEACHER', 'Teacher'
+        
+    base_role = Role.STUDENT
+    
+    role = models.CharField(max_length=15, choices=Role.choices, default=base_role)
     first_name = models.CharField(max_length=50, verbose_name='First Name')
     last_name = models.CharField(max_length=50, verbose_name='Last Name')
     address_1 = models.CharField(max_length=50, verbose_name='Address Line One')
@@ -32,32 +40,10 @@ class CustomUser(AbstractUser):
     date_of_birth = models.DateField(verbose_name='Date of Birth', null=True, blank=True)
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     email = models.EmailField(verbose_name='Email Address')
-    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=1, verbose_name='Student Grade')
+    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=1, verbose_name='Student grade')
     
     groups = models.ManyToManyField(Group, related_name='customuser_set', blank=True)
     user_permissions = models.ManyToManyField(Permission, related_name='customuser_set', blank=True)
 
     def __str__(self):
         return self.username
-
-
-
-#  This Model is for Karate Students Information
-
-class StudentInfoMod(models.Model):
-    first_name = models.CharField(max_length=50, verbose_name='First Name')
-    last_name = models.CharField(max_length=50, verbose_name='Last Name')
-    email = models.EmailField(verbose_name='Email Address')
-    address_1 = models.CharField(max_length=50, verbose_name='Address Line One')
-    address_2 = models.CharField(max_length=50, verbose_name='Address Line Two', blank=True, null=True)
-    date_of_birth = models.DateField(verbose_name='Date of Birth')
-    post_code = models.CharField(max_length=10, verbose_name='Post Code')
-    updated_on = models.DateTimeField(auto_now=True, verbose_name='Updated On')
-    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=9, verbose_name='Student Grade')
-
-    class Meta:
-        ordering = ["id"]  # Built in "ID PK" will be used for Student_ID
-
-    def __str__(self):
-        return f"{self.first_name} {self.last_name}"
-

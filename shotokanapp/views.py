@@ -5,7 +5,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import View, TemplateView, DetailView, DeleteView
 from django.views.generic.edit import FormView, UpdateView
 from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm, CustomUserCreationForm
-from .models import StudentInfoMod, StudentLevelMod, CustomUser
+from .models import StudentLevelMod, CustomUser
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views import View
@@ -25,22 +25,26 @@ class FirstPage(View):
         return render(request, 'index.html', context)
 
 
-class StudentRegesterView(FormView):
-
-    template_name = 'student_regester.html'
-    form_class = StudentForm
-    success_url = 'success.html'
-
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
-
-    def get_success_url(self):
-        return reverse('success')
 
 
 
 
+
+
+
+
+
+class StudentPageView(TemplateView):
+    template_name = 'student_page.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student_page'] = StudentLevelMod.objects.all()
+        return context
+
+
+#########################################################
+#############      Kyu Table views    ################### 
 
 class KyuRegisterView(FormView):
     template_name = 'kyu_regester.html'
@@ -63,26 +67,6 @@ class KyuListView(TemplateView):
         context['kyu_list'] = StudentLevelMod.objects.all()
         return context
 
-
-
-
-class StudentPageView(TemplateView):
-    template_name = 'student_page.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['student_page'] = StudentLevelMod.objects.all()
-        return context
-
-
-
-
-
-class DeleteStudentView(DeleteView):
-    model = StudentInfoMod
-    form_class = UpdateStudentForm
-    template_name = 'delete_record.html'
-    success_url = reverse_lazy('success')
 
 
 class DeleteKyuView(DeleteView):
@@ -109,6 +93,7 @@ class UpdateKyuView(UpdateView):
 
     def get_success_url(self):
         return reverse('success')
+    
 #########################################################
 #############       Custom User      #################### 
 
@@ -117,9 +102,6 @@ class DeleteStudentView(DeleteView):
     form_class = UpdateStudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
-
-
-
 
 class UpdateStudentView(UpdateView):
     model = CustomUser
@@ -160,3 +142,4 @@ class RegisterView(View):
             form.save()
             return redirect('success') 
         return render(request, 'register.html', {'form': form})
+   
