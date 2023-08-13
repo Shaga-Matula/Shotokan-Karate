@@ -37,12 +37,6 @@ main {
 
 }
 
-.work {
-    height: 2000px;
-    justify-content:flex-start;
-    align-items:center;
-
-}
 
 /* This sets the grey box and also transparent  */
 .grey-transparent-background {
