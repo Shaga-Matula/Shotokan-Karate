@@ -79,7 +79,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('address_1', 'address_2', 'date_of_birth', 'post_code', 'role', 'first_name', 'last_name', 'student_grade','email')
+        fields = UserCreationForm.Meta.fields + ( 'role', 'first_name', 'last_name', 'date_of_birth', 'address_1', 'address_2', 'post_code') + ('student_grade','email')
         
         widgets = {
             'date_of_birth': forms.DateInput(attrs={'type': 'date'}, format='%d/%m/%Y'),

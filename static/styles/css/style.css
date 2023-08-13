@@ -3,8 +3,22 @@ html {
     margin: 0;
 }
 
+/* Keep footer at botom of page  */
 body {
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+ 
+
+}
+
+main {
+    flex-grow: 1;
+}
+
+.footerbar {
+    margin-top: auto;
+    bottom: 0;
 }
 
 /* Note to rember */
@@ -14,7 +28,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    */
+
+}
+
+.heroback {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+   
+}
+
+/* This sets the grey box and also transparent  */
+.grey-transparent-background {
+    background-color: rgba(128, 128, 128, 0.60);
+    color: black;
+    font-weight: 400;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .box-b {
@@ -52,12 +82,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.grey-transparent-background {
-    background-color: rgba(128, 128, 128, 0.5);
-    color: black;
 
-    border-radius: 25px;
-}
 
 /* Keeps footer at botom of screen  */
 

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Bootstrap 5  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
@@ -20,100 +20,92 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <!-- Css file location -->
     <link rel="stylesheet" type="text/css" href="{% static 'styles/css/style.css' %}">
 
-
     <title>Shotokan Karate</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/pages/favicon.ico' %}">
+
 </head>
 
-<body class="#">
-    <!-- style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')" -->
-    <main class="force-height " style="background-image: url('{% static 'images/grades/japan-back.jpg' %}')">
-
-        <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark ">
-            <!-- Brand -->
-            <a class="navbar-brand " href="#">Shotokan</a>
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
-
-                    {% if user.is_authenticated %}
-                      
-
+<body style="background-image: url('{% static 'images/pages/kpunch.jpg' %}'); background-size: 100% 100%;">
+    <header>
+        <div>
+            <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark ">
+                <!-- Brand -->
+                <a class="navbar-brand " href="#">Shotokan Karate</a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        {% if user.is_authenticated %}
                         {% if user.role == 'Student' or user.role == 'ADMIN' %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'student_page' %}">Student Page</a>
                         </li>
                         {% endif %}
                         {% if user.role == 'ADMIN' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Create Student Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'studentlist' %}">Student Read\Update\Delete</a>
-                    </li class="nav-item">
-                   
-                                                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'kyuregister' %}">Create Kyu</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'kyu_list' %}">Kyu Read\Update\Delete</a>
-                    </li class="nav-item">
-                    <li class="nav-item">
-                              
-                        <a class="nav-link" href="{% url 'admin:index' %}">Django Admin Panel</a>
-                    </li class="nav-item">
-                  
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Create Student Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'studentlist' %}">Student Read\Update\Delete</a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'kyuregister' %}">Create Kyu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'kyu_list' %}">Kyu Read\Update\Delete</a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'admin:index' %}">Django Admin Panel</a>
+                        </li class="nav-item">
                         {% endif %}
-                    
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-        <!-- Alert messages and warnings id = msg -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
                 </div>
+            </nav>
+    </header>
+    <!-- Alert messages and warnings id = msg -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+    </div>
+    <!-- Body extends accross block -->
+    {% block content %}
+    <!-- Content Shotokan Karate -->
+    {% endblock content %}
 
 
 
-        <footer class="container bg-dark mx-auto text-white text-center col-12 rounded-top">
-            <div class="container mx-auto">
-                <div class="row justify-content-center">
-                    <div class="#">
+    <footer class="container">
+        <div
+            class="container bg-dark text-white text-center rounded-top footerbar d-flex align-content-center justify-content-center">
+            <div>
+                <div class="#">
+                    <div class="row justify-content-center">
+
                         <!-- Section: Social media -->
                         <section class="col-12">
                             <!-- Facebook -->
@@ -137,37 +129,39 @@
                                 data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
                         </section>
                         <!-- Section: Social media -->
-                    </div>
 
 
-                    <!-- Copyright -->
-                    <div class="rounded-top text-center text-white bg-secondary">
-                        © 2023 Copyright:
+
+                        <!-- Copyright -->
+                        <div class="rounded-top text-center text-white bg-secondary">
+                            © 2023 Copyright : Yoshin Ryu Shotokan Karate Club
+                        </div>
+                        <!-- Copyright -->
                     </div>
-                    <!-- Copyright -->
                 </div>
             </div>
-
-        </footer>
-
-        <!-- Time out for alert messages -->
-        <script>
-            setTimeout(function () {
-                let messages = document.getElementById('msg');
-                let alert = new bootstrap.Alert(messages);
-                alert.close();
-            }, 3000);
-        </script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
-    </main>
+        </div>
+    </footer>
 </body>
+<!-- Time out for alert messages -->
+<script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+
+
 
 </html>
