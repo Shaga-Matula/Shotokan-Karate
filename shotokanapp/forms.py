@@ -5,43 +5,6 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
 
-# from django.forms import ModelForm
-# from .models import StudentLevelMod
-
-# class PhotoForm(ModelForm):
-#     class Meta:
-#         model = StudentLevelMod
-#         fields = ['kata_image', 'syllabus_image']
-
-
-class user_sign_up(forms.ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = [
-            'first_name',
-            'last_name',
-            'email',
-            'address_1',
-            'address_2',
-            'date_of_birth',
-            'post_code',
-            'student_grade',
-        ]
-
-
-class StudentForm(forms.ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = [
-            'first_name',
-            'last_name',
-            'email',
-            'address_1',
-            'address_2',
-            'date_of_birth',
-            'post_code',
-            'student_grade',
-        ]
 
 
 class KyuRegisterForm(forms.ModelForm):
@@ -56,7 +19,7 @@ class KyuRegisterForm(forms.ModelForm):
         ]
 
 
-class UpdateStudentForm(forms.ModelForm):
+class StudentForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = [
@@ -66,6 +29,7 @@ class UpdateStudentForm(forms.ModelForm):
             'address_1',
             'address_2',
             'post_code',
+            'email',
             'role',
             'student_grade',
         ]
@@ -79,7 +43,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ( 'role', 'first_name', 'last_name', 'date_of_birth', 'address_1', 'address_2', 'post_code') + ('student_grade','email')
+        fields = UserCreationForm.Meta.fields + ( 'role', 'first_name', 'last_name','address_1', 'address_2', 'post_code','email','date_of_birth', 'student_grade' )
         
         widgets = {
             'date_of_birth': forms.DateInput(attrs={'type': 'date'}, format='%d/%m/%Y'),

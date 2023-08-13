@@ -1,32 +1,31 @@
 from django.contrib import admin
 from .models import StudentLevelMod, CustomUser
 from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
-
+from django.contrib.auth.admin import UserAdmin
+from .forms import CustomUserCreationForm, StudentForm
+from .models import CustomUser
 
 admin.site.register(StudentLevelMod)
 admin.site.unregister(SocialToken)
 admin.site.unregister(SocialAccount)
 admin.site.unregister(SocialApp)
 
-from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 
-from .forms import CustomUserCreationForm, UpdateStudentForm
-from .models import CustomUser
+
 
 ### Custom Admin Model
 
-from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 
-from .forms import CustomUserCreationForm, UpdateStudentForm
-from .models import CustomUser
+
+
+
+
 
 ### Custom Admin Model
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
-    form =  UpdateStudentForm
+    form =  StudentForm
     model = CustomUser
     list_display = ("email", "is_staff", "is_active", "role")
     list_filter = ("email", "is_staff", "is_active", "role")

@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import View, TemplateView, DetailView, DeleteView
 from django.views.generic.edit import FormView, UpdateView
-from .forms import StudentForm, KyuRegisterForm, UpdateStudentForm, CustomUserCreationForm
+from .forms import StudentForm, KyuRegisterForm, StudentForm, CustomUserCreationForm
 from .models import StudentLevelMod, CustomUser
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -23,15 +23,6 @@ class FirstPage(View):
     def get(self, request, *args, **kwargs):
         context = {'username': request.user.username, }
         return render(request, 'index.html', context)
-
-
-
-
-
-
-
-
-
 
 
 class StudentPageView(TemplateView):
@@ -71,7 +62,7 @@ class KyuListView(TemplateView):
 
 class DeleteKyuView(DeleteView):
     model = StudentLevelMod
-    form_class = UpdateStudentForm
+    form_class = StudentForm
     template_name = 'delete_kyu.html'
     success_url = reverse_lazy('success')
 
@@ -99,13 +90,13 @@ class UpdateKyuView(UpdateView):
 
 class DeleteStudentView(DeleteView):
     model = CustomUser
-    form_class = UpdateStudentForm
+    form_class = StudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
 
 class UpdateStudentView(UpdateView):
     model = CustomUser
-    form_class = UpdateStudentForm
+    form_class = StudentForm
     template_name = 'edit_record.html'
     success_url = reverse_lazy('success')
 
