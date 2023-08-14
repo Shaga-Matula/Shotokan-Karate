@@ -4,13 +4,13 @@
 
 {% load static %}
 
-<main class="container d-flex align-items-center">
+<main class="d-flex align-items-sm-center justify-content-center box-y">
     <!-- <strong>Kyu Level: {{ user.student_grade.kyu_level }}</strong></h5>
     <strong>Role Level: {{ user.role }}</strong></h5> -->
 
-    <div class="">
-        <div class="grey-transparent-background rounded mx-auto p-2 col-lg-8">
-            <div class="row ">
+    <div>
+        <div class="grey-transparent-background rounded mx-auto border-5 col-lg-6 col-md-10 col-sm-12 box-g mb-5 p-1">
+            <div class="row border-5">
                 <div class="col-lg-8 ">
                     {% load account %}
                     {% if user.is_authenticated %}
