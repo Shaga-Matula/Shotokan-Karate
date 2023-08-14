@@ -4,43 +4,45 @@
 {% block content %}
 
 {% load static %}
-{% for obj in student_page %}
-{% load cloudinary %}
-<h1 class="text-center">Grade Syllabus</h1>
-<div class="row justify-content-center">
-    <div class="col-lg-10 col-md-11 col-sm-12">
-        <table class="table table-dark spacer">
-            <thead>
-                <tr class="text-center">
+<main class=" box-b">
+    {% for obj in student_page %}
+    {% load cloudinary %}
+    <h1 class="text-center text-white">Grade Syllabus</h1>
 
-                    <th>Kyu Level</th>
-                    <th>Current Belt Color</th>
-                    <th>Kata Name</th>
-                </tr>
-            </thead>
-            <tbody class="rounded-bottom">
+    <content class="">
+        <div class="">
+            <table class="table table-dark ">
+                <thead>
+                    <tr class="text-center">
 
-                <tr class="text-center">
-                    <td>{{ obj.kyu_level }}</td>
-                    <td>{{ obj.belt_color }}</td>
-                    <td>{{ obj.kata_name }}</td>
-            </tbody>
-        </table>
-    </div>
-    </tr>
-    <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-6 make-center-hoz-ver spacer">
-            <p> "{% cloudinary obj.kata_image.url %}" </p>
+                        <th>Kyu Level</th>
+                        <th>Current Belt Color</th>
+                        <th>Kata Name</th>
+                    </tr>
+                </thead>
+                <tbody class="rounded-bottom">
+
+                    <tr class="text-center">
+                        <td>{{ obj.kyu_level }}</td>
+                        <td>{{ obj.belt_color }}</td>
+                        <td>{{ obj.kata_name }}</td>
+                </tbody>
+            </table>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 make-center-hoz-ver spacer">
-            <p> "{% cloudinary obj.syllabus_image.url %}" </p>
+        </tr>
+        <div class="d-flex justify-content-evenly">
+            <div class="mr-3">
+                {% cloudinary obj.kata_image.url width=350 height=500 %}
+            </div>
+            <div class="mr-3 d-flex align-items-center">
+                {% cloudinary obj.syllabus_image.url width=500 height=300 %}
+            </div>
         </div>
-    </div>
 
 
-    {% endfor %}
+        {% endfor %}
 
 
-</div>
-
+    </content>
+</main>
 {% endblock %}
