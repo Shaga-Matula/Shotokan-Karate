@@ -4,7 +4,7 @@
 {% block content %}
 
 {% load static %}
-<main class=" box-b">
+<main class="paperimage container">
     {% for obj in student_page %}
     {% load cloudinary %}
     <h1 class="text-center text-white">Grade Syllabus</h1>
@@ -30,12 +30,12 @@
             </table>
         </div>
         </tr>
-        <div class="d-flex justify-content-evenly">
-            <div class="mr-3">
-                {% cloudinary obj.kata_image.url width=350 height=500 %}
+        <div class="d-flex justify-content-evenly col-sm-12 flex-sm-wrap flex-wrap">
+            <div class="">
+                {% cloudinary obj.kata_image.url width=300 height=450 %}
             </div>
-            <div class="mr-3 d-flex align-items-center">
-                {% cloudinary obj.syllabus_image.url width=500 height=300 %}
+            <div class="d-flex align-items-center m-5">
+                {% cloudinary obj.syllabus_image.url width=300 height=250 %}
             </div>
         </div>
 
