@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% load static %}
+<main class="paperimage container">
+    <h1 class="text-center text-black">Grade Syllabus</h1>
+    {% for obj in student %}
+    {% load cloudinary %}
+    
+
+    <content class="">
+        <div class="">
+            <table class="table table-dark ">
+                <thead>
+                    <tr class="text-center">
+
+                        <th>Kyu Level</th>
+                        <th>Current Belt Color</th>
+                        <th>Kata Name</th>
+                    </tr>
+                </thead>
+                <tbody class="rounded-bottom">
+
+                    <tr class="text-center">
+                        <td>{{ obj.kyu_level }}</td>
+                        <td>{{ obj.belt_color }}</td>
+                        <td>{{ obj.kata_name }}</td>
+                </tbody>
+            </table>
+        </div>
+        </tr>
+        <div class="d-flex justify-content-evenly col-sm-12 flex-sm-wrap flex-wrap">
+            <div class="">
+                {% cloudinary obj.kata_image.url width=300 height=450 %}
+            </div>
+            <div class="d-flex align-items-center m-5">
+                {% cloudinary obj.syllabus_image.url width=300 height=250 %}
+            </div>
+        </div>
+
+
+        {% endfor %}
+
+
+    </content>
+</main>
+{% endblock %}

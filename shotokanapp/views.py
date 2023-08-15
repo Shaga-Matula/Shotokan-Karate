@@ -20,22 +20,44 @@ class FirstPage(View):
     context is created to store the username of the user making the request and
     display the username on screen when loged in along with the page 'index.html'.
     """
+
     def get(self, request, *args, **kwargs):
         context = {'username': request.user.username, }
         return render(request, 'index.html', context)
 
 
-class StudentPageView(TemplateView):
-    template_name = 'student_page.html'
+########################################################
+###############   Student Page View   ##################
 
+
+# class StudentPageView(TemplateView):
+#     template_name = 'student_page.html'
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['student_page'] = StudentLevelMod.objects.all()
+#         return context
+
+
+class StudentKyuListView(TemplateView):
+    template_name = 'student_kyu_list.html'
+
+       
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['student_page'] = StudentLevelMod.objects.all()
+        user_kyu_level = self.request.user.student_grade.kyu_level
+        records = StudentLevelMod.objects.filter(kyu_level__gte=user_kyu_level)
+        context['student'] = records
+   
         return context
 
 
+
 #########################################################
-#############      Kyu Table views    ################### 
+#############      Kyu Table views    ###################
+
+################    Kyu Create    #######################
+
 
 class KyuRegisterView(FormView):
     template_name = 'kyu_regester.html'
@@ -50,6 +72,9 @@ class KyuRegisterView(FormView):
         return reverse('success')
 
 
+##############       Kyu Read       #######################
+
+
 class KyuListView(TemplateView):
     template_name = 'kyu_list.html'
 
@@ -59,12 +84,7 @@ class KyuListView(TemplateView):
         return context
 
 
-
-class DeleteKyuView(DeleteView):
-    model = StudentLevelMod
-    form_class = StudentForm
-    template_name = 'delete_kyu.html'
-    success_url = reverse_lazy('success')
+##############     Kyu Update       #######################
 
 
 class UpdateKyuView(UpdateView):
@@ -84,15 +104,48 @@ class UpdateKyuView(UpdateView):
 
     def get_success_url(self):
         return reverse('success')
-    
-#########################################################
-#############       Custom User      #################### 
 
-class DeleteStudentView(DeleteView):
-    model = CustomUser
+
+#################    Kyu Delete    ########################
+
+
+class DeleteKyuView(DeleteView):
+    model = StudentLevelMod
     form_class = StudentForm
-    template_name = 'delete_record.html'
+    template_name = 'delete_kyu.html'
     success_url = reverse_lazy('success')
+
+
+#########################################################
+#############       Custom User      ####################
+
+
+##############       User Create    ######################
+
+
+class RegisterView(View):
+    def get(self, request):
+        form = CustomUserCreationForm()
+        return render(request, 'register.html', {'form': form})
+
+    def post(self, request):
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+        return render(request, 'register.html', {'form': form})
+
+##############      User Read     ######################
+
+class StudentListView(TemplateView):
+    template_name = 'student_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student'] = CustomUser.objects.all()
+        return context
+
+##############      User Update     ######################
 
 class UpdateStudentView(UpdateView):
     model = CustomUser
@@ -112,25 +165,19 @@ class UpdateStudentView(UpdateView):
     def get_success_url(self):
         return reverse('success')
 
+##############      User Delete     ######################
 
-class StudentListView(TemplateView):
-    template_name = 'student_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['student'] = CustomUser.objects.all()
-        return context
+class DeleteStudentView(DeleteView):
+    model = CustomUser
+    form_class = StudentForm
+    template_name = 'delete_record.html'
+    success_url = reverse_lazy('success')
 
 
-class RegisterView(View):
-    def get(self, request):
-        form = CustomUserCreationForm()
-        return render(request, 'register.html', {'form': form})
-    
-    def post(self, request):
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('success') 
-        return render(request, 'register.html', {'form': form})
-   
+
+
+
+
+
+
+
