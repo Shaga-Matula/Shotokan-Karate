@@ -40,7 +40,7 @@ class CustomUser(AbstractUser):
     date_of_birth = models.DateField(verbose_name='Date of Birth', null=True, blank=True)
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     email = models.EmailField(verbose_name='Email Address')
-    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=1, verbose_name='Student grade')
+    student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=1, verbose_name='Kyu To Achieve')
     
     groups = models.ManyToManyField(Group, related_name='customuser_set', blank=True)
     user_permissions = models.ManyToManyField(Permission, related_name='customuser_set', blank=True)
