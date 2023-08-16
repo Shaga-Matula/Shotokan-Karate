@@ -17,6 +17,8 @@ class StudentLevelMod(models.Model):
     syllabus_image = CloudinaryField('image', default='placeholder')
 
     class Meta:
+        verbose_name = "Kyu Level"
+        verbose_name_plural = "Kyu Levels"
         ordering = ["-kyu_level"]
 
     def __str__(self):
@@ -25,6 +27,7 @@ class StudentLevelMod(models.Model):
 
 class CustomUser(AbstractUser):
     # Custom User Model
+    
     class Role(models.TextChoices):
         ADMIN = 'ADMIN', 'Admin'
         STUDENT = 'STUDENT', 'Student'

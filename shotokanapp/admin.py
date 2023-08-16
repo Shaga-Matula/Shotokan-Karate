@@ -4,46 +4,40 @@ from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
 from django.contrib.auth.admin import UserAdmin
 from .forms import CustomUserCreationForm, StudentForm
 from .models import CustomUser
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin, Group
+from .models import CustomUser
 
-admin.site.register(StudentLevelMod)
-admin.site.unregister(SocialToken)
-admin.site.unregister(SocialAccount)
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
+
+
+
+
+
 admin.site.unregister(SocialApp)
+admin.site.unregister(Group)
+admin.site.unregister(SocialAccount)
+admin.site.unregister(SocialToken)
 
 
-
-
-### Custom Admin Model
-
-
-
-
-
-
-
-### Custom Admin Model
 
 class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form =  StudentForm
-    model = CustomUser
-    list_display = ("email", "is_staff", "is_active", "role")
-    list_filter = ("email", "is_staff", "is_active", "role")
     fieldsets = (
-        (None, {"fields": ("email", "password")}),
-        ("Permissions", {"fields": ("is_staff", "is_active", "groups", "user_permissions")}),
-        ("Roles", {"fields": ("role",)}),
+        (None, {'fields': ('username', 'password')}),
+        (None, {'fields': ('first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code')}),
+        (None, {'fields': ('role',)}),
     )
+    list_display = ('username', 'email', 'first_name', 'last_name', 'role',)
     add_fieldsets = (
         (None, {
-            "classes": ("wide",),
-            "fields": (
-                "email", "password1", "password2", "is_staff",
-                "is_active", "groups", "user_permissions", "role"
-            )}
-        ),
+            'classes': ('wide',),
+            'fields': ('username', 'password1', 'password2', 'first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code', 'role'),
+        }),
     )
-    search_fields = ("email",)
-    ordering = ("email",)
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(StudentLevelMod)
