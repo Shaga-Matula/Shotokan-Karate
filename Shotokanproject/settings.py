@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shotokanapp-156d7bd78744.herokuapp.com', 'localhost', '8000-shagamatula-shotokankar-6rbxp0qlqp9.ws-eu103.gitpod.io']
+ALLOWED_HOSTS = ['shotokanapp-156d7bd78744.herokuapp.com', 'localhost', '8000-shagamatula-shotokankar-6rbxp0qlqp9.ws-eu104.gitpod.io']
 
 
 # Application definition
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'phonenumber_field',
     'crispy_forms',
     'whitenoise',
     'shotokanapp',

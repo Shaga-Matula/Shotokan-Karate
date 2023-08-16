@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import AbstractUser, Group, Permission
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 
 # These are the Models for my Karate School Database 
@@ -25,9 +27,32 @@ class StudentLevelMod(models.Model):
         return self.kyu_level
 
 
+class SenseiMod(models.Model):
+    first_name = models.CharField(max_length=50, verbose_name='Sensei Name')
+    last_name = models.CharField(max_length=50, verbose_name='Sensei Last Name')
+    email = models.EmailField(verbose_name='Sensei Email Address')
+    contact_num = PhoneNumberField(verbose_name='Sensei Mobile')
+
+      
+    class Meta:
+        verbose_name = "Sensei"
+        verbose_name_plural = "Sensei"
+        ordering = ["-first_name"]
+
+    def __str__(self):
+        return self.first_name
+
+
+
+
+
+
 class CustomUser(AbstractUser):
     # Custom User Model
-    
+    class Meta:
+        verbose_name = "Shotokan Membrers"
+        verbose_name_plural = "Shotokan Membrers"
+
     class Role(models.TextChoices):
         ADMIN = 'ADMIN', 'Admin'
         STUDENT = 'STUDENT', 'Student'
@@ -43,10 +68,16 @@ class CustomUser(AbstractUser):
     date_of_birth = models.DateField(verbose_name='Date of Birth', null=True, blank=True)
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     email = models.EmailField(verbose_name='Email Address')
+
     student_grade = models.ForeignKey(StudentLevelMod, on_delete=models.PROTECT, default=1, verbose_name='Kyu To Achieve')
+    sensei = models.ForeignKey(SenseiMod, on_delete=models.PROTECT, default=None, verbose_name='Sensei', null=True)
     
     groups = models.ManyToManyField(Group, related_name='customuser_set', blank=True)
     user_permissions = models.ManyToManyField(Permission, related_name='customuser_set', blank=True)
 
     def __str__(self):
-        return self.username
+        return f"{self.last_name}, {self.first_name}"
+
+
+
+
