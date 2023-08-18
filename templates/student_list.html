@@ -7,9 +7,9 @@
         {% for obj in student %}
         <!-- # Hide Admin from list so not deleted -->
         {% if obj.username != 'admin' %}
-        <div class="col-sm-6 col-md-4 col-lg-2 ">
+        <div class="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <div class="card rounded-3 paperimage">
-                <div class="card-body accordion-body">
+                <div class="card-body accordion-body ">
                     <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">Name: {{ obj.first_name }}
                         {{ obj.last_name }}</h5>
                     <p class="card-text cardtextcolor ">User Name: {{ obj.username }}</p>

@@ -23,6 +23,7 @@ main {
 }
 
 /* Keep footer at bottom of page */
+/*  footer 135px so 100 - 135px  */
 .loger_out {
     min-height: calc(100vh - 135px);
 }
@@ -34,6 +35,28 @@ main {
     width: 500px;
     /* any other styles to make the card look expanded */
 }
+
+
+.card {
+    /* Initial styles */
+    transition: transform 0.3s ease;
+}
+
+.card.enlarged {
+    /* Enlarged styles */
+    transform: scale(1.5);
+    z-index: 9999;
+}
+
+
+.footer {
+    position: absolute;
+    width: 100%;
+    min-height: 320px;
+    bottom: 0;
+    left: 0;
+}
+
 
 /* ############################################## */
 
@@ -55,13 +78,6 @@ main {
 }
 
 
-.footer {
-    position: absolute;
-    width: 100%;
-    min-height: 320px;
-    bottom: 0;
-    left: 0;
-}
 
 
 /* Note to rember */
@@ -181,12 +197,6 @@ main {
 }
 
 
-.card {
-    white-space: nowrap;
-    width: 300px;
-    flex-wrap: nowrap;
-    margin: 10px;
-}
 
 
 .custom-kate-img {
