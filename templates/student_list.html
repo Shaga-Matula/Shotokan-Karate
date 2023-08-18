@@ -1,26 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main class="row d-flex justify-content-center ">
+<main class="container">
     <h1 class="text-center text-white">Student List</h1>
-    <div class="row d-flex">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
         {% for obj in student %}
         <!-- # Hide Admin from list so not deleted -->
         {% if obj.username != 'admin' %}
-        <div class="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
+        <div class="col card-width">
             <div class="card rounded-3 paperimage">
-                <div class="card-body accordion-body ">
+                <div class="card-body accordion-body">
                     <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">Name: {{ obj.first_name }}
                         {{ obj.last_name }}</h5>
-                    <p class="card-text cardtextcolor ">User Name: {{ obj.username }}</p>
-                    <p class="card-text cardtextcolor ">DOB: {{ obj.date_of_birth }}</p>
-                    <p class="card-text cardtextcolor ">Email: {{ obj.email }}</p>
-                    <p class="card-text cardtextcolor ">Add_1: {{ obj.address_1 }}</p>
-                    <p class="card-text cardtextcolor ">Add_2: {{ obj.address_2 }}</p>
-                    <p class="card-text cardtextcolor ">Post Code: {{ obj.post_code }}</p>
-                    <p class="card-text cardtextcolor ">Role: {{ obj.role }}</p>
-                    <p class="card-text cardtextcolor ">Grade: {{ obj.student_grade }}</p>
-                    <p class="card-text cardtextcolor ">Student ID: {{ obj.id }}</p>
+                    <p class="card-text cardtextcolor">User Name: {{ obj.username }}</p>
+                    <p class="card-text cardtextcolor">DOB: {{ obj.date_of_birth }}</p>
+                    <p class="card-text cardtextcolor">Email: {{ obj.email }}</p>
+                    <p class="card-text cardtextcolor">Add_1: {{ obj.address_1 }}</p>
+                    <p class="card-text cardtextcolor">Add_2: {{ obj.address_2 }}</p>
+                    <p class="card-text cardtextcolor">Post Code: {{ obj.post_code }}</p>
+                    <p class="card-text cardtextcolor">Role: {{ obj.role }}</p>
+                    <p class="card-text cardtextcolor">Grade: {{ obj.student_grade }}</p>
+                    <p class="card-text cardtextcolor">Student ID: {{ obj.id }}</p>
                     <div class="d-flex align-content-lg-center justify-content-between">
                         <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Update</a>
                         <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
