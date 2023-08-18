@@ -25,8 +25,18 @@ main {
 /* Keep footer at bottom of page */
 .loger_out {
     min-height: calc(100vh - 135px);
-
 }
+
+/* Perplexity AI help */
+.card.expanded {
+    height: 500px;
+    /* or any other value that suits your needs */
+    width: 500px;
+    /* any other styles to make the card look expanded */
+}
+
+/* ############################################## */
+
 
 /* Register page */
 
@@ -204,10 +214,10 @@ main {
     transform: scale(5);
 
 }
-
+/* 
 /*  On screens Smaller than 768 */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .rotate-me {
         transform: rotate(45deg);
     }
-}
+} */ */
