@@ -10,7 +10,7 @@
         <div class="col-sm-6 col-md-4 col-lg-2 ">
             <div class="card rounded-3 paperimage">
                 <div class="card-body accordion-body">
-                    <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">Name: {{ obj.sensei_first_name  }}
+                    <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">{{ obj.sensei_first_name  }}
                         {{ obj.sensei_last_name }}</h5>
                     <p class="card-text cardtextcolor ">Sensei Name: {{ obj.sensei_first_name }}</p>
                     <p class="card-text cardtextcolor ">Sensei DOB: {{ obj.sensei_last_name }}</p>
@@ -19,7 +19,7 @@
 
                     <div class="d-flex align-content-lg-center justify-content-between">
                         <a href="{% url 'edit_sensei' pk=obj.id %}" class="btn btn-success">Update</a>
-                        <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'delete_sensei' pk=obj.id %}" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
             </div>

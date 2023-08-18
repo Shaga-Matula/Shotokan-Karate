@@ -30,6 +30,7 @@ urlpatterns = [
     path('create_sensei/', views.SenseiRegisterView.as_view(), name='create_sensei'),
     path('sensei_list/', views.SenseiListView.as_view(), name='sensei_list'),
     path('edit_sensei/<int:pk>', views.UpdateSenseiView.as_view(), name='edit_sensei'),
+    path('delete_sensei/<int:pk>', views.DeleteSenseiView.as_view(), name='delete_sensei'),
 
     ###################   Student Syllabus  ########################
     

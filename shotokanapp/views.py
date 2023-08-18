@@ -30,25 +30,17 @@ class FirstPage(View):
 ###############   Student Page View   ##################
 
 
-# class StudentPageView(TemplateView):
-#     template_name = 'student_page.html'
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['student_page'] = StudentLevelMod.objects.all()
-#         return context
-
 
 class StudentKyuListView(TemplateView):
     template_name = 'student_kyu_list.html'
 
-       
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user_kyu_level = self.request.user.student_grade.kyu_level
         records = StudentLevelMod.objects.filter(kyu_level__gte=user_kyu_level)
         context['student'] = records
-   
+
         return context
 
 
@@ -110,6 +102,13 @@ class SenseiListView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['sensei_list'] = SenseiMod.objects.all()
         return context
+
+
+class DeleteSenseiView(DeleteView):
+    model = SenseiMod
+    form_class = SenseiListView
+    template_name = 'delete_sensei.html'
+    success_url = reverse_lazy('success')
 ##############       Kyu Read       #######################
 
 

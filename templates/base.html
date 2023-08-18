@@ -54,7 +54,7 @@
                         {% endif %}
                         {% if user.role == 'ADMIN' %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Create Student Register</a>
+                            <a class="nav-link" href="{% url 'register' %}">Create Student</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'studentlist' %}">Student Read\Update\Delete</a>
@@ -63,11 +63,18 @@
                             <a class="nav-link" href="{% url 'kyuregister' %}">Create Kyu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'kyu_list' %}">Kyu Read\Update\Delete</a>
+                            <a class="nav-link" href="{% url 'kyu_list' %}">Kyu Read\Update\Delete </a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'create_sensei' %}">Create Sensei</a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'sensei_list' %}">Sensei Read\Update\Delete</a>
                         </li class="nav-item">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:index' %}">Django Admin Panel</a>
                         </li class="nav-item">
+                        
                         {% endif %}
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
@@ -80,6 +87,8 @@
                 </div>
             </nav>
     </header>
+
+
     <!-- Alert messages and warnings id = msg -->
 
     <div class="container">

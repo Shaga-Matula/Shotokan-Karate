@@ -41,6 +41,7 @@ class StudentForm(forms.ModelForm):
             'email',
             'role',
             'student_grade',
+            'sensei',
         ]
 
 
