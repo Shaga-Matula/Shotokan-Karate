@@ -7,8 +7,8 @@
         {% for obj in sensei_list %}
         <!-- # Hide Admin from list so not deleted -->
         {% if obj.username != 'admin' %}
-        <div class="col card-width">
-            <div class="card rounded-3 paperimage">
+        <div class="col card-width ">
+            <div class="card rounded-3 paperimage card-height">
                 <div class="card-body accordion-body">
                     <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">{{ obj.sensei_first_name  }}
                         {{ obj.sensei_last_name }}</h5>

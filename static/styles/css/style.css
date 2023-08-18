@@ -40,9 +40,10 @@ main {
 
 .card-width{
     max-width: 400px;
-    
 }
-
+.card-height{
+    min-height: 300px;
+}
 
 .paperimage {
     background-image: url('/static/images/pages/japan-back.jpg');
