@@ -17,7 +17,7 @@
                     <p class="card-text cardtextcolor ">Sensei Email: {{ obj.sensei_email}}</p>
                     <p class="card-text cardtextcolor ">Sensei Contact: {{ obj.sensei_contact_num}}</p>
 
-                    <div class="d-flex align-content-lg-center justify-content-between">
+                    <div class="d-flex align-content-lg-center justify-content-between pt-5">
                         <a href="{% url 'edit_sensei' pk=obj.id %}" class="btn btn-success">Update</a>
                         <a href="{% url 'delete_sensei' pk=obj.id %}" class="btn btn-danger">Delete</a>
                     </div>
