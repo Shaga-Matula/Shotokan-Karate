@@ -1,31 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main class="container">
-    <h1 class="text-center text-white">Sensei List</h1>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
-        {% for obj in sensei_list %}
-        <!-- # Hide Admin from list so not deleted -->
-        {% if obj.username != 'admin' %}
-        <div class="col card-width ">
-            <div class="card rounded-3 paperimage card-height">
-                <div class="card-body accordion-body">
-                    <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">{{ obj.sensei_first_name  }}
-                        {{ obj.sensei_last_name }}</h5>
-                    <p class="card-text cardtextcolor ">Sensei Name: {{ obj.sensei_first_name }}</p>
-                    <p class="card-text cardtextcolor ">Sensei DOB: {{ obj.sensei_last_name }}</p>
-                    <p class="card-text cardtextcolor ">Sensei Email: {{ obj.sensei_email}}</p>
-                    <p class="card-text cardtextcolor ">Sensei Contact: {{ obj.sensei_contact_num}}</p>
+<h1 class="text-center text-white">Sensei List</h1>
+<main class="container d-flex align-items-center">
+   
+    <div class="">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex align-items-center">
+            {% for obj in sensei_list %}
+            <!-- # Hide Admin from list so not deleted -->
+            {% if obj.username != 'admin' %}
+            <div class="col card-width ">
+                <div class="card rounded-3 paperimage ">
+                    <div class="card-body accordion-body card-height">
+                        <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">
+                            {{ obj.sensei_first_name  }}
+                            {{ obj.sensei_last_name }}</h5>
+                        <p class="card-text cardtextcolor ">Sensei Name: {{ obj.sensei_first_name }}</p>
+                        <p class="card-text cardtextcolor ">Sensei DOB: {{ obj.sensei_last_name }}</p>
+                        <p class="card-text cardtextcolor ">Sensei Email: {{ obj.sensei_email}}</p>
+                        <p class="card-text cardtextcolor ">Sensei Contact: {{ obj.sensei_contact_num}}</p>
 
-                    <div class="d-flex align-content-lg-center justify-content-between pt-5">
-                        <a href="{% url 'edit_sensei' pk=obj.id %}" class="btn btn-success">Update</a>
-                        <a href="{% url 'delete_sensei' pk=obj.id %}" class="btn btn-danger">Delete</a>
+                        <div class="d-flex align-content-lg-center justify-content-between pt-3">
+                            <a href="{% url 'edit_sensei' pk=obj.id %}" class="btn btn-success">Update</a>
+                            <a href="{% url 'delete_sensei' pk=obj.id %}" class="btn btn-danger">Delete</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
 </main>
 {% endblock %}
