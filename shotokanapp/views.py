@@ -4,8 +4,8 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import View, TemplateView, DetailView, DeleteView
 from django.views.generic.edit import FormView, UpdateView
-from .forms import StudentForm, KyuRegisterForm, StudentForm, CustomUserCreationForm
-from .models import StudentLevelMod, CustomUser
+from .forms import StudentForm, KyuRegisterForm, StudentForm, CustomUserCreationForm, SenseiRegisterForm
+from .models import StudentLevelMod, CustomUser, SenseiMod
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views import View
@@ -72,6 +72,44 @@ class KyuRegisterView(FormView):
         return reverse('success')
 
 
+class UpdateSenseiView(UpdateView):
+    model = SenseiMod
+    form_class = SenseiRegisterForm
+    template_name = 'edit_sensei.html'
+    success_url = reverse_lazy('success')
+
+    def get_object(self, queryset=None):
+        obj = get_object_or_404(SenseiMod, pk=self.kwargs['pk'])
+        return obj
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = self.kwargs['pk']
+        return context
+
+    def get_success_url(self):
+        return reverse('success')
+
+class SenseiRegisterView(FormView):
+    template_name = 'reg_sensei.html'
+    form_class = SenseiRegisterForm
+    success_url = 'success.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('success')
+
+
+class SenseiListView(TemplateView):
+    template_name = 'sensei_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['sensei_list'] = SenseiMod.objects.all()
+        return context
 ##############       Kyu Read       #######################
 
 
@@ -164,6 +202,8 @@ class UpdateStudentView(UpdateView):
 
     def get_success_url(self):
         return reverse('success')
+
+        
 
 ##############      User Delete     ######################
 

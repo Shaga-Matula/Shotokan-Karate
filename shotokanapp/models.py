@@ -28,26 +28,25 @@ class StudentLevelMod(models.Model):
 
 
 class SenseiMod(models.Model):
-    first_name = models.CharField(max_length=50, verbose_name='Sensei Name')
-    last_name = models.CharField(max_length=50, verbose_name='Sensei Last Name')
-    email = models.EmailField(verbose_name='Sensei Email Address')
-    contact_num = PhoneNumberField(verbose_name='Sensei Mobile')
+    sensei_first_name = models.CharField(max_length=50, verbose_name='Sensei Name')
+    sensei_last_name = models.CharField(max_length=50, verbose_name='Sensei Last Name')
+    sensei_email = models.EmailField(verbose_name='Sensei Email Address')
+    sensei_contact_num = PhoneNumberField(verbose_name='Sensei Mobile')
 
       
     class Meta:
         verbose_name = "Sensei"
         verbose_name_plural = "Sensei"
-        ordering = ["-first_name"]
+        ordering = ["-sensei_first_name"]
 
     def __str__(self):
-        return self.first_name
-
-
-
+        return self.sensei_first_name
 
 
 
 class CustomUser(AbstractUser):
+
+    readonly_fields = ('last_updated',)
     # Custom User Model
     class Meta:
         verbose_name = "Shotokan Membrers"
@@ -66,6 +65,7 @@ class CustomUser(AbstractUser):
     address_1 = models.CharField(max_length=50, verbose_name='Address Line One')
     address_2 = models.CharField(max_length=50, verbose_name='Address Line Two', blank=True, null=True)
     date_of_birth = models.DateField(verbose_name='Date of Birth', null=True, blank=True)
+    last_updated = models.DateTimeField(auto_now=True, verbose_name='Last Update')
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     email = models.EmailField(verbose_name='Email Address')
 
