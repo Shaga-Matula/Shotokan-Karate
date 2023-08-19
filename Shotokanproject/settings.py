@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'crispy_forms',
     'whitenoise',
+    'active_link',
     'shotokanapp',
 ]
 

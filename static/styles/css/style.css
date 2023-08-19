@@ -68,6 +68,13 @@ main {
     transform: scale(3);
 
 }
+
+
+
+.nav-link.active {
+    background-color: blue;
+    color: white;
+  }
 /* ############################################## */
 
 
