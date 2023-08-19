@@ -8,7 +8,7 @@ from .views import StudentListView, StudentKyuListView,SenseiRegisterView
 urlpatterns = [
     ###################   Home/Success Page #######################
 
-    path('', views.FirstPage.as_view(), name="home"),
+    path('', views.FirstPage.as_view(), name='home'),
     path('success/', TemplateView.as_view(template_name="success.html"), name='success'),
  
     

@@ -46,9 +46,11 @@
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
+                        {% with request.resolver_match.url_name as url_name %}
                         <li class="nav-item">
-                            <a class="nav-link {% active_link '' %}" href="{% url 'home' %}" >Home</a>
+                            <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}" >Home</a>
                         </li>
+                        {% endwith %}
                         {% if user.is_authenticated %}
                         {% if user.role == 'STUDENT' %}
                         <li class="nav-item">

@@ -70,10 +70,8 @@ main {
 }
 
 
-
-.nav-link.active {
-    background-color: blue;
-    color: white;
+.active {
+    color: red;
   }
 /* ############################################## */
 
