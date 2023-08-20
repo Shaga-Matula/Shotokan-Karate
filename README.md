@@ -106,14 +106,24 @@ Improve website accessibility: This goal involves making the website more access
 * Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. It's like putting your toys away in a toy box so you can find them easily and don't lose any. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database table is like keeping your room clean and tidy so you can find everything you need quickly and easily.
 
 
-<img src="static/images/readme/mock_database.png" width="400" height="200" alt="Pre-Normalizing">
+<img src="static/images/readme/exceldatabase.png" width="400" height="300" alt="Excel Data Base">
 
 
 ### Pre-Normalizing 
 * This is the database table named "Students" before normalizing; it stores information about martial arts students. It has 20 fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
 
+<img src="static/images/readme/notnorm.png" width="400" height="100" alt="un Normalised">
 
-<img src="static/images/readme/first_table.png" width="150" height="300" alt="Pre-Normalizing">
+### Over view of Shotkan Database
+
+*   The "Students_Table" is a database table that stores information about students.
+    It has several columns that represent different attributes of a student, such as their ID, first name, last name, date of birth, email, address, postal code, role, last updated timestamp, student grade, and sensei.
+*   The table also includes foreign key relationships to other tables, such as the "Student_Lvl" table and the "Sensei" table.
+*   The "Student_Lvl" table stores information about the student's level, including the kyu level, belt color, kata name, kata image, and syllabus image.
+*   The "Sensei" table stores information about the sensei, including their ID, first name, last name, email, and contact number.
+*   Overall, the "Students_Table" provides a structured way to store and organize information about students, their levels, and their sensei. It allows for efficient retrieval  and manipulation of student data within a database system.
+
+
 <img src="static/images/readme/shotokandbdesign.png" width="400" height="300" alt="Database Design">
 
 ## Tools
