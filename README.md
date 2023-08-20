@@ -113,8 +113,8 @@ Improve website accessibility: This goal involves making the website more access
 * This is the database table named "Students" before normalizing; it stores information about martial arts students. It has 20 fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
 
 
-<img src="static/images/readme_images/first_table.png" width="150" height="300" alt="Pre-Normalizing">
-
+<img src="static/images/readme/first_table.png" width="150" height="300" alt="Pre-Normalizing">
+<img src="static/images/readme/shotokandbdesign.png" width="400" height="300" alt="Database Design">
 
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
