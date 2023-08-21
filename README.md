@@ -19,13 +19,18 @@
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
 * [Link to Shotokan Heroku](https://shotokanapp-156d7bd78744.herokuapp.com/)
 
-# Introduction
+
+
+# Project Introduction
+
+<hr style="border:1px solid white">
+
 * The Shotokan website is designed to introduce potential karate students to Shotokan Karate as a means to achieve a healthier lifestyle and a healthy state of mind. The website aims to provide an engaging and informative experience for visitors. Shotokan Karate is a dynamic martial art style created by the late, great Gichin Funakoshi. The philosophy of Shotokan Karate is based on the traditional Budo (martial arts) spirit of Karate, which seeks the perfection of character through hard work and discipline. Shotokan Karate is a form of self-defense that is built on a strong foundation of physical and mental training.
 
 
-# Landing Page
+## Landing Page
 * Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image as background wallpaper that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
-# Registration Process
+## Registration Process
 * If a student decides to take up lessons, they can use the contact us form to express interest. If they choose to become students the head instructor can register through a form integrated into the website. This registration form is built using Django, along with Bootstrap for enhanced styling and responsiveness. The use of Django allows for efficient handling of form submissions and data management. The information provided by the student will be securely stored in a PostgreSQL database, ensuring the privacy and security of their personal details.
 * Utilizing Django, Bootstrap and Python, the registration process is streamlined and user-friendly. The integration of these technologies enables a seamless user experience, making it easy for instructors to register students to sign up for lessons and become part of the Shotokan Karate community.
 * The ultimate goal of the Shotokan website is to provide an engaging and informative platform that encourages potential students to explore the benefits of Shotokan Karate and take the first step towards a healthier lifestyle and a positive state of mind.
@@ -39,7 +44,7 @@
     4.  [User Stories](#user-stories)
     5.  [Design](#design)
 
-<hr style="border:1px solid white">
+
 
 
 ## MVP
@@ -58,38 +63,18 @@ Improve website accessibility: This goal involves making the website more access
 * By following best practices for website accessibility, such as using semantic HTML, providing alternative text for images, and using ARIA attributes, we aim to ensure that all users can access and use the website.
 * Enhance website design: This goal involves improving the overall look and feel of the website to make it more visually appealing and engaging for users. By following best practices for website design, such as using a consistent color scheme, using whitespace effectively, and using high-quality images, we aim to create a website that is visually appealing and engaging for users.
 
-## User experience
+# User experience
+<hr style="border:1px solid white">
 
 * Contact Page: The contact page should have a form that allows students to send messages to instructors and the school administration. 
 * Home Page: The home page should have a clear and concise navigation menu that allows users to easily access different sections of the website. 
 * Instructor Dashboard: The instructor dashboard should allow instructors to create, read, update, and delete information about students and their instructors. It should also allow them to view their progress. 
 * Student Dashboard: The student dashboard should allow students to view their class grades and critical information for their next gradeing. 
 * Grade Pages: Each class page should have a detailed description of the grade material, including the Kata name, and any prerequisites. 
-* The Django admin panel should be tailored to function as a functional mirror of the website. This means that the admin panel should have the same features and functionalities as the website itself. By tailoring the admin panel to be a functioning copy of the website, administrators can easily navigate and make changes to the website without needing to access the code directly. This ensures consistency and ease of use for managing the website's backend operations.
+* The Django admin panel should be tailored to function as a functional mirror of the website. This means that the admin panel should have the same features and functionalities as the website itself. By tailoring the admin panel to be a functioning copy of the website, administrators can easily navigate and make changes to the students without needing to access the website directly. This ensures consistency and ease of use for managing the website's backend operations.
 
-
-## Agile Aproach
-
-* The Agile approach is a flexible project management methodology that emphasizes collaboration and iterative development. It is widely used in software development but can be applied to various industries and projects. The Agile approach focuses on delivering value to customers through incremental and frequent delivery of small chunks of functionality. One of the key components of the Agile approach is the use of user stories, which are short descriptions of what a user wants to achieve with a product or service. User stories follow a specific format: "As a [user], I want to [action], so that I [outcome]". The use of user stories helps to capture the user's perspective and prioritize work.
-
-* In GitHub, labels are used to categorize issues and pull requests. They can help you keep track of what needs to be done and what's already been done. I have create some labels and used some of the default ones. Labels can be used to indicate the priority of an issue, the type of issue, or the status of an issue. For example, "bug", "enhancement", "high priority", "in progress", or "done".
-
-
-## User Stories
-
-
-* The user story template in this project is a widely used format for defining user requirements in Agile software development. The template follows the format of "As a [user], I want to [action], so that [outcome]". The template is used to capture user requirements in a concise and structured manner, making it easier for the development team to understand and implement them.
-* The user story template in this project includes three sections: Estimation Effort, Tasks, and Acceptance Criteria. The Estimation Effort section uses the Fibonacci sequence to estimate the amount of effort required to complete each task. The Tasks section lists the specific tasks that need to be completed to achieve the user story. The Acceptance Criteria section lists the criteria that must be met for the user story to be considered complete.
-* The use of the Fibonacci sequence in the Estimation Effort section is a common practice in Agile software development. The Fibonacci sequence is a numerical sequence in which each number is the sum of the two preceding numbers. The sequence is often used in Agile software development to estimate the amount of effort required to complete a task. The sequence is used because it allows for a more accurate estimation of effort, as it takes into account the uncertainty and complexity of software development.
-* The user story template in this project is a useful tool for Agile software development teams. It provides a structured and concise format for capturing user requirements and helps to ensure that the development team understands and implements them correctly. By using this template, the development team can work more efficiently and effectively, resulting in a higher quality product that meets the needs of the users.
-
-<hr>
-
-<img src="static/images/readme/userstoriesland.png" alt="User Story Template Image" height="300">
-
+# Design 
 <hr style="border:1px solid white">
-
-## Design 
 
 ### Landing Page
 
@@ -132,6 +117,53 @@ Improve website accessibility: This goal involves making the website more access
 
 <img src="static/images/readme/shotokandbdesign.png" width="400" height="300" alt="Database Design">
 
+# Features
+<hr style="border:1px solid white">
+
+## Agile Aproach
+
+* The Agile approach is a flexible project management methodology that emphasizes collaboration and iterative development. It is widely used in software development but can be applied to various industries and projects. The Agile approach focuses on delivering value to customers through incremental and frequent delivery of small chunks of functionality. One of the key components of the Agile approach is the use of user stories, which are short descriptions of what a user wants to achieve with a product or service. User stories follow a specific format: "As a [user], I want to [action], so that I [outcome]". The use of user stories helps to capture the user's perspective and prioritize work.
+
+* In GitHub, labels are used to categorize issues and pull requests. They can help you keep track of what needs to be done and what's already been done. I have create some labels and used some of the default ones. Labels can be used to indicate the priority of an issue, the type of issue, or the status of an issue. For example, "bug", "enhancement", "high priority", "in progress", or "done".
+
+
+## User Stories
+
+
+* The user story template in this project is a widely used format for defining user requirements in Agile software development. The template follows the format of "As a [user], I want to [action], so that [outcome]". The template is used to capture user requirements in a concise and structured manner, making it easier for the development team to understand and implement them.
+* The user story template in this project includes three sections: Estimation Effort, Tasks, and Acceptance Criteria. The Estimation Effort section uses the Fibonacci sequence to estimate the amount of effort required to complete each task. The Tasks section lists the specific tasks that need to be completed to achieve the user story. The Acceptance Criteria section lists the criteria that must be met for the user story to be considered complete.
+* The use of the Fibonacci sequence in the Estimation Effort section is a common practice in Agile software development. The Fibonacci sequence is a numerical sequence in which each number is the sum of the two preceding numbers. The sequence is often used in Agile software development to estimate the amount of effort required to complete a task. The sequence is used because it allows for a more accurate estimation of effort, as it takes into account the uncertainty and complexity of software development.
+* The user story template in this project is a useful tool for Agile software development teams. It provides a structured and concise format for capturing user requirements and helps to ensure that the development team understands and implements them correctly. By using this template, the development team can work more efficiently and effectively, resulting in a higher quality product that meets the needs of the users.
+
+<hr>
+
+<img src="static/images/readme/userstoriesland.png" alt="User Story Template Image" height="300">
+
+
+# Technologies Used
+<hr style="border:1px solid white">
+
+
+# Deployment and Local Development
+
+<hr style="border:1px solid white">
+
+# Testing
+
+<hr style="border:1px solid white">
+
+
+# Credits
+
+<hr style="border:1px solid white">
+
+
+
+
+
+
+
+
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
 ### QuickDBD : -       https://app.quickdatabasediagrams.com
@@ -145,3 +177,26 @@ Improve website accessibility: This goal involves making the website more access
 * AUTH_USER_MODEL = 'shotokanapp.CustomUser'
 * fix by https://testdriven.io/blog/django-custom-user-model/
 
+## Login and permisions
+
+* In this project, there are three types of users: admin (superuser), teachers, and students. Each user type has exclusive navbar access to specific functionalities and pages. Here's a breakdown of the access and functionalities for each user type:
+
+### Admin (superuser):
+
+- Exclusive access to the admin panel.
+- Can manage users, groups, and permissions in the admin panel.
+- Can create and delete users in the admin panel.
+- Can assign permissions to users or groups.
+
+### Teachers:
+
+- Exclusive access to the website's functionality.
+- Can create student profiles in the Registration Page.
+- Can read student data from the Student View Page.
+- Can update student data from the Student View Page.
+- Can delete a student profile from the Student View Page.
+
+### Students:
+
+- Exclusive access to their own information page.
+- Cannot access or modify any students' information.
