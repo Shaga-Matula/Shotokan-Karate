@@ -28,14 +28,14 @@ class CustomUserAdmin(UserAdmin):
     
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        (None, {'fields': ('first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code')}),
+        (None, {'fields': ('first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code','contact_num' )}),
         (None, {'fields': ('role', 'student_grade','sensei',)}),
     )
-    list_display = ('username', 'email', 'first_name', 'last_name', 'role','student_grade','sensei', 'last_updated')
+    list_display = ('username', 'email', 'first_name', 'last_name', 'role','student_grade','sensei', 'contact_num' ,'last_updated')
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'password1', 'password2', 'first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code', 'role', 'student_grade','sensei'),
+            'fields': ('username', 'password1', 'password2', 'first_name', 'last_name', 'email', 'date_of_birth', 'address_1', 'address_2', 'post_code', 'contact_num','role', 'student_grade','sensei'),
         }),
     )
     def __str__(self):

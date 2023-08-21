@@ -52,7 +52,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('role', 'first_name',  'last_name', 'address_1', 'address_2', 'student_grade', 'sensei', 'post_code', 'email', 'date_of_birth', 'student_grade', 'sensei', 'role')
+        fields = UserCreationForm.Meta.fields + ('role', 'first_name',  'last_name', 'address_1', 'address_2', 'student_grade', 'sensei', 'post_code', 'email', 'date_of_birth','contact_num','student_grade', 'sensei', 'role')
         
         widgets = {
             'date_of_birth': forms.DateInput(attrs={'type': 'date'}, format='%d/%m/%Y'),
@@ -67,6 +67,7 @@ class CustomUserCreationForm(UserCreationForm):
         user.address_2 = self.cleaned_data['address_2']
         user.date_of_birth = self.cleaned_data['date_of_birth']
         user.post_code = self.cleaned_data['post_code']
+        user.contact_num = self.cleaned_data['contact_num']
         user.role = self.cleaned_data.get('role')
         user.student_grade = self.cleaned_data['student_grade']
         user.email = self.cleaned_data['email']

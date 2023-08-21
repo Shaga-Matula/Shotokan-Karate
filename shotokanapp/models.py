@@ -65,6 +65,7 @@ class CustomUser(AbstractUser):
     address_1 = models.CharField(max_length=50, verbose_name='Address Line One')
     address_2 = models.CharField(max_length=50, verbose_name='Address Line Two', blank=True, null=True)
     date_of_birth = models.DateField(verbose_name='Date of Birth', null=True, blank=True)
+    contact_num = PhoneNumberField(verbose_name='Student Contact Number', blank=True, null=True)
     last_updated = models.DateTimeField(auto_now=True, verbose_name='Last Update')
     post_code = models.CharField(max_length=10, verbose_name='Post Code')
     email = models.EmailField(verbose_name='Email Address')

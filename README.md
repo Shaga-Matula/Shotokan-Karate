@@ -24,10 +24,10 @@
 
 
 # Landing Page
-* Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
+* Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image as background wallpaper that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
 # Registration Process
 * If a student decides to take up lessons, they can use the contact us form to express interest. If they choose to become students the head instructor can register through a form integrated into the website. This registration form is built using Django, along with Bootstrap for enhanced styling and responsiveness. The use of Django allows for efficient handling of form submissions and data management. The information provided by the student will be securely stored in a PostgreSQL database, ensuring the privacy and security of their personal details.
-* By leveraging the power of Django, Bootstrap, and Python, the registration process is streamlined and user-friendly. The integration of these technologies enables a seamless user experience, making it easy for instructors to register students to sign up for lessons and become part of the Shotokan Karate community.
+* Utilizing Django, Bootstrap and Python, the registration process is streamlined and user-friendly. The integration of these technologies enables a seamless user experience, making it easy for instructors to register students to sign up for lessons and become part of the Shotokan Karate community.
 * The ultimate goal of the Shotokan website is to provide an engaging and informative platform that encourages potential students to explore the benefits of Shotokan Karate and take the first step towards a healthier lifestyle and a positive state of mind.
 
 ## README Table Content
@@ -41,26 +41,32 @@
 
 <hr style="border:1px solid white">
 
-## Project Goals
+
+## MVP
+
+* An MVP, or Minimum Viable Product, is a product development technique that involves creating a new product with just enough features to satisfy initial customers. The idea is to get the product to the market quickly, gather feedback, and improve it based on that feedback. The goal is to achieve a desirable product/market fit or determine if the product is non-viable. An MVP is a basic version of a new product with minimum essential features to satisfy the initial customers. It allows the team to gather the maximum amount of authentic learning about customers with little effort.
+
+## Project Goals (MVP)
 
 * Create a user-friendly website that provides a high-quality user experience. This includes implementing best practices for website design and development. By focusing on intuitive navigation, clear content presentation, and responsive design, I aim to ensure that users have a positive and enjoyable experience while interacting with the website.
 * Develop a form that effectively handles initial inquiries to the website. This form will be designed to capture relevant information from users and provide a seamless experience for submitting inquiries. By implementing HTML and CSS techniques, I will create a visually appealing and user-friendly form that encourages users to engage with the website.
-* Utilize Agile methodology to organize the project, specifically by employing methods such as epics, milestones, and user stories. This approach will enable effective project management, allowing me to break down the project into manageable tasks and prioritize them based on user needs and project objectives. By using Agile, I can ensure a collaborative and iterative development process that aligns with the dynamic nature of the project.
-* Improve website performance: This goal involves optimizing the website's speed and responsiveness to improve the user experience. By implementing best practices for website performance, such as optimizing images, reducing HTTP requests, and minifying code, we aim to ensure that users have a fast and seamless experience while interacting with the website.
+* Utilize Agile methodology to organize the project, specifically by employing methods such as milestones (epics), and user stories. This approach will enable effective project management, allowing me to break down the project into manageable tasks and prioritize them based on user needs and project objectives. By using Agile, I can ensure a collaborative and iterative development process that aligns with the dynamic nature of the project.
+* Improve website performance: This goal involves optimizing the website's speed and responsiveness to improve the user experience. By implementing best practices for website performance, such as optimizing images, reducing HTTP requests, and minifying code, I aim to ensure that users have a fast and seamless experience while interacting with the website.
 * Enhance website security: This goal involves implementing security measures to protect user data and prevent hacking or other security breaches. By following best practices for website security, I aim to ensure that user data is secure and protected from potential threats.
-* Increase website traffic: This goal involves implementing SEO strategies and other marketing techniques to attract more visitors to the website. By following best practices for SEO such as using relevant keywords, creating high-quality content, and building backlinks, we aim to increase the website's visibility and attract more visitors.
+* Increase website traffic: This goal involves implementing SEO strategies (Search Engine Optimization) and other marketing techniques to attract more visitors to the website. By following best practices for SEO such as using relevant keywords, creating high-quality content, I aim to increase the website's visibility and attract more visitors.
 Improve website accessibility: This goal involves making the website more accessible to users with disabilities, such as by adding alt text to images and ensuring that the website is compatible with screen readers
 * By following best practices for website accessibility, such as using semantic HTML, providing alternative text for images, and using ARIA attributes, we aim to ensure that all users can access and use the website.
 * Enhance website design: This goal involves improving the overall look and feel of the website to make it more visually appealing and engaging for users. By following best practices for website design, such as using a consistent color scheme, using whitespace effectively, and using high-quality images, we aim to create a website that is visually appealing and engaging for users.
 
 ## User experience
 
-* Home Page: The home page should have a clear and concise navigation menu that allows users to easily access different sections of the website. It should also have a search bar that allows students to search for classes and instructors.
-* Instructor Dashboard: The instructor dashboard should allow instructors to create, read, update, and delete information about classes, students, and other instructors. It    should also allow them to view their schedule and upcoming classes.
-* Student Dashboard: The student dashboard should allow students to view their class schedule, grades, and attendance records. '** It should also allow them to search for classes and instructors, and sign up for classes.**'
+* Contact Page: The contact page should have a form that allows students to send messages to instructors and the school administration. 
+* Home Page: The home page should have a clear and concise navigation menu that allows users to easily access different sections of the website. 
+* Instructor Dashboard: The instructor dashboard should allow instructors to create, read, update, and delete information about students and their instructors. It should also allow them to view their progress. 
+* Student Dashboard: The student dashboard should allow students to view their class grades and critical information for their next gradeing. 
 * Grade Pages: Each class page should have a detailed description of the grade material, including the Kata name, and any prerequisites. 
-* Instructor Pages: Each instructor page should have a detailed bio, including their qualifications, experience, and teaching style. It should also have a list of classes they teach and a schedule of their upcoming classes.
-* Contact Page: The contact page should have a form that allows students to send messages to instructors and the school administration. It should also have a list of frequently asked questions and answers.
+* The Django admin panel should be tailored to function as a functional mirror of the website. This means that the admin panel should have the same features and functionalities as the website itself. By tailoring the admin panel to be a functioning copy of the website, administrators can easily navigate and make changes to the website without needing to access the code directly. This ensures consistency and ease of use for managing the website's backend operations.
+
 
 ## Agile Aproach
 
@@ -103,16 +109,16 @@ Improve website accessibility: This goal involves making the website more access
 ### DataBase Design
 
 ### Normalizing definition
-* Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. It's like putting your toys away in a toy box so you can find them easily and don't lose any. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database table is like keeping your room clean and tidy so you can find everything you need quickly and easily.
+* Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database makes it easier to manage and maintain, and it helps to avoid complexities and eliminate duplicates.
 
 
 <img src="static/images/readme/exceldatabase.png" width="400" height="300" alt="Excel Data Base">
 
 
 ### Pre-Normalizing 
-* This is the database table named "Students" before normalizing; it stores information about martial arts students. It has 20 fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
+* This is the database table named "Students" before normalizing; it stores information about martial arts students. It has fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
 
-<img src="static/images/readme/notnorm.png" width="400" height="100" alt="un Normalised">
+<img src="static/images/readme/notnorm.png" width="600" height="100" alt="un Normalised">
 
 ### Over view of Shotkan Database
 
@@ -138,3 +144,4 @@ Improve website accessibility: This goal involves making the website more access
 
 * AUTH_USER_MODEL = 'shotokanapp.CustomUser'
 * fix by https://testdriven.io/blog/django-custom-user-model/
+

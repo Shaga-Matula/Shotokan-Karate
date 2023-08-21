@@ -57,7 +57,7 @@
                             <a class="nav-link  " href="{% url 'student_kyu_list' %}">Student Page</a>
                         </li>
                         {% endif %}
-                        {% if user.role == 'ADMIN' %}
+                        {% if user.role == 'TEACHER' %}
                         <li class="nav-item">
                             <a class="nav-link {% active_link 'register' %}" href="{% url 'register' %}">Create Student</a>
                         </li>
@@ -76,6 +76,7 @@
                         <li class="nav-item">
                             <a class="nav-link {% active_link 'sensei_list' %}" href="{% url 'sensei_list' %}">Sensei Edit</a>
                         </li class="nav-item">
+                        {% elif user.role == 'ADMIN' %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:index' %}">Admin Panel</a>
                         </li class="nav-item">
