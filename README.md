@@ -8,7 +8,9 @@
 
 ![Screen Shots](static/images/readme/websitescreens.png)
 
+* https://shields.io/badges
 
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json)
 
 <img src="static/images/readme/main_logo-modified.png">
 

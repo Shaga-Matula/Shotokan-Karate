@@ -17,10 +17,11 @@
                     <p class="card-text cardtextcolor">Email: {{ obj.email }}</p>
                     <p class="card-text cardtextcolor">Add_1: {{ obj.address_1 }}</p>
                     <p class="card-text cardtextcolor">Add_2: {{ obj.address_2 }}</p>
+                    <p class="card-text cardtextcolor">Contact: {{ obj.contact_num }}</p>
                     <p class="card-text cardtextcolor">Post Code: {{ obj.post_code }}</p>
                     <p class="card-text cardtextcolor">Role: {{ obj.role }}</p>
-                    <p class="card-text cardtextcolor">Grade: {{ obj.student_grade }}</p>
-                    <p class="card-text cardtextcolor">Student ID: {{ obj.id }}</p>
+                    <p class="card-text cardtextcolor">Attainable Grade: {{ obj.student_grade }}</p>
+                    <p class="card-text cardtextcolor">Last Update: {{ obj.last_updated }}</p>
                     <div class="d-flex align-content-lg-center justify-content-between">
                         <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Update</a>
                         <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
