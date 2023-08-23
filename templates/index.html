@@ -3,15 +3,11 @@
 {% block content %}
 
 {% load static %}
-
+<!-- Body tag included in header/Use of symantic HTML: Section, Article, Aside and Main -->
 <main class="d-flex align-items-center justify-content-center ">
-    <!-- <strong>Kyu Level: {{ user.student_grade.kyu_level }}</strong></h5>
-    <strong>Role Level: {{ user.role }}</strong></h5> -->
-
-    <div class="rounded mx-auto border-5 col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-12 paperimage">
-
+    <section class="rounded mx-auto border-5 col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-12 paperimage">
         <div class="row border-5 register-form-style  p-3">
-            <div class="col-lg-8 ">
+            <article class="col-lg-8 ">
                 {% load account %}
                 {% if user.is_authenticated %}
                 <h4 class="align-items-center text-black p-1">Welcome, {{ username }}!</h4>
@@ -27,9 +23,6 @@
                     <p>A beginner’s guide</p>
                 </h2>
                 <h2>
-
-
-
                     <p>What is Karate?</p>
                 </h2>
                 <section>
@@ -73,12 +66,11 @@
                                 techniques
                                 developed by the masters of past centuries.</p>
                 </section>
-            </div>
+            </article>
 
+            <!-- Contacts is linked to code institute to catch form and validate -->
 
-
-
-            <div class="container col-md-6 col-lg-4 order-2 order-md-2 mt-1 mb-1 ">
+            <aside class="container col-md-6 col-lg-4 order-2 order-md-2 mt-1 mb-1 ">
                 <form class="my-1" method="post" action="https://formdump.codeinstitute.net/">
                     {% csrf_token %}
                     <fieldset class="">
@@ -133,9 +125,8 @@
                         </section>
                     </fieldset>
                 </form>
-            </div>
-
+            </aside>
         </div>
-    </div>
+    </section>
 </main>
 {% endblock %}

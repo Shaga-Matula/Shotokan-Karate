@@ -1,27 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Body tag in base.html with Symantec HTML tags such as main, section, fieldset and header -->
+<!-- Also the use of   {% csrf_token %} to safe guard against attacks -->
 
-
-<section class="container loger_out d-flex align-items-center justify-content-center">
-    <div class="paperimage">
-        <h2 class="text-center">Edit Sensei</h2>
+<main class="container loger_out d-flex align-items-center justify-content-center">
+    <section class="paperimage col-lg-4 col-md-6 col-sm-11 col-11">
+        <header>
+            <h2 class="text-center">Edit Sensei</h2>
+        </header>
         {% load crispy_forms_tags %}
-        <div class="">
-            <div class="border-padd-grey">
-                <form class="" method="post" enctype="multipart/form-data">
-                    <div>
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                    </div>
-                    <div class="border-5 ">
-                        <br>
-                        <button type="submit" class="btn btn-primary">Make Change</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+        <fieldset class="border-padd-grey">
+            <form class="" method="post" enctype="multipart/form-data">
+                <div>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                </div>
+                <div class="border-5 ">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Make Change</button>
+                </div>
+            </form>
+        </fieldset>
 
-</section>
+    </section>
+</main>
 {% endblock %}

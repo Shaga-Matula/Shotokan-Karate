@@ -3,10 +3,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-
-
-<div class="mx-auto loger_out ">
-    <div class="container register-form-style d-flex align-content-center justify-content-center col-md-8 p-3   mb-5">
+<!-- Body tag in base.html with Symantec HTML tags such as main, section, form, input, label, legend, fieldset, -->
+<!-- Also the use of   {% csrf_token %} to safe guard against attacks -->
+<main class="mx-auto loger_out ">
+    <section class="container register-form-style d-flex align-content-center justify-content-center col-md-8 p-3 mb-5">
         <div class="border-3 p-3 paperimage">
             <h2 class="text-center text-black">Registration</h2>
             <form class='form container ' method="POST">
@@ -21,6 +21,6 @@
                 <input class='btn btn-primary' type='submit'>
             </form>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 {% endblock %}

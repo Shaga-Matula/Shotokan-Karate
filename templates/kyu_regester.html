@@ -1,33 +1,37 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
+<!-- Body tag in base.html with Symantec HTML tags such as main, section, fieldset and header -->
+<!-- Also the use of   {% csrf_token %} to safe guard against attacks -->
 {% block content %}
-<div class="d-flex align-items-center justify-content-center loger_out ">
-    <div class="text-black-100 col-xl-3 col-lg-3 col-md-5 col-sm-8 col-12">
-        
+<main class="d-flex align-items-center justify-content-center loger_out ">
+    <section class="text-black-100 col-xl-3 col-lg-3 col-md-5 col-sm-8 col-12">
         <div class="paperimage border-padd-grey d-flex flex-column justify-content-center ">
-             <h2 class="text-center text-black">Kyu Creation</h2>
-            <form class="" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                    {{ form.kyu_level|as_crispy_field }}
-                </div>
-                <div class="form-group mb-3">
-                    {{ form.belt_color|as_crispy_field }}
-                </div>
-                <div class="form-group mb-3">
-                    {{ form.kata_name|as_crispy_field }}
-                </div>
-                <div class="form-group mb-3">
-                    {{ form.kata_image|as_crispy_field }}
-                </div>
-                <div class="form-group mb-3">
-                    {{ form.syllabus_image|as_crispy_field }}
-                </div>
+            <header>
+                <h2 class="text-center text-black">Kyu Creation</h2>
+            </header>
+            <fieldset>
+                <form class="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        {{ form.kyu_level|as_crispy_field }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.belt_color|as_crispy_field }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.kata_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.kata_image|as_crispy_field }}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.syllabus_image|as_crispy_field }}
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </fieldset>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 {% endblock %}

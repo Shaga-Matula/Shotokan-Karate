@@ -1,36 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main class="container">
-    <h1 class="text-center text-white">Student List</h1>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
+<!-- Body tag included in header/Use of symantic HTML: Section, Main, Header, Article, ul,li  -->
+<main>
+    <header>
+        <h1 class="text-center text-white">Student List</h1>
+    </header>
+    <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
         {% for obj in student %}
         <!-- # Hide Admin from list so not deleted -->
         {% if obj.username != 'admin' %}
-        <div class="col card-width">
+        <article class="col card-width">
             <div class="card rounded-3 paperimage">
                 <div class="card-body accordion-body">
-                    <h5 class="card-title p-2 bg-dark text-white border border-3 rounded">Name: {{ obj.first_name }}
-                        {{ obj.last_name }}</h5>
-                    <p class="card-text cardtextcolor">User Name: {{ obj.username }}</p>
-                    <p class="card-text cardtextcolor">DOB: {{ obj.date_of_birth }}</p>
-                    <p class="card-text cardtextcolor">Email: {{ obj.email }}</p>
-                    <p class="card-text cardtextcolor">Add_1: {{ obj.address_1 }}</p>
-                    <p class="card-text cardtextcolor">Add_2: {{ obj.address_2 }}</p>
-                    <p class="card-text cardtextcolor">Contact: {{ obj.contact_num }}</p>
-                    <p class="card-text cardtextcolor">Post Code: {{ obj.post_code }}</p>
-                    <p class="card-text cardtextcolor">Role: {{ obj.role }}</p>
-                    <p class="card-text cardtextcolor">Attainable Grade: {{ obj.student_grade }}</p>
-                    <p class="card-text cardtextcolor">Last Update: {{ obj.last_updated }}</p>
+                    <h2 class="card-title p-2 bg-dark text-white border border-3 rounded">{{ obj.first_name }}
+                        {{ obj.last_name }}</h2>
+                    <ul class="card-text">
+                        <li>User Name: {{ obj.username }}</li>
+                        <li>DOB: {{ obj.date_of_birth }}</li>
+                        <li>Email: {{ obj.email }}</li>
+                        <li>Add_1: {{ obj.address_1 }}</li>
+                        <li>Add_2: {{ obj.address_2 }}</li>
+                        <li>Contact: {{ obj.contact_num }}</li>
+                        <li>Post Code: {{ obj.post_code }}</li>
+                        <li>Role: {{ obj.role }}</li>
+                        <li>Attainable Grade: {{ obj.student_grade }}</li>
+                        <li>Last Update: {{ obj.last_updated }}</li>
+                    </ul>
                     <div class="d-flex align-content-lg-center justify-content-between">
-                        <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success">Update</a>
-                        <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'edit_record' pk=obj.id %}" class="btn btn-success"
+                            aria-label="Update Record">Update</a>
+                        <a href="{% url 'delete_record' pk=obj.id %}" class="btn btn-danger"
+                            aria-label="Delete Record">Delete</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
         {% endif %}
         {% endfor %}
-    </div>
+    </section>
 </main>
 {% endblock %}

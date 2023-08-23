@@ -81,7 +81,7 @@ Improve website accessibility: This goal involves making the website more access
 ### Landing Page
 
 * The landing page at provides an introduction to Karate and serves as a beginner's guide to the martial art. The page welcomes guests and highlights the key aspects of Karate. * Description of the landing page:
-*Welcome message: The landing page greets the user as a guest.
+* Welcome message: The landing page greets the user as a guest.
 * Introduction to Karate: The page introduces Karate as an ancient method of unarmed fighting with a moral warrior code. It emphasizes punching, striking, and kicking. Karate originated on the Island of Okinawa, which is now part of Japan. 
 * Beginner's guide: The landing page mentions that it serves as a beginner's guide to Karate, providing essential information and insights for those new to the martial art.
 * The landing page aims to provide visitors with a basic understanding of Karate and its principles. It serves as a starting point for individuals interested in learning more about the art and its techniques.
@@ -89,7 +89,17 @@ Improve website accessibility: This goal involves making the website more access
 
 <hr>
 
-<img src="static/images/readme/landing _page _view.png"  alt="Landing page view" height="450">
+<img src="static/images/readme/landing _page _view.png"  alt="Landing page view" height="200" width="200">
+
+
+### Registration Page
+
+* The form allows a Sensei to provide personal information for the student and register as a member of the karate school. The form is designed to be submitted using the POST method, which means that the user's information will be sent securely to the server for processing. In this form the instructor can apply grade level and assign students to the appropriate class and instructor.
+
+
+<img src="static/images/readme/registrationpage.png"  alt="Registration page view" height="200" width="200">
+
+
 
 <hr style="border:1px solid white">
 

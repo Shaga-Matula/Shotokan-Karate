@@ -2,16 +2,18 @@
 {% load static %}
 {% block content %}
 
-<div class="container d-flex align-items-center justify-content-center loger_out">
-  <div class="paperimage ">
-    <div class="">
-      <div class="text-center ">
-        <h1 class="">Success!</h1>
 
-      </div>
-    </div>
-    <div class="container ">
-      <div class="d-flex align-items-center justify-content-center row row-cols-md-3">
+<!-- Body tag included in header/Use of symantic HTML: Section, Article, Aside and Main -->
+
+<main class="container d-flex align-items-center justify-content-center loger_out">
+  <div class="paperimage ">
+    <section class="">
+      <header class="text-center ">
+        <h1 class="">Success!</h1>
+      </header>
+    </section>
+    <section class="container ">
+      <aside class="d-flex align-items-center justify-content-center row row-cols-md-3">
         <div class="d-flex align-items-center justify-content-center">
           <a href="{% url 'home' %}" class="btn btn-dark btn-success btn-block spacer text-center text-nowrap"
             role="button">Home</a>
@@ -28,8 +30,8 @@
           <a href="{% url 'register' %}"
             class="btn btn-dark btn-success btn-block spacer text-center text-nowrap" role="button">Register Student</a>
         </div>
-      </div>
-    </div>
+      </aside>
+    </section>
   </div>
-</div>
+</main>
 {% endblock %}

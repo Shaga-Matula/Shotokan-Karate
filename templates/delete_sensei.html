@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class ="row justify-content-center align-content-center loger_out ">
-    <div class="grey-transparent-background border-padd-grey text-black-100  col-lg-4 col-md-6 col-sm-10">
+<main class ="row justify-content-center align-content-center loger_out ">
+    <section class="grey-transparent-background border-padd-grey text-black-100  col-lg-4 col-md-6 col-sm-10">
         <header class="text-center">
             <h1>Delete Record ?</h1>
         </header>
-        <div>
+        <fieldset>
             <form method="post"
                 onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
                 {% csrf_token %}
@@ -20,7 +20,7 @@
                     <a href="{% url 'sensei_list' %}" class="btn btn-success " role="button">Back To Sensei</a>
                 </div>
             </form>
-        </div>
-    </div>
-</section>
+        </fieldset>
+    </section>
+</main>
 {% endblock %}

@@ -1,28 +1,25 @@
 {% extends "base.html" %}
-
+<!-- Body tag in base.html with Symantec HTML tags such as main, section, fieldset and header -->
+<!-- Also the use of   {% csrf_token %} to safe guard against attacks -->
 {% block content %}
-<section class ="row justify-content-center align-content-center loger_out">
-    <div class="grey-transparent-background border-padd-grey text-black-100  col-lg-4 col-md-6 col-sm-10">
+<main class="row justify-content-center align-content-center loger_out">
+    <section class="grey-transparent-background border-padd-grey text-black-100  col-lg-4 col-md-6 col-sm-10">
         <header class="text-center">
             <h1>Delete Record ?</h1>
         </header>
-        <div>
+        <fieldset>
             <form method="post"
                 onsubmit="return confirm('Are you really sure you want to delete record {{ object.id }}, {{ object }} ?')">
                 {% csrf_token %}
                 <h3 class="text-center">Are you sure you want to delete record ID: {{ object.id }}</h3>
                 <h3 class="text-center"> Student Name: "{{ object }}"</h3>&nbsp
-                
                 <div class="d-flex align-items-center justify-content-between">
                     <button class="btn btn-danger " type="submit">Confirm</button>
                     &nbsp
-
                     <a href="{% url 'studentlist' %}" class="btn btn-success " role="button">Back To Student</a>
                 </div>
-
-
             </form>
-        </div>
-    </div>
-</section>
+        </fieldset>
+    </section>
+</main>
 {% endblock %}
