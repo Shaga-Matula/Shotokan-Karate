@@ -51,7 +51,6 @@ main {
 
 }
 
-
 .thumbnail {
     top: -50px;
     left: -35px;
@@ -214,15 +213,4 @@ main {
     width: 50%;
 }
 
-.yellow-field {
-    background-color: yellow;
-}
 
-
-/* 
-/*  On screens Smaller than 768 */
-/* @media only screen and (max-width: 768px) {
-    .rotate-me {
-        transform: rotate(45deg);
-    }
-} */ */

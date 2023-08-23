@@ -38,10 +38,11 @@
     <header>
 
         <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark ">
-            <!-- Brand -->
-            <a class="navbar-brand " href="#">Shotokan Karate</a>
+
+            <a class="navbar-brand shoto-color" href="{% url 'home' %}" aria-label="Home">Shotokan Karate</a>
             <!-- Toggler/collapsible Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Navbar links -->
@@ -50,33 +51,41 @@
                     <!-- bug fix for  -->
                     {% with request.resolver_match.url_name as url_name %}
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}" aria-label="Home">Home</a>
+                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}"
+                            aria-label="Home">Home</a>
                     </li>
                     {% endwith %}
                     {% if user.is_authenticated %}
                     {% if user.role == 'STUDENT' %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'student_kyu_list' %}" aria-label="Student Page">Student Page</a>
+                        <a class="nav-link" href="{% url 'student_kyu_list' %}" aria-label="Student Page">Student
+                            Page</a>
                     </li>
                     {% endif %}
                     {% if user.role == 'TEACHER' %}
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'register' %}" href="{% url 'register' %}" aria-label="Create Student">Create Student</a>
+                        <a class="nav-link {% active_link 'register' %}" href="{% url 'register' %}"
+                            aria-label="Create Student">Create Student</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'studentlist' %}" href="{% url 'studentlist' %}" aria-label="Student Edit">Student Edit</a>
+                        <a class="nav-link {% active_link 'studentlist' %}" href="{% url 'studentlist' %}"
+                            aria-label="Student Edit">Student Edit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'kyuregister' %}" href="{% url 'kyuregister' %}" aria-label="Create Kyu">Create Kyu</a>
+                        <a class="nav-link {% active_link 'kyuregister' %}" href="{% url 'kyuregister' %}"
+                            aria-label="Create Kyu">Create Kyu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'kyu_list' %}" href="{% url 'kyu_list' %}" aria-label="Kyu Edit">Kyu Edit</a>
+                        <a class="nav-link {% active_link 'kyu_list' %}" href="{% url 'kyu_list' %}"
+                            aria-label="Kyu Edit">Kyu Edit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'create_sensei' %}" href="{% url 'create_sensei' %}" aria-label="Create Sensei">Create Sensei</a>
+                        <a class="nav-link {% active_link 'create_sensei' %}" href="{% url 'create_sensei' %}"
+                            aria-label="Create Sensei">Create Sensei</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'sensei_list' %}" href="{% url 'sensei_list' %}" aria-label="Sensei Edit">Sensei Edit</a>
+                        <a class="nav-link {% active_link 'sensei_list' %}" href="{% url 'sensei_list' %}"
+                            aria-label="Sensei Edit">Sensei Edit</a>
                     </li>
                     {% elif user.role == 'ADMIN' %}
                     <li class="nav-item">
