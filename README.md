@@ -171,10 +171,19 @@ Improve website accessibility: This goal involves making the website more access
 
 
 
+# Registration form
+
+<img src="static/images/readme/selectcreatestudent.png" alt="User Story Template Image" height="30">
+
+* In this project, the instructors are responsible for overseeing the student registration process. To begin, simply click on the "create student" tab located on the navigation bar, which will direct you to the registration page. Fill out all the necessary fields, including the student's first name, last name, address (both address_1 and address_2, although the latter is optional), date of birth (using the format dd/mm/yyyy), postal code, contact number, email address, sensei, student grade, and role.
+* To ensure a unique identification for each student, choose a distinct user id and input it into the username field for the proposed student. If this userid is already taken a warning will be displayed and approiate action will need to be taken.  
+* Enter the student's first name in the first_name field and their last name in the last_name field. Provide the student's address in the address_1 and address_2 fields, noting that the second address field is not compulsory. Input the student's date of birth in the date_of_birth field using the dd/mm/yyyy format. Include the student's postal code in the post_code field, contact number in the contact_num field, and email address in the email field.
+* Next, select the appropriate role from the dropdown menu in the sensei, student_grade, and role fields. Finally, click the "submit" button to complete the registration process. If successful, you will be redirected to the success page
 
 
 
 
+<img src="static/images/readme/registrationform.png" alt="User Story Template Image" height="300">
 
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
