@@ -9,6 +9,7 @@ from .models import StudentLevelMod, CustomUser, SenseiMod
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views import View
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 class FirstPage(View):
@@ -30,10 +31,8 @@ class FirstPage(View):
 ###############   Student Page View   ##################
 
 
-
 class StudentKyuListView(TemplateView):
     template_name = 'student_kyu_list.html'
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -42,7 +41,6 @@ class StudentKyuListView(TemplateView):
         context['student'] = records
 
         return context
-
 
 
 #########################################################
@@ -81,6 +79,7 @@ class UpdateSenseiView(UpdateView):
 
     def get_success_url(self):
         return reverse('success')
+
 
 class SenseiRegisterView(FormView):
     template_name = 'reg_sensei.html'
@@ -160,7 +159,10 @@ class DeleteKyuView(DeleteView):
 ##############       User Create    ######################
 
 
-class RegisterView(View):
+class RegisterView(UserPassesTestMixin, View):
+    def test_func(self):
+        return self.request.user.role == 'TEACHER'
+
     def get(self, request):
         form = CustomUserCreationForm()
         return render(request, 'register.html', {'form': form})
@@ -174,6 +176,7 @@ class RegisterView(View):
 
 ##############      User Read     ######################
 
+
 class StudentListView(TemplateView):
     template_name = 'student_list.html'
 
@@ -183,6 +186,7 @@ class StudentListView(TemplateView):
         return context
 
 ##############      User Update     ######################
+
 
 class UpdateStudentView(UpdateView):
     model = CustomUser
@@ -202,7 +206,6 @@ class UpdateStudentView(UpdateView):
     def get_success_url(self):
         return reverse('success')
 
-        
 
 ##############      User Delete     ######################
 
@@ -211,12 +214,3 @@ class DeleteStudentView(DeleteView):
     form_class = StudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
-
-
-
-
-
-
-
-
-
