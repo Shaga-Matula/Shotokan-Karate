@@ -14,12 +14,15 @@
 
 <img src="static/images/readme/main_logo-modified.png">
 
-* The creator of the Shotokan project is Paul Gleeson from Code Institute. The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields. The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club. 
+* The creator of the Shotokan project is Paul Gleeson from Code Institute. The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields. The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club. All Karate information and images were created by Paul Gleeson, written in 2016 in a book called Yoshin Ryu Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary. 
+[Yoshin Ryu](https://www.yoshinryu.co.uk/) 
+
 
 # Shotokan Karate
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
 * [Link to Shotokan Heroku](https://shotokanapp-156d7bd78744.herokuapp.com/)
+
 
 
 
@@ -80,7 +83,10 @@ Improve website accessibility: This goal involves making the website more access
 
 ### Landing Page
 
-* The landing page at provides an introduction to Karate and serves as a beginner's guide to the martial art. The page welcomes guests and highlights the key aspects of Karate. * Description of the landing page:
+* The landing page at provides an introduction to Karate and serves as a beginner's guide to the martial art. The page welcomes guests and highlights the key aspects of Karate. 
+
+### Description of the landing page:
+
 * Welcome message: The landing page greets the user as a guest.
 * Introduction to Karate: The page introduces Karate as an ancient method of unarmed fighting with a moral warrior code. It emphasizes punching, striking, and kicking. Karate originated on the Island of Okinawa, which is now part of Japan. 
 * Beginner's guide: The landing page mentions that it serves as a beginner's guide to Karate, providing essential information and insights for those new to the martial art.
@@ -92,12 +98,16 @@ Improve website accessibility: This goal involves making the website more access
 <img src="static/images/readme/landing _page _view.png"  alt="Landing page view" height="200" width="200">
 
 
-### Registration Page
+### Student Registration Page/Student View Page/Student Edit Page
 
 * The form allows a Sensei to provide personal information for the student and register as a member of the karate school. The form is designed to be submitted using the POST method, which means that the user's information will be sent securely to the server for processing. In this form the instructor can apply grade level and assign students to the appropriate class and instructor.
 
 
-<img src="static/images/readme/registrationpage.png"  alt="Registration page view" height="200" width="200">
+<img src="static/images/readme/usedcreateeditview.png"  alt="Registration page view" height="200" width="600">
+
+### Kyu Creation Page/Kyu Edit Page
+
+<img src="static/images/readme/kyucreateviewedit.png"  alt="Registration page view" height="200" width="600">
 
 
 
