@@ -109,7 +109,9 @@ Improve website accessibility: This goal involves making the website more access
 
 <img src="static/images/readme/kyucreateviewedit.png"  alt="Registration page view" height="200" width="600">
 
+### Sensei Creation Page/Sensei View page /Sensei Edit Page
 
+<img src="static/images/readme/ssensiecreateeditview.png"  alt="Landing page view" height="200" width="600">
 
 <hr style="border:1px solid white">
 
