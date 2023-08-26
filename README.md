@@ -18,6 +18,18 @@
 [Yoshin Ryu](https://www.yoshinryu.co.uk/) 
 
 
+## Project Discription
+
+### This project is for a karate school website that will have the following features:
+* Registration: The site will allow sensei (teachers) to register new kyu(grade levels), studnents and sensei. The information collected will include the user's name, email address, address, date of birth, and grade to attain.
+* Profile Cards: The registered users' information will be displayed in a card view. Each profile card can be edited or deleted by the teachers.
+* Kyu Table: The site will also have a table to register Kyus (grade levels) in karate.
+* Sensei Table: Another table will register the sensei (teachers) in the school.
+* User Roles: Each user will be assigned a role as either a student or a teacher. Teachers will have access to new registrations, kyu registration, and sensei registration. This access will be provided through available navigation links and code that checks if the user is authenticated.
+* Teacher Functionality: Teachers (sensei) will be able to edit and delete kyu, sensei, through user cards.
+* Student Functionality: Students will have limited choices in the navigation bar and will only be able to view their own page. The student page will display their current attainable karate level and all previous grades. Students will not be able to edit any data in the project.
+* Admin Panel: An admin account (superuser) will be created solely for access to the admin panel, where all the functionality of the site is included.
+
 # Shotokan Karate
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
@@ -49,24 +61,20 @@
     4.  [User Stories](#user-stories)
     5.  [Design](#design)
 
-
-
-
 ## MVP
 
 * An MVP, or Minimum Viable Product, is a product development technique that involves creating a new product with just enough features to satisfy initial customers. The idea is to get the product to the market quickly, gather feedback, and improve it based on that feedback. The goal is to achieve a desirable product/market fit or determine if the product is non-viable. An MVP is a basic version of a new product with minimum essential features to satisfy the initial customers. It allows the team to gather the maximum amount of authentic learning about customers with little effort.
 
 ## Project Goals (MVP)
 
-* Create a user-friendly website that provides a high-quality user experience. This includes implementing best practices for website design and development. By focusing on intuitive navigation, clear content presentation, and responsive design, I aim to ensure that users have a positive and enjoyable experience while interacting with the website.
+* Create a user-friendly MVP that provides a high-quality user experience. This includes implementing best practices for website design and development. By focusing on intuitive navigation, clear content presentation, and responsive design, to ensure that users have a positive and enjoyable experience while interacting with the website.
 * Develop a form that effectively handles initial inquiries to the website. This form will be designed to capture relevant information from users and provide a seamless experience for submitting inquiries. By implementing HTML and CSS techniques, I will create a visually appealing and user-friendly form that encourages users to engage with the website.
-* Utilize Agile methodology to organize the project, specifically by employing methods such as milestones (epics), and user stories. This approach will enable effective project management, allowing me to break down the project into manageable tasks and prioritize them based on user needs and project objectives. By using Agile, I can ensure a collaborative and iterative development process that aligns with the dynamic nature of the project.
+* Utilize Agile methodology to organize the project, specifically by employing methods such as milestones (epics), and user stories. This approach will enable effective project management, allowing me to break down the project into manageable tasks and prioritize them based on user needs and project objectives.
 * Improve website performance: This goal involves optimizing the website's speed and responsiveness to improve the user experience. By implementing best practices for website performance, such as optimizing images, reducing HTTP requests, and minifying code, I aim to ensure that users have a fast and seamless experience while interacting with the website.
 * Enhance website security: This goal involves implementing security measures to protect user data and prevent hacking or other security breaches. By following best practices for website security, I aim to ensure that user data is secure and protected from potential threats.
 * Increase website traffic: This goal involves implementing SEO strategies (Search Engine Optimization) and other marketing techniques to attract more visitors to the website. By following best practices for SEO such as using relevant keywords, creating high-quality content, I aim to increase the website's visibility and attract more visitors.
-Improve website accessibility: This goal involves making the website more accessible to users with disabilities, such as by adding alt text to images and ensuring that the website is compatible with screen readers
-* By following best practices for website accessibility, such as using semantic HTML, providing alternative text for images, and using ARIA attributes, we aim to ensure that all users can access and use the website.
-* Enhance website design: This goal involves improving the overall look and feel of the website to make it more visually appealing and engaging for users. By following best practices for website design, such as using a consistent color scheme, using whitespace effectively, and using high-quality images, we aim to create a website that is visually appealing and engaging for users.
+* Improve website accessibility: This goal involves making the website more accessible to users with disabilities, such as by adding alt text to images and ensuring that the website is compatible with screen readers. By following best practices for website accessibility, such as using semantic HTML, providing alternative text for images, and using ARIA attributes, we aim to ensure that all users can access and use the website.
+* Enhance website design: This goal involves improving the overall look and feel of the website to make it more visually appealing and engaging for users. By following best practices for website design, such as using a consistent color scheme, using whitespace effectively, and using high-quality images, I will aim to create a website that is visually appealing and engaging for users.
 
 # User experience
 <hr style="border:1px solid white">
@@ -109,6 +117,7 @@ Improve website accessibility: This goal involves making the website more access
 
 <img src="static/images/readme/kyucreateviewedit.png"  alt="Registration page view" height="200" width="600">
 
+
 ### Sensei Creation Page/Sensei View page /Sensei Edit Page
 
 <img src="static/images/readme/ssensiecreateeditview.png"  alt="Landing page view" height="200" width="600">
@@ -130,6 +139,19 @@ Improve website accessibility: This goal involves making the website more access
 <img src="static/images/readme/notnorm.png" width="600" height="100" alt="un Normalised">
 
 ### Over view of Shotkan Database
+
+* Role: A character field with a maximum length of 15, representing the role of the student.
+* First Name: A character field with a maximum length of 50, representing the first name of the student.
+* Last Name: A character field with a maximum length of 50, representing the last name of the student.
+* Address Line One: A character field with a maximum length of 50, representing the first line of the student's address.
+* Address Line Two: A character field with a maximum length of 50, representing the second line of the student's address. This field is optional and can be left blank.
+* Date of Birth: A date field representing the date of birth of the student. This field is optional and can be left blank.
+* Student Contact Number: A phone number field representing the contact number of the student. This field is optional and can be left blank.
+* Last Update: A date and time field representing the last time the student profile was updated.
+* Post Code: A character field with a maximum length of 10, representing the post code of the student's address.
+* Email Address: An email field representing the email address of the student.
+* Kyu To Achieve: A foreign key field representing the student's grade.
+* Sensei: A foreign key field representing the student's sensei. This field is optional and can be left blank.
 
 *   The "Students_Table" is a database table that stores information about students.
     It has several columns that represent different attributes of a student, such as their ID, first name, last name, date of birth, email, address, postal code, role, last updated timestamp, student grade, and sensei.
@@ -193,9 +215,38 @@ Improve website accessibility: This goal involves making the website more access
 * Next, select the appropriate role from the dropdown menu in the sensei, student_grade, and role fields. Finally, click the "submit" button to complete the registration process. If successful, you will be redirected to the success page
 
 
-
-
 <img src="static/images/readme/registrationform.png" alt="User Story Template Image" height="300">
+
+
+# Student Card View
+* Each student is represented in a card view that clearly shows all the relevant student data such as Role, First Name, Last Name, Address Line One, Address Line Two, Date of Birth, Student Contact Number, Last Update, Post Code, Email Address, Kyu To Achieve, Sensei. From here, the teacher can read all necessary data on the students and also choose to update or delete the record. The record also has a last updated field to keep track of changes in the student profile. 
+ 
+<img src="static/images/readme/studentedit.png" height="150" alt="Student card view">
+
+# Student Update View
+* Here the student form includes all the necessary fields, such as Role, First Name, Last Name, Address Line One, Address Line Two, Date of Birth, Student Contact Number, Last Update, Post Code, Email Address, Kyu To Achieve, and Sensei. The fields are clearly presented and formatted to provide a user-friendly experience.
+* To update a student record, the sensei can navigate to the student's profile and access the update form. The form will display all the existing data for each field, allowing the sensei to make any necessary changes. Once the sensei has made the desired updates, they can submit the form to save the changes to the student's record. The Last Update field will automatically be updated with the current date and time to keep track of the modifications made to the student profile.
+* It is important to note that the Address Line Two field is optional and can be left blank if not applicable. The Kyu To Achieve and Sensei fields are foreign key fields, representing the student's grade and sensei, respectively. These fields can be updated by selecting the appropriate values from the provided options or by entering the necessary information.
+* Overall, the form web page is designed to provide a seamless and efficient way for the sensei to update a student's record. The clear presentation and formatting of the fields ensure a user-friendly experience, making it easy for the sensei to make any necessary changes to the student's profile.
+
+<img src="static/images/readme/studenteditedit.png" height="400" alt="Student card view">
+
+# Success
+
+* If the user is successful in updating the record, they will be given a success message. This message will comprise of a page with the title "Success" that will provide URLs to any page they wish to go. This means that the user will be redirected to a page that confirms the successful update of the record and provides links to other pages that they may want to visit next. This can help the user navigate the website more easily and efficiently.
+
+<img src="static/images/readme/succcess.png" height="100" alt="Success Message">
+
+# Delete (Two-tier Validation Check)
+* First check: If the sensei clicks the delete button, they will be presented with a choice of "yes" or "no". They will also see a clear view of the student's name and record ID because deletion is irreversible. If the user clicks "delete", the program will ask for a second check.
+* Second check: The user is presented with a Django Allauth message asking them to confirm if they want to delete the record.
+* This two-tier validation check ensures that the deletion process is deliberate and helps prevent accidental deletions. The first check provides a clear view of the student's information, allowing the sensei to review it before making a decision. The second check, using Django Allauth, adds an extra layer of confirmation to ensure that the user is certain about deleting the record.
+* By implementing this two-tier validation check, you can enhance the user experience and minimize the risk of unintended deletions.
+
+
+<img src="static/images/readme/deletemessage.png" height="100" alt="Delete check One">
+<img src="static/images/readme/deletemessage2.png" height="100" alt="Delete check Two">
+
 
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
@@ -233,3 +284,10 @@ Improve website accessibility: This goal involves making the website more access
 
 - Exclusive access to their own information page.
 - Cannot access or modify any students' information.
+
+
+
+
+* keyword search (Meta)
+* keywords content: "Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, 
+Belt ranking, Sparring, Japan, Dublin, Ireland"
