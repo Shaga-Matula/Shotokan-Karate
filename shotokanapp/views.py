@@ -28,14 +28,17 @@ class FirstPage(View):
 ###############   Student Classs Functions #############
 
 class StudentKyuListView(TemplateView):
+    """
+    This view: Displays a list of students based on their 
+    next atainable kyu level.
+
+    """
+
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'STUDENT'
         return False
-    """
-    This view is for displaying a list of students based on their kyu level.
 
-    """
     template_name = 'student_kyu_list.html'
 
     def get_context_data(self, **kwargs):
@@ -53,6 +56,13 @@ class StudentKyuListView(TemplateView):
 
 
 class DeleteKyuView(UserPassesTestMixin, DeleteView):
+    """
+    This view: Instructors with the Teacher 
+    Role to displayDisplays a Belt View with the 
+    ability to delete it.
+
+    """
+
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -65,6 +75,13 @@ class DeleteKyuView(UserPassesTestMixin, DeleteView):
 
 
 class KyuListView(UserPassesTestMixin, TemplateView):
+    """
+    This view: Allows Instructors with the Teacher 
+    Role to display a list of all the Belt Levels or 
+    kyu level.
+
+    """
+
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -79,6 +96,11 @@ class KyuListView(UserPassesTestMixin, TemplateView):
 
 
 class KyuRegisterView(UserPassesTestMixin, FormView):
+    """
+    This view: Enables the Instructors with the Teacher 
+    Role to Create New Kyu's or Belt Levels.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -97,6 +119,11 @@ class KyuRegisterView(UserPassesTestMixin, FormView):
 
 
 class UpdateKyuView(UserPassesTestMixin, UpdateView):
+    """
+    This view: Allows the Instructors with the Teacher role 
+    update the kyu records.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -122,6 +149,11 @@ class UpdateKyuView(UserPassesTestMixin, UpdateView):
 
 
 class UpdateSenseiView(UserPassesTestMixin, UpdateView):
+    """
+    This view: Allows the Instructors with the Teacher role 
+    update Sensei records.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -146,6 +178,11 @@ class UpdateSenseiView(UserPassesTestMixin, UpdateView):
 
 
 class SenseiRegisterView(UserPassesTestMixin, FormView):
+    """
+    This view: Allows the Instructors with the Teacher role 
+    register new sensei.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -164,6 +201,11 @@ class SenseiRegisterView(UserPassesTestMixin, FormView):
 
 
 class SenseiListView(UserPassesTestMixin, TemplateView):
+    """
+    This view: Allows the Instructors with the Teacher role 
+    view a list of senseis'.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -178,6 +220,11 @@ class SenseiListView(UserPassesTestMixin, TemplateView):
 
 
 class DeleteSenseiView(UserPassesTestMixin, DeleteView):
+    """
+    This view: Allows the Instructors with the Teacher role 
+    delete a Sensei record.
+
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -194,6 +241,10 @@ class DeleteSenseiView(UserPassesTestMixin, DeleteView):
 
 
 class RegisterView(UserPassesTestMixin, View):
+    """ 
+    This view: Allows the Instructors with the Teacher role 
+    to register new users and assign roles, sensei and grades. 
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -212,6 +263,10 @@ class RegisterView(UserPassesTestMixin, View):
 
 
 class StudentListView(UserPassesTestMixin, TemplateView):
+    """ 
+    This view: Allows the Instructors with the Teacher role 
+    to view a list of students.
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -226,6 +281,10 @@ class StudentListView(UserPassesTestMixin, TemplateView):
 
 
 class UpdateStudentView(UserPassesTestMixin, UpdateView):
+    """ 
+    This view: Allows the Instructors with the Teacher role 
+    to edit a student record.
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
@@ -250,6 +309,10 @@ class UpdateStudentView(UserPassesTestMixin, UpdateView):
 
 
 class DeleteStudentView(UserPassesTestMixin, DeleteView):
+    """ 
+    This view: Allows the Instructors with the Teacher role 
+    delete a student record.
+    """
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'TEACHER'
