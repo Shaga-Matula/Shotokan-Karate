@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views import View
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 
 
 class FirstPage(View):
@@ -17,6 +18,7 @@ class FirstPage(View):
     This FirstPage class is used to handle the landing page request
     and display the information in a FormView.
     """
+
     def get(self, request, *args, **kwargs):
         context = {'username': request.user.username, }
         return render(request, 'index.html', context)
@@ -26,23 +28,18 @@ class FirstPage(View):
 ###############   Student Classs Functions #############
 
 class StudentKyuListView(TemplateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'STUDENT'
+        return False
     """
     This view is for displaying a list of students based on their kyu level.
 
-    Attributes:
-        template_name: The name of the template to use
-        for the view, which is 'student_kyu_list.html'.
     """
-    
     template_name = 'student_kyu_list.html'
 
     def get_context_data(self, **kwargs):
-        """
-        Retrieves the context data for the view.
 
-        Returns:
-        A dictionary containing the context data.
-        """
         context = super().get_context_data(**kwargs)
         user_kyu_level = self.request.user.student_grade.kyu_level
         records = StudentLevelMod.objects.filter(kyu_level__gte=user_kyu_level)
@@ -55,18 +52,24 @@ class StudentKyuListView(TemplateView):
 #############      Kyu Class Functions   ################
 
 
-class DeleteKyuView(DeleteView):
-    """
-    A view for deleting a Student Record in
-    `StudentLevelMod` object.   
-    """
+class DeleteKyuView(UserPassesTestMixin, DeleteView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = StudentLevelMod
     form_class = StudentForm
     template_name = 'delete_kyu.html'
     success_url = reverse_lazy('success')
 
 
-class KyuListView(TemplateView):
+class KyuListView(UserPassesTestMixin, TemplateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     template_name = 'kyu_list.html'
 
     def get_context_data(self, **kwargs):
@@ -75,7 +78,12 @@ class KyuListView(TemplateView):
         return context
 
 
-class KyuRegisterView(FormView):
+class KyuRegisterView(UserPassesTestMixin, FormView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     template_name = 'kyu_regester.html'
     form_class = KyuRegisterForm
     success_url = 'success.html'
@@ -88,7 +96,12 @@ class KyuRegisterView(FormView):
         return reverse('success')
 
 
-class UpdateKyuView(UpdateView):
+class UpdateKyuView(UserPassesTestMixin, UpdateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = StudentLevelMod
     form_class = KyuRegisterForm
     template_name = 'edit_kyu.html'
@@ -108,7 +121,12 @@ class UpdateKyuView(UpdateView):
 #########################################
 
 
-class UpdateSenseiView(UpdateView):
+class UpdateSenseiView(UserPassesTestMixin, UpdateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = SenseiMod
     form_class = SenseiRegisterForm
     template_name = 'edit_sensei.html'
@@ -127,7 +145,12 @@ class UpdateSenseiView(UpdateView):
         return reverse('success')
 
 
-class SenseiRegisterView(FormView):
+class SenseiRegisterView(UserPassesTestMixin, FormView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     template_name = 'reg_sensei.html'
     form_class = SenseiRegisterForm
     success_url = 'success.html'
@@ -140,7 +163,12 @@ class SenseiRegisterView(FormView):
         return reverse('success')
 
 
-class SenseiListView(TemplateView):
+class SenseiListView(UserPassesTestMixin, TemplateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     template_name = 'sensei_list.html'
 
     def get_context_data(self, **kwargs):
@@ -149,7 +177,12 @@ class SenseiListView(TemplateView):
         return context
 
 
-class DeleteSenseiView(DeleteView):
+class DeleteSenseiView(UserPassesTestMixin, DeleteView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = SenseiMod
     form_class = SenseiListView
     template_name = 'delete_sensei.html'
@@ -159,9 +192,12 @@ class DeleteSenseiView(DeleteView):
 #########################################################
 #############       Custom User      ####################
 
+
 class RegisterView(UserPassesTestMixin, View):
     def test_func(self):
-        return self.request.user.role == 'TEACHER'
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
 
     def get(self, request):
         form = CustomUserCreationForm()
@@ -175,7 +211,12 @@ class RegisterView(UserPassesTestMixin, View):
         return render(request, 'register.html', {'form': form})
 
 
-class StudentListView(TemplateView):
+class StudentListView(UserPassesTestMixin, TemplateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     template_name = 'student_list.html'
 
     def get_context_data(self, **kwargs):
@@ -184,7 +225,12 @@ class StudentListView(TemplateView):
         return context
 
 
-class UpdateStudentView(UpdateView):
+class UpdateStudentView(UserPassesTestMixin, UpdateView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = CustomUser
     form_class = StudentForm
     template_name = 'edit_record.html'
@@ -203,7 +249,12 @@ class UpdateStudentView(UpdateView):
         return reverse('success')
 
 
-class DeleteStudentView(DeleteView):
+class DeleteStudentView(UserPassesTestMixin, DeleteView):
+    def test_func(self):
+        if self.request.user.is_authenticated:
+            return self.request.user.role == 'TEACHER'
+        return False
+
     model = CustomUser
     form_class = StudentForm
     template_name = 'delete_record.html'

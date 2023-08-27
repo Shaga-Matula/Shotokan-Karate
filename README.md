@@ -14,7 +14,8 @@
 
 <img src="static/images/readme/main_logo-modified.png">
 
-* The creator of the Shotokan project is Paul Gleeson from Code Institute. The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields. The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club. All Karate information and images were created by Paul Gleeson, written in 2016 in a book called Yoshin Ryu Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary. 
+* The creator of the Shotokan project is Paul Gleeson from Code Institute.  The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club.  
+
 [Yoshin Ryu](https://www.yoshinryu.co.uk/) 
 
 
@@ -291,3 +292,17 @@
 * keyword search (Meta)
 * keywords content: "Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, 
 Belt ranking, Sparring, Japan, Dublin, Ireland"
+
+
+The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields.
+
+All Karate information and images were created by Paul Gleeson, written in 2016 in a book called Yoshin Ryu Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary.
+
+
+
+* Bug Description:
+* There is a vulnerability where anonymous users can access restricted pages by pasting the URL into the search bar. To mitigate this security risk, we have implemented the use of "UserPassesTestMixin" and added a small code snippet to each view.
+* This approach ensures that only authorized users can access the restricted areas, preventing unauthorized access and maintaining the integrity of the application.
+*In the event that access or authentication is denied, the user will be redirected to the login screen. This ensures that only authorized users can access the application and maintain the security of the system.
+
+<img src="static/images/readme/accessfix.png" height="100" alt="Bug Fix User Access">
