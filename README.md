@@ -305,4 +305,8 @@ All Karate information and images were created by Paul Gleeson, written in 2016 
 * This approach ensures that only authorized users can access the restricted areas, preventing unauthorized access and maintaining the integrity of the application.
 *In the event that access or authentication is denied, the user will be redirected to the login screen. This ensures that only authorized users can access the application and maintain the security of the system.
 
+
 <img src="static/images/readme/accessfix.png" height="100" alt="Bug Fix User Access">
+
+
+<img src="static/images/readme/accessfixerror.png" height="100" alt="Bug Fix User Access">
