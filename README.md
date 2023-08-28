@@ -37,11 +37,20 @@
 * [Link to Shotokan Heroku](https://shotokanapp-156d7bd78744.herokuapp.com/)
 
 
+## README Table Content
+
+1.  [Introduction](#Introduction)
+    1.  [Project Goals](#Project-Goals)
+    2.  [User experience](#User-experience)
+    3.  [Agile Aproach](#Agile-Aproach)
+    4.  [User Stories](#user-stories)
+    5.  [Design](#design)
+
 
 
 # Project Introduction
 
-<hr style="border:1px solid white">
+
 
 * The Shotokan website is designed to introduce potential karate students to Shotokan Karate as a means to achieve a healthier lifestyle and a healthy state of mind. The website aims to provide an engaging and informative experience for visitors. Shotokan Karate is a dynamic martial art style created by the late, great Gichin Funakoshi. The philosophy of Shotokan Karate is based on the traditional Budo (martial arts) spirit of Karate, which seeks the perfection of character through hard work and discipline. Shotokan Karate is a form of self-defense that is built on a strong foundation of physical and mental training.
 
@@ -53,14 +62,6 @@
 * Utilizing Django, Bootstrap and Python, the registration process is streamlined and user-friendly. The integration of these technologies enables a seamless user experience, making it easy for instructors to register students to sign up for lessons and become part of the Shotokan Karate community.
 * The ultimate goal of the Shotokan website is to provide an engaging and informative platform that encourages potential students to explore the benefits of Shotokan Karate and take the first step towards a healthier lifestyle and a positive state of mind.
 
-## README Table Content
-
-1.  [Introduction](#Introduction)
-    1.  [Project Goals](#Project-Goals)
-    2.  [User experience](#User-experience)
-    3.  [Agile Aproach](#Agile-Aproach)
-    4.  [User Stories](#user-stories)
-    5.  [Design](#design)
 
 ## MVP
 
@@ -78,7 +79,7 @@
 * Enhance website design: This goal involves improving the overall look and feel of the website to make it more visually appealing and engaging for users. By following best practices for website design, such as using a consistent color scheme, using whitespace effectively, and using high-quality images, I will aim to create a website that is visually appealing and engaging for users.
 
 # User experience
-<hr style="border:1px solid white">
+
 
 * Contact Page: The contact page should have a form that allows students to send messages to instructors and the school administration. 
 * Home Page: The home page should have a clear and concise navigation menu that allows users to easily access different sections of the website. 
@@ -88,7 +89,7 @@
 * The Django admin panel should be tailored to function as a functional mirror of the website. This means that the admin panel should have the same features and functionalities as the website itself. By tailoring the admin panel to be a functioning copy of the website, administrators can easily navigate and make changes to the students without needing to access the website directly. This ensures consistency and ease of use for managing the website's backend operations.
 
 # Design 
-<hr style="border:1px solid white">
+
 
 ### Landing Page
 
@@ -154,8 +155,7 @@
 * Kyu To Achieve: A foreign key field representing the student's grade.
 * Sensei: A foreign key field representing the student's sensei. This field is optional and can be left blank.
 
-*   The "Students_Table" is a database table that stores information about students.
-    It has several columns that represent different attributes of a student, such as their ID, first name, last name, date of birth, email, address, postal code, role, last updated timestamp, student grade, and sensei.
+*   The "Students_Table" is a database table that stores information about students. It has several columns that represent different attributes of a student, such as their ID, first name, last name, date of birth, email, address, postal code, role, last updated timestamp, student grade, and sensei.
 *   The table also includes foreign key relationships to other tables, such as the "Student_Lvl" table and the "Sensei" table.
 *   The "Student_Lvl" table stores information about the student's level, including the kyu level, belt color, kata name, kata image, and syllabus image.
 *   The "Sensei" table stores information about the sensei, including their ID, first name, last name, email, and contact number.
@@ -189,6 +189,44 @@
 
 # Technologies Used
 <hr style="border:1px solid white">
+
+* Coding Languages
+
+* HTML
+* CSS
+* Python 3
+* Javascript
+
+* Frameworks 
+
+* Git - Version control system.
+* GitHub - Managing Git repositories.
+* Gitpod - Development environment.
+* Icon library for producing icons on websites.
+* Google Fonts - Collection of free, open-source fonts for importing into websites.
+* Psycopg2 - PostgreSQL adapter for Python.
+* Django 3.2.16 - A Python web framework for rapid development.
+* Gunicorn - Python HTTP server for WSGI applications.
+* Heroku Platform - A cloud-based platform for deploying and managing web applications.
+* Crispy Forms - A Python package for formatting forms in Django.
+* Website Mockup Generator - A tool for creating mockups of websites on different screen sizes.
+* Balsamiq - A wireframing tool for producing mockups of websites.
+* Bootstrap 5 - A front-end framework for building responsive websites.
+* Cloudinary - A cloud-based image and video management platform for storing media assets.
+* Microsoft Paint - Editor for images 
+
+* Validation
+
+* WC3 Validator - Used to validate the HTML code of the site.
+* Jigsaw W3 Validator- Used to validate the CSS of the site.
+* Jshint - Used to validate the Javascript of the site.
+* Pycodestyle - Used to validate code against Python conventions.
+* Chrome dev tools (Lighthouse) - Used to measure site performance, SEO and accessibility.
+* WAVE Validator - Used to evaluate site accessibility
+
+
+
+
 
 
 # Deployment and Local Development
