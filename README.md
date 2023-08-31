@@ -288,6 +288,33 @@
 
 <img src="static/images/readme/kyulistedit.png" height="150" alt="Kyu Edit View">
 
+# Sensei Create
+
+<img src="static/images/readme/senseicreatenav.png" height="50" alt="Sensei Nav Bar">
+
+* To fill in the form provided in the code snippet, follow these steps:
+* Open the HTML file in a web browser.
+-   Fill in the form fields with the required information.
+-   sensei_first_name: Enter the first name of the sensei in the text field.
+-   sensei_last_name: Enter the last name of the sensei in the text field.
+-   sensei_email: Enter the email address of the sensei in the text field.
+-   sensei_contact_num: Enter the contact number of the sensei in the text field.
+-   Select the Submit button to submit the form.
+*   Make sure to include all the required information in the form before submitting it. The form also includes a CSRF token to safeguard against attacks.
+
+<img src="static/images/readme/senseicreate.png" height="150" alt="Sensei create">
+
+# Sensei View/Edit/Delete
+
+<img src="static/images/readme/senseieditviewnav.png" height="50" alt="Sensei edit nav">
+
+<img src="static/images/readme/senseiview.png" height="150" alt="Sensei View">
+
+* Here the Sensei form includes all the necessary fields, such as Semsei first name, Sensei last name, Email and Contact number. The fields are clearly presented and formatted to provide a user-friendly experience.
+* To update a Sensei, the editor can navigate to the Sensei Profile and access the update form. The form will display all the existing data for each field, allowing the sensei to make any necessary changes. Once the sensei has made the desired updates, they can submit the form to save the changes to the sensei record. 
+* Overall, the form web page is designed to provide a seamless and efficient way for the sensei to update a Sensei record. The clear presentation and formatting of the fields ensure a user-friendly experience, making it easy for the sensei to make any necessary changes to the Sensei records.
+
+<img src="static/images/readme/senseieditview.png" height="150" alt="Sensei edit nav">
 
 # Student View
 -   <img src="static/images/readme/studentpagenav.png" height="50" alt="Student page Nav Bar">
@@ -333,9 +360,9 @@
 * Chrome dev tools (Lighthouse) - Used to measure site performance, SEO and accessibility.
 * WAVE Validator - Used to evaluate site accessibility
 
-## keyword search (Meta)
-* keywords content: "Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, 
-Belt ranking, Sparring, Japan, Dublin, Ireland"
+## keyword, Discription(Meta)
+*   Site Discription="Shotokan Karate club for people in Dublin, Ireland"
+*   keywords search="Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, Belt ranking, Sparring, Japan, Dublin, Ireland"
 
 ## Deployment
 
