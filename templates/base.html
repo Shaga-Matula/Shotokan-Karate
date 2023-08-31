@@ -54,7 +54,7 @@
                     {% if user.is_authenticated %}
                     {% if user.role == 'STUDENT' %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'student_kyu_list' %}" aria-label="Student Page">Student
+                        <a class="nav-link {% active_link 'student_kyu_list' %}" href="{% url 'student_kyu_list' %}" aria-label="Student Page">Student
                             Page</a>
                     </li>
                     {% endif %}

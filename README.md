@@ -8,18 +8,13 @@
 
 ![Screen Shots](static/images/readme/websitescreens.png)
 
-* https://shields.io/badges
-
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json)
 
 <img src="static/images/readme/main_logo-modified.png">
 
 * The creator of the Shotokan project is Paul Gleeson from Code Institute.  The project aims to provide an introduction to Shotokan Karate and a beginner's guide to the martial art. In addition to this the site, individuals interested in learning more about Shotokan Karate can join a Shotokan Karate club.  
 
-[Yoshin Ryu](https://www.yoshinryu.co.uk/) 
 
-
-## Project Discription
+# Project Discription
 
 ### This project is for a karate school website that will have the following features:
 * Registration: The site will allow sensei (teachers) to register new kyu(grade levels), studnents and sensei. The information collected will include the user's name, email address, address, date of birth, and grade to attain.
@@ -31,7 +26,7 @@
 * Student Functionality: Students will have limited choices in the navigation bar and will only be able to view their own page. The student page will display their current attainable karate level and all previous grades. Students will not be able to edit any data in the project.
 * Admin Panel: An admin account (superuser) will be created solely for access to the admin panel, where all the functionality of the site is included.
 
-# Shotokan Karate
+## Shotokan Karate
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
 * [Link to Shotokan Heroku](https://shotokanapp-156d7bd78744.herokuapp.com/)
@@ -51,8 +46,34 @@
 # Project Introduction
 
 
-
 * The Shotokan website is designed to introduce potential karate students to Shotokan Karate as a means to achieve a healthier lifestyle and a healthy state of mind. The website aims to provide an engaging and informative experience for visitors. Shotokan Karate is a dynamic martial art style created by the late, great Gichin Funakoshi. The philosophy of Shotokan Karate is based on the traditional Budo (martial arts) spirit of Karate, which seeks the perfection of character through hard work and discipline. Shotokan Karate is a form of self-defense that is built on a strong foundation of physical and mental training.
+
+## Login and permisions
+
+
+* In this project, there are three types of users: admin (superuser), teachers, and students. Each user type has exclusive navbar access to specific functionalities and pages. Here's a breakdown of the access and functionalities for each user type:
+
+### Admin (superuser):
+
+- Test User name for admin : admin , "Htmlcss1" 
+- Exclusive access to the admin panel.
+- Can manage users, groups, and permissions in the admin panel.
+- Can create and delete users in the admin panel.
+- Can assign permissions to users or groups.
+
+### Teachers:
+- Test User Name for Sensei : Editor , "Bulmers1"
+- Exclusive access to the website's functionality.
+- Can create student profiles in the Registration Page.
+- Can read student data from the Student View Page.
+- Can update student data from the Student View Page.
+- Can delete a student profile from the Student View Page.
+
+### Students:
+
+- Test User for Students DaveM "Htmlcss1"
+- Exclusive access to their own information page.
+- Cannot access or modify any students' information.
 
 
 ## Landing Page
@@ -140,8 +161,7 @@
 
 <img src="static/images/readme/notnorm.png" width="600" height="100" alt="un Normalised">
 
-### Over view of Shotkan Database
-
+# Over view of Shotkan Database
 * Role: A character field with a maximum length of 15, representing the role of the student.
 * First Name: A character field with a maximum length of 50, representing the first name of the student.
 * Last Name: A character field with a maximum length of 50, representing the last name of the student.
@@ -155,6 +175,7 @@
 * Kyu To Achieve: A foreign key field representing the student's grade.
 * Sensei: A foreign key field representing the student's sensei. This field is optional and can be left blank.
 
+# Other Tables
 *   The "Students_Table" is a database table that stores information about students. It has several columns that represent different attributes of a student, such as their ID, first name, last name, date of birth, email, address, postal code, role, last updated timestamp, student grade, and sensei.
 *   The table also includes foreign key relationships to other tables, such as the "Student_Lvl" table and the "Sensei" table.
 *   The "Student_Lvl" table stores information about the student's level, including the kyu level, belt color, kata name, kata image, and syllabus image.
@@ -185,64 +206,6 @@
 <hr>
 
 <img src="static/images/readme/userstoriesland.png" alt="User Story Template Image" height="300">
-
-
-# Technologies Used
-<hr style="border:1px solid white">
-
-* Coding Languages
-
-* HTML
-* CSS
-* Python 3
-* Javascript
-
-* Frameworks 
-
-* Git - Version control system.
-* GitHub - Managing Git repositories.
-* Gitpod - Development environment.
-* Icon library for producing icons on websites.
-* Google Fonts - Collection of free, open-source fonts for importing into websites.
-* Psycopg2 - PostgreSQL adapter for Python.
-* Django 3.2.16 - A Python web framework for rapid development.
-* Gunicorn - Python HTTP server for WSGI applications.
-* Heroku Platform - A cloud-based platform for deploying and managing web applications.
-* Crispy Forms - A Python package for formatting forms in Django.
-* Website Mockup Generator - A tool for creating mockups of websites on different screen sizes.
-* Balsamiq - A wireframing tool for producing mockups of websites.
-* Bootstrap 5 - A front-end framework for building responsive websites.
-* Cloudinary - A cloud-based image and video management platform for storing media assets.
-* Microsoft Paint - Editor for images 
-
-* Validation
-
-* WC3 Validator - Used to validate the HTML code of the site.
-* Jigsaw W3 Validator- Used to validate the CSS of the site.
-* Jshint - Used to validate the Javascript of the site.
-* Pycodestyle - Used to validate code against Python conventions.
-* Chrome dev tools (Lighthouse) - Used to measure site performance, SEO and accessibility.
-* WAVE Validator - Used to evaluate site accessibility
-
-
-
-
-
-
-# Deployment and Local Development
-
-<hr style="border:1px solid white">
-
-# Testing
-
-<hr style="border:1px solid white">
-
-
-# Credits
-
-<hr style="border:1px solid white">
-
-
 
 # Registration form
 
@@ -287,9 +250,179 @@
 <img src="static/images/readme/deletemessage2.png" height="100" alt="Delete check Two">
 
 
-## Tools
-### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
-### QuickDBD : -       https://app.quickdatabasediagrams.com
+# Kyu Create
+
+-  <img src="static/images/readme/kyucreatnav.png" height="50" alt="Kyu Creation View">
+
+* Fill in the form given in the code, follow these steps:
+* Open the HTML file in a web browser.
+* Fill in the form fields with the required information.
+* Select the Submit button to submit the form.
+
+- The form contains the following input fields:
+- kyu_level: Select the kyu level from the dropdown list.
+- belt_color: Select the belt color from the dropdown list.
+- kata_name: Enter the name of the kata in the text field.
+- Kata_image: Upload an image of the kata to cloudaniry.
+- Syllabus_image: Upload an image of the syllabus to cloudaniry.
+- Make sure to include all the required information in the form before submitting it. The form also includes a CSRF token to safeguard against attacks.
+
+
+<img src="static/images/readme/kyucreateview.png" height="150" alt="Kyu Creation View">
+
+# Kyu View/Edit/Delete
+
+<img src="static/images/readme/kyulistnav.png" height="50" alt="Kyu Create View">
+
+* When the relevant navigation button is selected, the Kyu (grade) levels are displayed. It is important to note that while this view is relatively static and does not require editing, some Dojos (Schools) may have a different grading system that could result in changes to the syllabus and grade colors.
+
+<img src="static/images/readme/kyulistview.png" height="150" alt="Kyu List View">
+
+# Kyu Update View
+
+* Here the Kyu form includes all the necessary fields, such as Kyu Name, Belt Color, Kata Name, Kata Image and Syllabus Image. The fields are clearly presented and formatted to provide a user-friendly experience.
+* To update a Kyu Level, the sensei can navigate to the Kyu Profile and access the update form. The form will display all the existing data for each field, allowing the sensei to make any necessary changes. Once the sensei has made the desired updates, they can submit the form to save the changes to the student's record. 
+
+* It is important to note that the Kata Image and Syllabus image are saved to cloudinary. These fields can be updated by selecting the appropriate values from the provided options or by entering the necessary information.
+* Overall, the form web page is designed to provide a seamless and efficient way for the sensei to update a Kyu record. The clear presentation and formatting of the fields ensure a user-friendly experience, making it easy for the sensei to make any necessary changes to the Kyu records.
+
+<img src="static/images/readme/kyulistedit.png" height="150" alt="Kyu Edit View">
+
+
+# Student View
+-   <img src="static/images/readme/studentpagenav.png" height="50" alt="Student page Nav Bar">
+
+- When a student logs in, they will have limited access to their previous grade material and attainable grade information. This means that if a student's attainable grade is 6th kyu, they will have access to the material for 9th, 8th, and 7th grades as well. It is important to note that the grades go from lowest to highest, with 9th grade being the lowest (Yellow belt) and 1st kyu being the highest (brown 2 white stripes).
+
+
+-   <img src="static/images/readme/studentpageview.png" height="400" alt="Student page Nav Bar">
+
+# Technologies
+
+## Coding Languages
+* HTML
+* CSS
+* Python 3
+* Javascript
+
+## Technologies
+* Git - Version control system.
+* GitHub - Managing Git repositories.
+* Gitpod - Development environment.
+* Icon library for producing icons on websites.
+* Google Fonts - Collection of free, open-source fonts for importing into websites.
+* Psycopg2 - PostgreSQL adapter for Python.
+* Django 3.2.16 - A Python web framework for rapid development.
+* Gunicorn - Python HTTP server for WSGI applications.
+* Heroku Platform - A cloud-based platform for deploying and managing web applications.
+* Crispy Forms - A Python package for formatting forms in Django.
+* Website Mockup Generator - A tool for creating mockups of websites on different screen sizes.
+* Balsamiq - A wireframing tool for producing mockups of websites.
+* Bootstrap 5 - A front-end framework for building responsive websites.
+* Cloudinary - A cloud-based image and video management platform for storing media assets.
+* Microsoft Paint - Editor for images
+* Microsoft Word 2010
+* Responsinator 
+* QuickDBD 
+
+## Validation
+* WC3 Validator - Used to validate the HTML code of the site.
+* Jigsaw W3 Validator- Used to validate the CSS of the site.
+* Jshint - Used to validate the Javascript of the site.
+* Pycodestyle - Used to validate code against Python conventions.
+* Chrome dev tools (Lighthouse) - Used to measure site performance, SEO and accessibility.
+* WAVE Validator - Used to evaluate site accessibility
+
+## keyword search (Meta)
+* keywords content: "Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, 
+Belt ranking, Sparring, Japan, Dublin, Ireland"
+
+## Deployment
+
+* Version Control
+- The Site was created using gitpod workspace and pushed to github.
+- git add . - This command was used to add the file(s) to the staging area before they are committed.
+- git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
+- git push - This command was used to push all committed code to the repository on github.
+
+## Heroku 
+
+- Requirement and Procfile
+- Before deployment on Heroku, two files need to be created and be up to date, a requirements.txt file and a Procfile.
+- The requirements.txt file is created by executing the following command in the terminal window:  pip3 freeze --local > requirements.txt. A file with all requirements will be  created.
+- Then create a file named Procfile and insert the following code: web: gunicorn welovedogs.wsgi, with no empty lines after it.
+- Then make sure to push these files to your repository.
+
+## Creating Heroku App
+
+- Log into Heroku and go to the Dashboard.
+- Click "New" and then select "Create new app".
+- Give your app a name and select the region closest to you.
+- Click "Create app" to confirm.
+- Creating a database
+
+## ElephantSql
+
+- Log into ElephantSQL.com and access your dashboard.
+- Click "Create New Instance"
+- Set up a plan, give your plan a Name, select the Tiny Turtel (Free) plan, leave the Tags field blank.
+- Select "Select Region" and select a data center new you.
+- Click "Review".
+- Confirm your details and then click "Create instance".
+- Return to the ElephantSQL dashboard and click on the database instance name for this project.
+- In the URL section, click the copy icon to copy the database URL.
+- In your workspace make sure django and gunicorn are installed by running pip3 install 'django<4' gunicorn.
+- Equally make sure that infrastructure for the database is installed by running pip3 install dj_database_url===0.5.0 psycopg2.
+- Update the requirements.txt file if needed.
+
+## The env.py file
+
+- If you do not have a env.py file in your workspace create one and make sure it is included in the .gitignore file.
+- At the top of the env.py file add the line: import os.
+- Below that add the following two lines:
+- os.environ["DATABASE_URL"] = "<copied URL from SQL database>"
+- os.environ["SECRET_KEY"] = "<create a secret key of your own>"
+
+## Cloudinary storage:
+
+- os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"
+- Make sure the environment variables are imported correctly into the settings.py file.
+- Run python manage.py migrate in the terminal window to migrate the data structure to the database instance.
+
+
+## Setting Environment Variables
+
+- On the Heroku Dashboard select the app you just created and then select the "Settings" tab.
+- Click "Reveal Config Vars"
+- Add the following config vars:
+    - DATABASE_URL - copy the database URL from ElephantSQL in here, it should also be in the env.py file.
+    - SECRET_KEY - copy your secret key in here.
+    - Cloudinary storage you also need to copy your personal CLOUDINARY_URL into these fields.
+    - In addition, you may need the key PORT with value 8000.
+
+## Connecting to GitHub and Deploy
+
+- On the Heroku Dashboard select the app you just created and then select the "Deploy" tab.
+- Select GitHub for the deployment method.
+- Search for the name of the project repository and click "Connect".
+- Further down the page, select "Enable Automatic Deploys" if desired.
+- Then finally further down, select "Deploy Branch" and watch the app being built.
+
+## Forking the Repository
+- Log in to GitHub and locate the GitHub repository you want to fork.
+- At the top of the Repository above the "Settings" Tab on the menu, locate the "Fork" Button and click it.
+- You will have a copy of the original repository in your GitHub account.
+- You will now be able to make changes to the new version and keep the original safe.
+
+## Making a Local Clone
+- Log into GitHub and locate the repository you want to clone.
+- Click the 'Code' dropdown above the file list.
+- Copy the URL for the repository.
+- Open Git Bash in your IDE.
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: $ git clone https://github.com/
+- Press Enter to create your local clone.
+- Install all of the packages listed in the requirements file you can use the following command in the terminal pip install -r requirements.txt which will do it for you.
 
 ## Bugs
 
@@ -297,54 +430,28 @@
 * Issue : Error message  
 <img src="static/images/readme/failcreatesuper.png" width="150" height="150" alt="Pre-Normalizing">
 
-* AUTH_USER_MODEL = 'shotokanapp.CustomUser'
-* fix by https://testdriven.io/blog/django-custom-user-model/
-
-## Login and permisions
-
-* In this project, there are three types of users: admin (superuser), teachers, and students. Each user type has exclusive navbar access to specific functionalities and pages. Here's a breakdown of the access and functionalities for each user type:
-
-### Admin (superuser):
-
-- Exclusive access to the admin panel.
-- Can manage users, groups, and permissions in the admin panel.
-- Can create and delete users in the admin panel.
-- Can assign permissions to users or groups.
-
-### Teachers:
-
-- Exclusive access to the website's functionality.
-- Can create student profiles in the Registration Page.
-- Can read student data from the Student View Page.
-- Can update student data from the Student View Page.
-- Can delete a student profile from the Student View Page.
-
-### Students:
-
-- Exclusive access to their own information page.
-- Cannot access or modify any students' information.
+- AUTH_USER_MODEL = 'shotokanapp.CustomUser'
+- fix by https://testdriven.io/blog/django-custom-user-model/
 
 
+### Vulnerability
+
+- There is a vulnerability where anonymous users can access restricted pages by pasting the URL into the search bar. To mitigate this security risk, we have implemented the use of "UserPassesTestMixin" and added a small code snippet to each view.
+- This approach ensures that only authorized users can access the restricted areas, preventing unauthorized access and maintaining the integrity of the application.
+- In the event that access or authentication is denied, the user will be redirected to the login screen. This ensures that only authorized users can access the application and maintain the security of the system.
+
+-   <img src="static/images/readme/accessfix.png" height="100" alt="Bug Fix User Access">
+
+-   <img src="static/images/readme/accessfixerror.png" height="100" alt="Bug Fix User Access">
 
 
-* keyword search (Meta)
-* keywords content: "Shotokan Karate, Karate club, Martial arts, Self-defense, Kata, Kumite, Dojo, Sensei, Training, Techniques, 
-Belt ranking, Sparring, Japan, Dublin, Ireland"
+# Credits
+
+<hr style="border:1px solid white">
+
+-   The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields.
+-   All Karate information and images were created by Paul Gleeson, written in 2016 in a book called [Yoshin Ryu](https://www.yoshinryu.co.uk/) 
+ Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary.
 
 
-The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields.
-
-All Karate information and images were created by Paul Gleeson, written in 2016 in a book called Yoshin Ryu Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary.
-
-
-
-* Bug Description:
-* There is a vulnerability where anonymous users can access restricted pages by pasting the URL into the search bar. To mitigate this security risk, we have implemented the use of "UserPassesTestMixin" and added a small code snippet to each view.
-* This approach ensures that only authorized users can access the restricted areas, preventing unauthorized access and maintaining the integrity of the application.
-*In the event that access or authentication is denied, the user will be redirected to the login screen. This ensures that only authorized users can access the application and maintain the security of the system.
-
-
-<img src="static/images/readme/accessfix.png" height="100" alt="Bug Fix User Access">
-
-
-<img src="static/images/readme/accessfixerror.png" height="100" alt="Bug Fix User Access">
+# Testing
