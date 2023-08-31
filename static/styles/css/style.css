@@ -4,7 +4,7 @@ html {
 
 }
 
-/* Keep footer at botom of page  */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -51,6 +51,7 @@ main {
 
 }
 
+/* Thumnail expantion image in Kyu page */
 .thumbnail {
     top: -50px;
     left: -35px;
@@ -68,12 +69,11 @@ main {
 
 }
 
-
 .active {
     background-color: grey;
     border-radius: 5px;
-   }
-/* ############################################## */
+}
+
 
 
 /* Register page */
@@ -87,74 +87,19 @@ main {
 }
 
 
-
-.student-page-image {
-    max-height: 10px;
-}
-
-
-
-
-/* Note to rember */
-
-.force-height {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-
-.heroback {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-
-}
-
 .cardtextcolor {
     color: black;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* This sets the grey box and also transparent  */
+/* This sets the grey box and also transparent on delete pages  */
 .grey-transparent-background {
     background-color: rgba(128, 128, 128, 0.60);
     color: black;
     font-weight: 400;
     border-radius: 25px;
 
-}
-
-
-
-
-
-
-.box-b {
-    background-color: blue;
-}
-
-.box-r {
-    background-color: red;
-}
-
-.box-g {
-    background-color: green;
-}
-
-.box-y {
-    background-color: yellow;
-}
-
-
-.make-center-hoz-ver {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
 }
 
 .border-padd-grey {
@@ -168,12 +113,7 @@ main {
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
-
-
-
-
+/* Forms and Signup */
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
@@ -200,17 +140,11 @@ main {
     width: 50%;
 }
 
+/* Small Margin for Spacing */
 .spacer {
     margin: 10px;
-    /* display: flex;
-    align-items: center; */
 }
 
 
-
-
-.custom-kate-img {
-    width: 50%;
-}
 
 

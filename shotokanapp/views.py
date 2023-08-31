@@ -4,7 +4,8 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import View, TemplateView, DetailView, DeleteView
 from django.views.generic.edit import FormView, UpdateView
-from .forms import StudentForm, KyuRegisterForm, StudentForm, CustomUserCreationForm, SenseiRegisterForm
+from .forms import KyuRegisterForm, StudentForm, CustomUserCreationForm
+from .forms import SenseiRegisterForm
 from .models import StudentLevelMod, CustomUser, SenseiMod
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
