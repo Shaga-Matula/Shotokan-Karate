@@ -33,7 +33,7 @@ class SenseiMod(models.Model):
     sensei_email = models.EmailField(verbose_name='Sensei Email Address')
     sensei_contact_num = PhoneNumberField(verbose_name='Sensei Mobile')
 
-      
+
     class Meta:
         verbose_name = "Sensei"
         verbose_name_plural = "Sensei"
@@ -49,8 +49,8 @@ class CustomUser(AbstractUser):
     readonly_fields = ('last_updated',)
     # Custom User Model
     class Meta:
-        verbose_name = "Shotokan Membrers"
-        verbose_name_plural = "Shotokan Membrers"
+        verbose_name = "Shotokan Members"
+        verbose_name_plural = "Shotokan Members"
 
     class Role(models.TextChoices):
         ADMIN = 'ADMIN', 'Admin'

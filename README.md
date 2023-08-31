@@ -43,7 +43,6 @@
 
 <hr>
 
-
 2. [Shotokan Project](#Project-Goals)
     1.  [User experience](#User-experience)
     2.  [Agile Aproach](#Agile-Aproach)
@@ -109,6 +108,10 @@
 <hr>
 
 9. [Bugs](#bugs)
+    1.  [Heroku Error](#heroku-error)
+    2.  [Deceptive Site Ahead](#deceptive-site-ahead)
+    3.  [Cant access Admin Panel](#cant-access-admin-panel-after-creating-custom-user)
+    4.  [Vulnerability](#vulnerability)
 <hr>
 
 10.[Credits](#credits)
@@ -116,9 +119,6 @@
 
 11.[Testing](#testing)
 <hr>
-
-
-
 
 # Project Introduction
 
@@ -569,6 +569,10 @@
 
 ## Bugs
 
+- Help from the comunity
+- https://code-institute-room.slack.com/archives/C026PTF46F5/p1689729640362899
+
+
 ### Heroku Error
 
 * Issue :  Css and Static not working on Heroku
@@ -621,9 +625,44 @@
 
 <hr style="border:1px solid white">
 
+* https://www.w3schools.com/css/css3_flexbox_responsive.asp - A tutorial on using CSS flexbox to create a responsive website.
+* https://stackoverflow.com/questions/32516886/how-to-make-bootstrap-cards-responsive - A question and answer forum on how to make Bootstrap cards responsive.
+* https://aguidehub.com/blog/how-to-make-card-responsive-in-bootstrap/ - A tutorial on how to make a card responsive in Bootstrap.
+* https://youtube.com/watch?v=Izc-0yF4EA0 - A YouTube video tutorial on how to create a responsive card using Bootstrap.
+* https://getbootstrap.com/docs/4.0/components/card/ - The official documentation for Bootstrap's card component.
+* https://github.com/othneildrew/Best-README-Template - A README template for GitHub projects.
+* https://cbea.ms/git-commit/#separate - A guide on how to separate subject from body in Git commit messages.
+* https://tinypng.com/ - A tool for compressing and optimizing PNG and JPEG images.
+* https://www.flexboxfroggy.com - A game that teaches CSS flexbox.
+* https://techsini.com/multi-mockup/index.php - A tool for creating mockups of websites and apps.
+* https://www.youtube.com/playlist?list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt - A YouTube playlist of tutorials on creating a responsive website using Bootstrap.
+* https://console.cloudinary.com/documentation/django_image_and_video_upload#django_forms_and_models - Documentation on how to upload images and videos in Django using Cloudinary.
+* https://codinggear.blog/django-templates-config/ - A tutorial on how to configure Django templates.
+* https://python-forum.io/thread-24612.html - A forum thread on Python programming.
+* https://www.rockandnull.com/django-user-profile/ - A tutorial on how to create a user profile in Django.
+* https://forum.djangoproject.com/t/duplicate-email-address-in-django-allauth/19064 - A forum thread on how to handle duplicate email addresses in Django Allauth.
+* https://saralgyaan.com/posts/how-to-extend-django-user-model-using-abstractuser/ - A tutorial on how to extend the Django user model using AbstractUser.
+* https://www.geeksforgeeks.org/search-bar-using-html-css-and-javascript/ - A tutorial on how to create a search bar using HTML, CSS, and JavaScript.
+* https://icons8.com/icons/set/karate - A set of karate icons.
+* https://www.pxfuel.com/en/desktop-wallpaper-skjrf/download - A desktop wallpaper image.
+* https://django-crispy-forms.readthedocs.io/en/latest/layouts.html - Documentation on how to use Django Crispy Forms to create form layouts.
+* https://gist.github.com/delneg/b6d625708ae1a75fd5f036a5fe6f6a62 - A code snippet for creating a responsive navbar in Bootstrap.
+* https://codefellows.github.io/sea-python-401d7/lectures/django_views.html - Lecture notes on Django views.
+
+
 -   The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields.
 -   All Karate information and images were created by Paul Gleeson, written in 2016 in a book called [Yoshin Ryu](https://www.yoshinryu.co.uk/) 
  Karate Syllabus. I have full permision from Yoshin Ryu Karare Club Cousldon UK to use any material nessasary.
+
+
+# Special Thanks to: 
+- Dave_T_5P (David Trevaskis) for moral support and exchange of ideas (Code Institatute)
+- Gareth McGirr (Mentor)
+- Paul Thomas O’Riordan (The Facilatator)
+- Oliver Train 5_p (Teaching Some Django fixes)
+- Seon O'brian Gleeson (Css and JavaScript tips)
+
+
 
 
 # Testing
