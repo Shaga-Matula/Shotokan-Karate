@@ -29,17 +29,94 @@
 ## Shotokan Karate
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
-* [Link to Shotokan Heroku](https://shotokanapp-156d7bd78744.herokuapp.com/)
+* [Link to Shotokan Heroku](https://shotokanapp-a0f46a26c73a.herokuapp.com/)
 
 
 ## README Table Content
 
 1.  [Introduction](#Introduction)
-    1.  [Project Goals](#Project-Goals)
-    2.  [User experience](#User-experience)
-    3.  [Agile Aproach](#Agile-Aproach)
-    4.  [User Stories](#user-stories)
-    5.  [Design](#design)
+    1.  [Project Introduction](#project-introduction)
+    2.  [Login and Permisions](#login-and-permisions)
+    3.  [Landing Page](#landing-page)
+    4.  [Registration](#registration-process)
+    5.  [MVP](#mvp)
+
+<hr>
+
+
+2. [Shotokan Project](#Project-Goals)
+    1.  [User experience](#User-experience)
+    2.  [Agile Aproach](#Agile-Aproach)
+    3.  [User Stories](#user-stories)
+<hr>
+
+3.  [Design](#design)
+    1.  [Design Landing Page](#landing-page)
+    2.  [Description of the landing page](#description-of-the-landing-page)
+    3.  [Design Student Registration Page](#student-registration-pagestudent-view-pagestudent-edit-page)
+    4.  [Kyu Creation](#kyu-creation-pagekyu-edit-page)
+    5.  [Sensei Creation Page](#sensei-creation-pagesensei-view-page-sensei-edit-page)
+<hr>
+
+4. [DataBase Design](#database-design)
+    1. [Normalizing definition](#normalizing-definition)
+    2. [Pre-Normalizing](#pre-normalizing)
+    3. [Over view of Shotkan Database](#over-view-of-shotkan-database)
+    4. [Other Tables](#other-tables)
+<hr>
+
+5. [Features](#features)
+    1.  [Agile Aproach](#agile-aproach)
+    2.  [User Stories](#user-stories)
+<hr>
+
+6. [How to Use Shotokan Site](#how-to-use-shotokan-site)
+    1.  [Registration form](#registration-form)
+    2.  [Student Card View](#student-card-view)
+    3.  [Student Update View](#student-update-view)
+    4.  [Success](#success)
+    5.  [Delete (Two-tier Validation Check)](#delete-two-tier-validation-check)
+    6.  [Kyu Create](#kyu-create)
+    7.  [Kyu View/Edit/Delete](#kyu-vieweditdelete)
+    8.  [Kyu Update View](#kyu-update-view)
+    9.  [Success](#success-1)
+    10. [Delete (Two-tier Validation Check)](#delete-two-tier-validation-check-1)
+    11. [Sensei Create](#sensei-create)
+    12. [Sensei View/Edit/Delete](#sensei-vieweditdelete)
+    13. [Success](#success-2)
+    14. [Delete (Two-tier Validation Check)](#delete-two-tier-validation-check-2)
+    15. [Student View (Restricted)](#student-view-restricted)
+<hr>
+
+7.  [Technologies](#technologies)
+    1. [Coding Languages](#coding-languages)
+    2. [Technologies Used](#technologies-used)
+    3. [Validation](#validation)
+    4. [keyword, Discription(Meta)](#keyword-discriptionmeta)
+<hr>
+
+8.  [Deployment](#deployment)
+    1. [Version Control](#version-control)
+    2. [Heroku](#heroku)
+    3. [Creating Heroku App](#creating-heroku-app)
+    4. [ElephantSql](#elephantsql)
+    5. [env.py file](#envpy-file)
+    6. [Cloudinary storage](#cloudinary-storage)
+    7. [Setting Environment Variables](#setting-environment-variables)
+    8. [Connecting to GitHub and Deploy](#connecting-to-github-and-deploy)
+    9. [Forking the Repository](#forking-the-repository)
+    10.[Making a Local Clone](#making-a-local-clone)
+<hr>
+
+9. [Bugs](#bugs)
+<hr>
+
+10.[Credits](#credits)
+<hr>
+
+11.[Testing](#testing)
+<hr>
+
 
 
 
@@ -78,6 +155,10 @@
 
 ## Landing Page
 * Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image as background wallpaper that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
+
+<img src="static/images/readme/landingpage.png"  alt="Landing page view" height="200">
+
+
 ## Registration Process
 * If a student decides to take up lessons, they can use the contact us form to express interest. If they choose to become students the head instructor can register through a form integrated into the website. This registration form is built using Django, along with Bootstrap for enhanced styling and responsiveness. The use of Django allows for efficient handling of form submissions and data management. The information provided by the student will be securely stored in a PostgreSQL database, ensuring the privacy and security of their personal details.
 * Utilizing Django, Bootstrap and Python, the registration process is streamlined and user-friendly. The integration of these technologies enables a seamless user experience, making it easy for instructors to register students to sign up for lessons and become part of the Shotokan Karate community.
@@ -186,7 +267,6 @@
 <img src="static/images/readme/shotokandbdesign.png" width="400" height="300" alt="Database Design">
 
 # Features
-<hr style="border:1px solid white">
 
 ## Agile Aproach
 
@@ -207,7 +287,11 @@
 
 <img src="static/images/readme/userstoriesland.png" alt="User Story Template Image" height="300">
 
-# Registration form
+# How to Use Shotokan Site
+
+* Navagate to the Shotokan Site using this link, [Link to Shotokan Heroku](https://shotokanapp-a0f46a26c73a.herokuapp.com/) and follow the instructions below.
+
+## Registration form
 
 <img src="static/images/readme/selectcreatestudent.png" alt="User Story Template Image" height="30">
 
@@ -288,6 +372,22 @@
 
 <img src="static/images/readme/kyulistedit.png" height="150" alt="Kyu Edit View">
 
+# Success
+
+* If the user is successful in updating the record, they will be given a success message. This message will comprise of a page with the title "Success" that will provide URLs to any page they wish to go. This means that the user will be redirected to a page that confirms the successful update of the record and provides links to other pages that they may want to visit next. This can help the user navigate the website more easily and efficiently.
+
+<img src="static/images/readme/succcess.png" height="100" alt="Success Message">
+
+# Delete (Two-tier Validation Check)
+* First check: If the sensei clicks the delete button, they will be presented with a choice of "yes" or "no". They will also see a clear view of the student's name and record ID because deletion is irreversible. If the user clicks "delete", the program will ask for a second check.
+* Second check: The user is presented with a Django Allauth message asking them to confirm if they want to delete the record.
+* This two-tier validation check ensures that the deletion process is deliberate and helps prevent accidental deletions. The first check provides a clear view of the student's information, allowing the sensei to review it before making a decision. The second check, using Django Allauth, adds an extra layer of confirmation to ensure that the user is certain about deleting the record.
+* By implementing this two-tier validation check, you can enhance the user experience and minimize the risk of unintended deletions.
+
+
+<img src="static/images/readme/deletemessage.png" height="100" alt="Delete check One">
+<img src="static/images/readme/deletemessage2.png" height="100" alt="Delete check Two">
+
 # Sensei Create
 
 <img src="static/images/readme/senseicreatenav.png" height="50" alt="Sensei Nav Bar">
@@ -316,7 +416,23 @@
 
 <img src="static/images/readme/senseieditview.png" height="150" alt="Sensei edit nav">
 
-# Student View
+# Success
+
+* If the user is successful in updating the record, they will be given a success message. This message will comprise of a page with the title "Success" that will provide URLs to any page they wish to go. This means that the user will be redirected to a page that confirms the successful update of the record and provides links to other pages that they may want to visit next. This can help the user navigate the website more easily and efficiently.
+
+<img src="static/images/readme/succcess.png" height="100" alt="Success Message">
+
+# Delete (Two-tier Validation Check)
+* First check: If the sensei clicks the delete button, they will be presented with a choice of "yes" or "no". They will also see a clear view of the student's name and record ID because deletion is irreversible. If the user clicks "delete", the program will ask for a second check.
+* Second check: The user is presented with a Django Allauth message asking them to confirm if they want to delete the record.
+* This two-tier validation check ensures that the deletion process is deliberate and helps prevent accidental deletions. The first check provides a clear view of the student's information, allowing the sensei to review it before making a decision. The second check, using Django Allauth, adds an extra layer of confirmation to ensure that the user is certain about deleting the record.
+* By implementing this two-tier validation check, you can enhance the user experience and minimize the risk of unintended deletions.
+
+
+<img src="static/images/readme/deletemessage.png" height="100" alt="Delete check One">
+<img src="static/images/readme/deletemessage2.png" height="100" alt="Delete check Two">
+
+# Student View (Restricted)
 -   <img src="static/images/readme/studentpagenav.png" height="50" alt="Student page Nav Bar">
 
 - When a student logs in, they will have limited access to their previous grade material and attainable grade information. This means that if a student's attainable grade is 6th kyu, they will have access to the material for 9th, 8th, and 7th grades as well. It is important to note that the grades go from lowest to highest, with 9th grade being the lowest (Yellow belt) and 1st kyu being the highest (brown 2 white stripes).
@@ -332,7 +448,7 @@
 * Python 3
 * Javascript
 
-## Technologies
+## Technologies Used
 * Git - Version control system.
 * GitHub - Managing Git repositories.
 * Gitpod - Development environment.
@@ -366,7 +482,7 @@
 
 ## Deployment
 
-* Version Control
+## Version Control
 - The Site was created using gitpod workspace and pushed to github.
 - git add . - This command was used to add the file(s) to the staging area before they are committed.
 - git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
@@ -402,7 +518,7 @@
 - Equally make sure that infrastructure for the database is installed by running pip3 install dj_database_url===0.5.0 psycopg2.
 - Update the requirements.txt file if needed.
 
-## The env.py file
+## env.py file
 
 - If you do not have a env.py file in your workspace create one and make sure it is included in the .gitignore file.
 - At the top of the env.py file add the line: import os.
@@ -453,13 +569,42 @@
 
 ## Bugs
 
+### Heroku Error
+
+* Issue :  Css and Static not working on Heroku
+    1. Check all settings in Heroku :  All good no errors found.
+    2. Check Paths in CSS HTML and Static
+    3. Research on Stack Over flow
+    4. Install White noise.  
+
+- Fix: White Noise need to be fully installed not just pip install. Enterys wre needed in Settings.py
+
+<img src="static/images/readme/heroku_whitenoise.png" width="150"  alt="Heroku White Noise">
+
+
+
+### Deceptive Site Ahead
+* Issue: Decptive Site Ahead 
+
+<img src="static/images/readme/decptivesite.png" width="150"  alt="Decptive Site Ahead">
+
+1.  Upon contacting Heroku, it was confirmed that there were no issues with the site.
+2.  A search for Mallish software or links on the site yielded no results.
+3.  After recreating the Heroku site, a warning was noticed on the site link.
+
+- Fix: 
+- Some user passwords were listed on a blacklist.
+- Deleted affected user accounts.
+- Created new users and passwords for those users.
+
+
 ### Cant access Admin Panel after creating custom user. 
 * Issue : Error message  
-<img src="static/images/readme/failcreatesuper.png" width="150" height="150" alt="Pre-Normalizing">
+<img src="static/images/readme/failcreatesuper.png" width="150" height="150" alt="Fail Create User">
 
 - AUTH_USER_MODEL = 'shotokanapp.CustomUser'
 - fix by https://testdriven.io/blog/django-custom-user-model/
-
+<hr>
 
 ### Vulnerability
 
