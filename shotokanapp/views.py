@@ -13,7 +13,23 @@ from django.views import View
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
 
+from .models import Contact
 
+def contact_view(request):
+    if request.method == 'POST':
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        msg = request.POST.get('msg')
+        level = request.POST.get('chk1')
+        contact = Contact(fname=fname, lname=lname, email=email, phone=phone, msg=msg, level=level)
+        contact.save()
+        return render(request, 'success.html')
+    return render(request, 'index.html')
+
+
+#################################################
 class FirstPage(View):
     """
     This FirstPage class is used to handle the landing page request

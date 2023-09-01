@@ -1,4 +1,4 @@
-from .models import StudentLevelMod, CustomUser, SenseiMod
+from .models import StudentLevelMod, CustomUser, SenseiMod, Contact
 from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp, EmailAddress
 from .forms import CustomUserCreationForm, StudentForm
 from django.contrib import admin, sites
@@ -15,6 +15,19 @@ admin.site.unregister(EmailAddress)
 admin.site.unregister(Site)
 
 admin.site.register(SenseiMod)
+admin.site.register(Contact)
+
+
+class CustomContact(Contact):
+    fieldsets = (
+        (None, {'fields': ('fname', ' lname', 'email', 'phone', ' msg', 'level')}),
+    )
+    list_display = ('fname', ' lname', 'email', 'phone', ' msg', 'level')
+    add_fieldsets = (
+        None, {'fname', ' lname', 'email', 'phone', ' msg', 'level'})
+
+    def __str__(self):
+        return f"{self.fname} {self.lname}"
 
 
 @admin.register(CustomUser)
@@ -32,8 +45,8 @@ class CustomUserAdmin(UserAdmin):
         (None, {
             'classes': ('wide',),
             'fields': ('username', 'password1', 'password2', 'first_name',
-            'last_name', 'email', 'date_of_birth', 'address_1', 'address_2',
-            'post_code', 'contact_num', 'role', 'student_grade', 'sensei'),
+                       'last_name', 'email', 'date_of_birth', 'address_1', 'address_2',
+                       'post_code', 'contact_num', 'role', 'student_grade', 'sensei'),
         }),
     )
 

@@ -2,7 +2,7 @@ from .import views
 from django.urls import path
 from django.views.generic.base import TemplateView
 from .forms import KyuRegisterForm
-from .views import StudentListView, StudentKyuListView,SenseiRegisterView
+from .views import StudentListView, StudentKyuListView,SenseiRegisterView, contact_view
 
 
 urlpatterns = [
@@ -35,5 +35,6 @@ urlpatterns = [
     ###################   Student Syllabus  ########################
     
     path('student_kyu_list/', views.StudentKyuListView.as_view(), name= 'student_kyu_list'),
+    path('contact/', views.contact_view, name='contact'),
 
 ]
