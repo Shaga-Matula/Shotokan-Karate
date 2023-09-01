@@ -25,7 +25,8 @@ def contact_view(request):
         level = request.POST.get('chk1')
         contact = Contact(fname=fname, lname=lname, email=email, phone=phone, msg=msg, level=level)
         contact.save()
-        return render(request, 'success.html')
+        messages.success(request, 'Your message was sent successfully, We will be in touch ASAP ')
+
     return render(request, 'index.html')
 
 
@@ -352,3 +353,5 @@ class DeleteStudentView(UserPassesTestMixin, DeleteView):
     form_class = StudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
+
+    

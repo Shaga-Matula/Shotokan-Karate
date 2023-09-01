@@ -17,14 +17,17 @@ admin.site.unregister(Site)
 admin.site.register(SenseiMod)
 admin.site.register(Contact)
 
-
+# This id for the User Contact in index.html
 class CustomContact(Contact):
     fieldsets = (
         (None, {'fields': ('fname', ' lname', 'email', 'phone', ' msg', 'level')}),
     )
     list_display = ('fname', ' lname', 'email', 'phone', ' msg', 'level')
     add_fieldsets = (
-        None, {'fname', ' lname', 'email', 'phone', ' msg', 'level'})
+        (None, {
+            'fields': ('fname', 'lname', 'email', 'phone', 'msg', 'level'),
+        }),
+    )
 
     def __str__(self):
         return f"{self.fname} {self.lname}"

@@ -80,7 +80,7 @@ class CustomUser(AbstractUser):
         return f"{self.last_name}, {self.first_name}"
 
 
-
+# This is the contact model for index.html form
 
 class Contact(models.Model):
     fname = models.CharField(max_length=50)
