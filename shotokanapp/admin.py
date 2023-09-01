@@ -14,19 +14,22 @@ admin.site.unregister(SocialToken)
 admin.site.unregister(EmailAddress)
 admin.site.unregister(Site)
 
+admin.site.register(StudentLevelMod)
 admin.site.register(SenseiMod)
 admin.site.register(Contact)
 
 # This id for the User Contact in index.html
-class CustomContact(Contact):
+
+
+class CustomContactAdmin(admin.ModelAdmin):
     fieldsets = (
-        (None, {'fields': ('fname', ' lname', 'email', 'phone', ' msg', 'level')}),
+        (None, {'fields': ('fname', 'lname', 'email', 'phone', 'msg', 'level')}),
     )
-    list_display = ('fname', ' lname', 'email', 'phone', ' msg', 'level')
+    list_display = ('fname', 'lname', 'email', 'phone', 'msg', 'level')
     add_fieldsets = (
-        (None, {
-            'fields': ('fname', 'lname', 'email', 'phone', 'msg', 'level'),
-        }),
+        (None, {'classes': ('wide',),
+                'fields': ('fname', 'lname', 'email', 'phone', 'msg', 'level'),
+                }),
     )
 
     def __str__(self):
@@ -55,6 +58,3 @@ class CustomUserAdmin(UserAdmin):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
-
-
-admin.site.register(StudentLevelMod)

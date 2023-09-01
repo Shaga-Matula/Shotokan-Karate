@@ -83,9 +83,18 @@ class CustomUser(AbstractUser):
 # This is the contact model for index.html form
 
 class Contact(models.Model):
-    fname = models.CharField(max_length=50)
-    lname = models.CharField(max_length=50)
-    email = models.EmailField()
-    phone = models.CharField(max_length=20)
-    msg = models.TextField()
-    level = models.CharField(max_length=20)
+    
+    
+    class Meta:
+        verbose_name = "Contact"
+        verbose_name_plural = "Contacts"
+
+    fname = models.CharField(max_length=50, verbose_name='First Name')
+    lname = models.CharField(max_length=50, verbose_name='Last Name')
+    email = models.EmailField(verbose_name='Email Address')
+    phone = models.CharField(max_length=20, verbose_name='Contact Number')
+    msg = models.TextField(verbose_name='Message')
+    level = models.CharField(max_length=20, verbose_name='Level')
+
+def __str__(self):
+        return f"{self.lname}, {self.fname}"
