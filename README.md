@@ -299,9 +299,11 @@
 
 <img src="static/images/readme/landingform.png" alt="Landing Page" width="200">
 
-* Once the information is relayed to the admin pannel the administrator can take the relavent action. 
+* Navagate to the admin panel and login to see the contact area of the panel. Once logged in, locate the contact area of the panel. The information from the form is relayed to the admin pannel where the administrator can then take the necessary action based on the information provided. 
 
-<img src="static/images/readme/adminlandingform.png" alt="Admin Panel Contacts" width="200">
+
+<img src="static/images/readme/contactsadminpanel.png" alt="Admin Panel Contacts" height="200">
+<img src="static/images/readme/adminlandingform.png" alt="Admin Panel Contacts" height="200">
 
 ## Registration form
 
