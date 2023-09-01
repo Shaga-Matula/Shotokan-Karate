@@ -10,7 +10,7 @@ urlpatterns = [
 
     path('', views.FirstPage.as_view(), name='home'),
     path('success/', TemplateView.as_view(template_name="success.html"), name='success'),
- 
+
     
     ###################   Student CRUD    ##########################
     

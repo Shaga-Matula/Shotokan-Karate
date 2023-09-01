@@ -152,6 +152,10 @@
 - Exclusive access to their own information page.
 - Cannot access or modify any students' information.
 
+## Test users
+* Test User name for admin : admin , "Htmlcss1"
+* Test User Name for Sensei : Editor , "Bulmers1"
+* Test User for Students: DaveM "Htmlcss1"
 
 ## Landing Page
 * Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image as background wallpaper that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
@@ -290,6 +294,14 @@
 # How to Use Shotokan Site
 
 * Navagate to the Shotokan Site using this link, [Link to Shotokan Heroku](https://shotokanapp-a0f46a26c73a.herokuapp.com/) and follow the instructions below.
+
+* Once on the main landing page, potential students can fill out the form and submit it to the admin panel in Django. An administrator can then read the form and take relevant actions, such as replying to the potential student through the dojo's primary email address. If the user wants to join the club, they will be sent an email by the dojo administrator with their login details and access to the relevant kyu levels.
+
+<img src="static/images/readme/landingform.png" alt="Landing Page" width="200">
+
+* Once the information is relayed to the admin pannel the administrator can take the relavent action. 
+
+<img src="static/images/readme/adminlandingform.png" alt="Admin Panel Contacts" width="200">
 
 ## Registration form
 
