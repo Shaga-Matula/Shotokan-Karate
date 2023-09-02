@@ -684,3 +684,12 @@
 
 
 # Testing
+
+## Lighthouse 
+
+- " Lighthouse is an open-source tool created by Google to perform a number of tests called audits with the aim of improving site performance and usability. Lighthouse can be used to audit web pages for performance, accessibility, best practices, SEO, and progressive web apps. It uses a web browser called Chromium to build pages and runs tests on the pages as they're ."
+
+- Here every page was tested with lighthouse.
+
+<img src="static/images/tests/lighthouse1.png" width="500" alt="Lighthouse Testing">
+<img src="static/images/tests/lighthouse2.png" width="500" alt="Lighthouse Testing">
