@@ -734,12 +734,32 @@
 
 - Here is the views.py file before pylint tester before error fixing has been addressed. 
 
-<img src="static/images/tests/pythonlinter.png" height="250" alt="Python CI Testing">
+<img src="static/images/tests/pythonlinter.png" width="400"  alt="Python CI Testing">
 
 - Here the Views.py was tested and all errors were corrected.
 
-<img src="static/images/tests/pythonlinterviews.png" height="250" alt="Python CI testing">
+<img src="static/images/tests/pythonlinterviews.png" width="400"  alt="Python CI testing">
 
 - Here is the urls.py file before pylint tester before error fixing has been addressed.
 
-<img src="static/images/tests/pythonlinter.png" height="250" alt="Python CI Testing">
+<img src="static/images/tests/pythonlinterurls.png" width="400"  alt="Python CI Testing">
+
+- Here the Urls.py was tested and all errors were corrected.
+
+<img src="static/images/tests/pythonlinterurlsfix.png" width="400" alt="Python CI testing">
+
+- Here is the models.py file before pylint tester before error fixing has been addressed.
+
+<img src="static/images/tests/pythonlintermodels.png" width="400" alt="Python CI testing">
+
+- Here the Models.py was tested and all errors were corrected.
+
+<img src="static/images/tests/pythonlintermodelsfix.png" width="400" alt="Python CI testing">
+
+- Here is the forms.py file before pylint tester before error fixing has been addressed.
+
+<img src="static/images/tests/pythonlinterforms.png" width="400" alt="Python CI testing">
+
+- Here the forms.py was tested and all errors were corrected.
+
+<img src="static/images/tests/pythonlinterformsfix.png" width="400" alt="Python CI testing">

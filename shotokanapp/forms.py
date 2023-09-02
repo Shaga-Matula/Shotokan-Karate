@@ -52,10 +52,19 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('role', 'first_name',  'last_name', 'address_1', 'address_2', 'student_grade', 'sensei', 'post_code', 'email', 'date_of_birth','contact_num','student_grade', 'sensei', 'role')
+        fields = UserCreationForm.Meta.fields + (
+                                                 'role', 'first_name',
+                                                 'last_name', 'address_1',
+                                                 'address_2', 'student_grade',
+                                                 'sensei', 'post_code',
+                                                 'email', 'date_of_birth',
+                                                 'contact_num', 
+                                                 'student_grade',
+                                                 'sensei', 'role')
         
         widgets = {
-            'date_of_birth': forms.DateInput(attrs={'type': 'date'}, format='%d/%m/%Y'),
+            'date_of_birth': forms.DateInput(attrs={'type': 'date'},
+                                             format='%d/%m/%Y'),
         }
         input_formats = ['%d/%m/%Y']
     
@@ -72,7 +81,7 @@ class CustomUserCreationForm(UserCreationForm):
         user.student_grade = self.cleaned_data['student_grade']
         user.email = self.cleaned_data['email']
         user.sensei_first_name = self.cleaned_data['sensei']
-              
+
         if commit:
             user.save()
         return user
