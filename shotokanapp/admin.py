@@ -1,5 +1,6 @@
 from .models import StudentLevelMod, CustomUser, SenseiMod, Contact
-from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp, EmailAddress
+from allauth.socialaccount.models import SocialToken, SocialAccount
+from allauth.socialaccount.models import SocialApp, EmailAddress
 from .forms import CustomUserCreationForm, StudentForm
 from django.contrib import admin, sites
 from django.contrib.auth.admin import UserAdmin, Group
@@ -23,7 +24,8 @@ admin.site.register(Contact)
 
 class CustomContactAdmin(admin.ModelAdmin):
     fieldsets = (
-        (None, {'fields': ('fname', 'lname', 'email', 'phone', 'msg', 'level')}),
+        (None, {'fields': ('fname', 'lname', 'email', 'phone', 'msg',
+                           'level')}),
     )
     list_display = ('fname', 'lname', 'email', 'phone', 'msg', 'level')
     add_fieldsets = (
