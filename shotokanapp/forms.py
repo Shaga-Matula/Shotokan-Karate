@@ -6,6 +6,9 @@ from crispy_forms.layout import Submit
 
 
 class SenseiRegisterForm(forms.ModelForm):
+    """
+    This is the Sensei form
+    """
     class Meta:
         model = SenseiMod
         fields = [
@@ -14,9 +17,12 @@ class SenseiRegisterForm(forms.ModelForm):
             'sensei_email',
             'sensei_contact_num',
         ]
-   
+
 
 class KyuRegisterForm(forms.ModelForm):
+    """
+    This is the Kyu Reg form
+    """
     class Meta:
         model = StudentLevelMod
         fields = [
@@ -29,6 +35,9 @@ class KyuRegisterForm(forms.ModelForm):
 
 
 class StudentForm(forms.ModelForm):
+    """
+    This is the Students form
+    """
     class Meta:
         model = CustomUser
         fields = [
@@ -46,6 +55,9 @@ class StudentForm(forms.ModelForm):
 
 
 class CustomUserCreationForm(UserCreationForm):
+    """
+    This is the User Creation form
+    """
     helper = FormHelper()
     helper.form_method = 'post'
     helper.add_input(Submit('submit', 'register'))

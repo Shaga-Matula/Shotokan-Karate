@@ -49,9 +49,7 @@ class StudentKyuListView(UserPassesTestMixin, TemplateView):
     """
     This view: Displays a list of students based on their
     next atainable kyu level.
-
     """
-
     def test_func(self):
         if self.request.user.is_authenticated:
             return self.request.user.role == 'STUDENT'
@@ -338,3 +336,10 @@ class DeleteStudentView(UserPassesTestMixin, DeleteView):
     form_class = StudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
+
+
+def error_404(request, exception):
+    """
+    This is a 404 page to catch errors
+    """
+    return render(request, '404.html', status=404)

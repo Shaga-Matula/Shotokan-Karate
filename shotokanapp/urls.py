@@ -39,3 +39,5 @@ urlpatterns = [
      path('contact/', views.contact_view, name='contact'),
 
 ]
+
+handler404 = 'shotokanapp.views.error_404'

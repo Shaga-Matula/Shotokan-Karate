@@ -48,7 +48,7 @@
                     <!-- bug fix for  -->
                     {% with request.resolver_match.url_name as url_name %}
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}"
+                        <a class="nav-link {% if url_name == 'home' %}active{% endif %} fw-bolder" href="{% url 'home' %}"
                             aria-label="Home">Home</a>
                     </li>
                     {% endwith %}
