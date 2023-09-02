@@ -44,7 +44,7 @@ main {
 .card-height{
     min-height: 330px;
 }
-
+/* Main Backing */
 .paperimage {
     background-image: url('/static/images/pages/japan-back.jpg');
     border-radius: 25px;
