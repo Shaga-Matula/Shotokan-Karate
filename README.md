@@ -30,6 +30,7 @@
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
 * [Link to Shotokan Heroku](https://shotokanapp-a0f46a26c73a.herokuapp.com/)
+* [Test Users and Passwords](#test-users)
 
 
 ## README Table Content
@@ -652,7 +653,6 @@
 * https://cbea.ms/git-commit/#separate - A guide on how to separate subject from body in Git commit messages.
 * https://tinypng.com/ - A tool for compressing and optimizing PNG and JPEG images.
 * https://www.flexboxfroggy.com - A game that teaches CSS flexbox.
-* https://techsini.com/multi-mockup/index.php - A tool for creating mockups of websites and apps.
 * https://www.youtube.com/playlist?list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt - A YouTube playlist of tutorials on creating a responsive website using Bootstrap.
 * https://console.cloudinary.com/documentation/django_image_and_video_upload#django_forms_and_models - Documentation on how to upload images and videos in Django using Cloudinary.
 * https://codinggear.blog/django-templates-config/ - A tutorial on how to configure Django templates.
@@ -666,6 +666,7 @@
 * https://django-crispy-forms.readthedocs.io/en/latest/layouts.html - Documentation on how to use Django Crispy Forms to create form layouts.
 * https://gist.github.com/delneg/b6d625708ae1a75fd5f036a5fe6f6a62 - A code snippet for creating a responsive navbar in Bootstrap.
 * https://codefellows.github.io/sea-python-401d7/lectures/django_views.html - Lecture notes on Django views.
+* Code Institute Learning Modules 
 
 
 -   The project is dedicated to the memory of Sensei Gichin Funakoshi https://en.wikipedia.org/wiki/Gichin_Funakoshi and Sensai Erol Fields.
@@ -693,3 +694,38 @@
 
 <img src="static/images/tests/lighthouse1.png" width="500" alt="Lighthouse Testing">
 <img src="static/images/tests/lighthouse2.png" width="500" alt="Lighthouse Testing">
+
+
+## [Validator](https://validator.w3.org/nu/)
+
+* The website https://validator.w3.org/nu/ is the Nu Html Checker, an experimental tool for checking the syntax of HTML documents
+. It is a free tool and service that validates markup, checking the syntax of web documents written in formats such as HTML. 
+
+- First checked page "landing page" before error fixing, shows multiple errors on page that need to be addrssed.  
+<img src="static/images/readme/page1.png" width="300" alt="HTML CSS Testing">
+
+
+- All errors have been identified and addressed on the "Landing Page". Some warnings on symantic markup but I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/page2.png" width="300" alt="HTML CSS Testing">
+
+- All errors have been identified and addressed on the "Registration Page". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/regpage.png" width="300" alt="HTML CSS Testing">
+
+- All errors have been identified and addressed on the "Sensei List". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/senseilist.png" width="300" alt="HTML CSS Testing">
+
+- All errors have been identified and addressed on the "Create Sensei". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/createsensei.png" width="300" alt="HTML CSS Testing">
+
+
+- All errors have been identified and addressed on the "Student List". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/studentlist.png" width="300" alt="HTML CSS Testing">
+
+- All errors have been identified and addressed on the "Kyu List". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/kyulist.png" width="300" alt="HTML CSS Testing">
+
+- All errors have been identified and addressed on the "Add Kyu". Some warnings on symantic markup and again I believe that leaving the symantic "Section" helps the browser handle the page. 
+<img src="static/images/readme/addkyu.png" width="300" alt="HTML CSS Testing">
+
+- I cannot locate the "trailing slash on void elements", further investagation is needed. 
+<img src="static/images/readme/void.png" height="50" alt="HTML CSS Testing">
