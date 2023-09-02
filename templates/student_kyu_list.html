@@ -29,10 +29,10 @@
         </tr>
         <div class="d-flex justify-content-evenly col-sm-12 flex-sm-wrap flex-wrap">
             <div class="">
-                <img src="{% cloudinary obj.kata_image.url width=300 height=450 %}" alt="Kata Image">
+            {% cloudinary obj.kata_image.url width=300 height=450 %}
             </div>
             <div class="d-flex align-items-center m-5">
-                <img src="{% cloudinary obj.syllabus_image.url width=300 height=250 %}" alt="Syllabus">
+            {% cloudinary obj.syllabus_image.url width=300 height=250 %}
             </div>
         </div>
         {% endfor %}
