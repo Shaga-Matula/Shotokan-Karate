@@ -7,13 +7,12 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DeleteView, DetailView, FormView
 from django.views.generic import TemplateView, UpdateView, View
-from .forms import CustomUserCreationForm, KyuRegisterForm 
+from .forms import CustomUserCreationForm, KyuRegisterForm
 from .forms import SenseiRegisterForm, StudentForm
 from .models import CustomUser, SenseiMod, StudentLevelMod
 from .models import Contact
 
 
-#  view for collecting data from form in index.html
 def contact_view(request):
     if request.method == 'POST':
         fname = request.POST.get('fname')
@@ -22,14 +21,17 @@ def contact_view(request):
         phone = request.POST.get('phone')
         msg = request.POST.get('msg')
         level = request.POST.get('chk1')
-        contact = Contact(fname=fname, lname=lname, email=email, phone=phone, msg=msg, level=level)
+        contact = Contact(fname=fname, lname=lname, email=email,
+                          phone=phone, msg=msg, level=level)
         contact.save()
-        messages.success(request, 'Your message was sent successfully, We will be in touch ASAP ')
+        messages.success(
+            request,
+            'Your message was sent successfully, We will be in touch ASAP ')
 
     return render(request, 'index.html')
 
 
-#################################################
+# Index Page
 class FirstPage(View):
     """
     This FirstPage class is used to handle the landing page request
@@ -41,12 +43,11 @@ class FirstPage(View):
         return render(request, 'index.html', context)
 
 
-########################################################
-###############   Student Classs Functions #############
+#  Student Classs Functions
 
 class StudentKyuListView(UserPassesTestMixin, TemplateView):
     """
-    This view: Displays a list of students based on their 
+    This view: Displays a list of students based on their
     next atainable kyu level.
 
     """
@@ -68,16 +69,14 @@ class StudentKyuListView(UserPassesTestMixin, TemplateView):
         return context
 
 
-#########################################################
-#############      Kyu Class Functions   ################
+#   Kyu Class Functions
 
 
 class DeleteKyuView(UserPassesTestMixin, DeleteView):
     """
-    This view: Instructors with the Teacher 
-    Role to displayDisplays a Belt View with the 
+    This view: Instructors with the Teacher
+    Role to displayDisplays a Belt View with the
     ability to delete it.
-
     """
 
     def test_func(self):
@@ -93,10 +92,9 @@ class DeleteKyuView(UserPassesTestMixin, DeleteView):
 
 class KyuListView(UserPassesTestMixin, TemplateView):
     """
-    This view: Allows Instructors with the Teacher 
-    Role to display a list of all the Belt Levels or 
-    kyu level.
-
+    This view: Allows Instructors with the Teacher
+    Role to display a list of all the Belt Levels or
+    Kyu level.
     """
 
     def test_func(self):
@@ -114,9 +112,8 @@ class KyuListView(UserPassesTestMixin, TemplateView):
 
 class KyuRegisterView(UserPassesTestMixin, FormView):
     """
-    This view: Enables the Instructors with the Teacher 
+    This view: Enables the Instructors with the Teacher
     Role to Create New Kyu's or Belt Levels.
-
     """
 
     def test_func(self):
@@ -138,9 +135,8 @@ class KyuRegisterView(UserPassesTestMixin, FormView):
 
 class UpdateKyuView(UserPassesTestMixin, UpdateView):
     """
-    This view: Allows the Instructors with the Teacher role 
+    This view: Allows the Instructors with the Teacher role
     update the kyu records.
-
     """
 
     def test_func(self):
@@ -166,15 +162,11 @@ class UpdateKyuView(UserPassesTestMixin, UpdateView):
         return reverse('success')
 
 
-#########################################################
-#############      Sensei Views      ####################
-
-
+#   Sensei Views
 class UpdateSenseiView(UserPassesTestMixin, UpdateView):
     """
-    This view: Allows the Instructors with the Teacher role 
+    This view: Allows the Instructors with the Teacher role
     update Sensei records.
-
     """
 
     def test_func(self):
@@ -202,9 +194,8 @@ class UpdateSenseiView(UserPassesTestMixin, UpdateView):
 
 class SenseiRegisterView(UserPassesTestMixin, FormView):
     """
-    This view: Allows the Instructors with the Teacher role 
+    This view: Allows the Instructors with the Teacher role
     register new sensei.
-
     """
 
     def test_func(self):
@@ -226,9 +217,8 @@ class SenseiRegisterView(UserPassesTestMixin, FormView):
 
 class SenseiListView(UserPassesTestMixin, TemplateView):
     """
-    This view: Allows the Instructors with the Teacher role 
+    This view: Allows the Instructors with the Teacher role
     view a list of senseis'.
-
     """
 
     def test_func(self):
@@ -246,9 +236,8 @@ class SenseiListView(UserPassesTestMixin, TemplateView):
 
 class DeleteSenseiView(UserPassesTestMixin, DeleteView):
     """
-    This view: Allows the Instructors with the Teacher role 
+    This view: Allows the Instructors with the Teacher role
     delete a Sensei record.
-
     """
 
     def test_func(self):
@@ -262,14 +251,11 @@ class DeleteSenseiView(UserPassesTestMixin, DeleteView):
     success_url = reverse_lazy('success')
 
 
-#########################################################
-#############       Custom User      ####################
-
-
+#  Custom User
 class RegisterView(UserPassesTestMixin, View):
-    """ 
-    This view: Allows the Instructors with the Teacher role 
-    to register new users and assign roles, sensei and grades. 
+    """
+    This view: Allows the Instructors with the Teacher role
+    to register new users and assign roles, sensei and grades.
     """
 
     def test_func(self):
@@ -290,8 +276,8 @@ class RegisterView(UserPassesTestMixin, View):
 
 
 class StudentListView(UserPassesTestMixin, TemplateView):
-    """ 
-    This view: Allows the Instructors with the Teacher role 
+    """
+    This view: Allows the Instructors with the Teacher role
     to view a list of students.
     """
 
@@ -309,8 +295,8 @@ class StudentListView(UserPassesTestMixin, TemplateView):
 
 
 class UpdateStudentView(UserPassesTestMixin, UpdateView):
-    """ 
-    This view: Allows the Instructors with the Teacher role 
+    """
+    This view: Allows the Instructors with the Teacher role
     to edit a student record.
     """
 
@@ -338,8 +324,8 @@ class UpdateStudentView(UserPassesTestMixin, UpdateView):
 
 
 class DeleteStudentView(UserPassesTestMixin, DeleteView):
-    """ 
-    This view: Allows the Instructors with the Teacher role 
+    """
+    This view: Allows the Instructors with the Teacher role
     delete a student record.
     """
 
@@ -352,5 +338,3 @@ class DeleteStudentView(UserPassesTestMixin, DeleteView):
     form_class = StudentForm
     template_name = 'delete_record.html'
     success_url = reverse_lazy('success')
-
-    

@@ -729,3 +729,17 @@
 
 - I cannot locate the "trailing slash on void elements", further investagation is needed. 
 <img src="static/images/readme/void.png" height="50" alt="HTML CSS Testing">
+
+## Code Institatute Pylint Tester
+
+- Here is the views.py file before pylint tester before error fixing has been addressed. 
+
+<img src="static/images/tests/pythonlinter.png" height="250" alt="Python CI Testing">
+
+- Here the Views.py was tested and all errors were corrected.
+
+<img src="static/images/tests/pythonlinterviews.png" height="250" alt="Python CI testing">
+
+- Here is the urls.py file before pylint tester before error fixing has been addressed.
+
+<img src="static/images/tests/pythonlinter.png" height="250" alt="Python CI Testing">
