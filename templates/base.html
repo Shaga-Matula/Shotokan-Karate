@@ -36,7 +36,7 @@
     <header>
         <nav class="navbar p-2 bg-dark navbar-dark navbar-expand-md bg-dark navbar-dark ">
 
-            <a class="navbar-brand shoto-color" href="{% url 'home' %}" aria-label="Home">Shotokan Karate</a>
+            <a class="navbar-brand " href="{% url 'home' %}" aria-label="Home">Shotokan Karate</a>
             <!-- Toggler/collapsible Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
                 aria-label="Toggle navigation">
@@ -47,9 +47,9 @@
                 <ul class="navbar-nav">
                     <!-- bug fix for  -->
                     {% with request.resolver_match.url_name as url_name %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'home' %}active{% endif %} fw-bolder" href="{% url 'home' %}"
-                            aria-label="Home">Home</a>
+                    <li class="nav-item shoto-color">
+                        <a class="nav-link fw-bolder {% if url_name == 'home' %}active{% endif %} " href="{% url 'home' %}"
+                            aria-label="Home"><strong>Home</strong></a>
                     </li>
                     {% endwith %}
                     {% if user.is_authenticated %}

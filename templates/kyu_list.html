@@ -20,14 +20,16 @@
                             <div class="mr-2">
                                 <a>
                                     <p class="thumbnail">
-                                        {% cloudinary obj.kata_image.url width=80 height=100 crop='thumb' %}</p>
+                                        {% cloudinary obj.kata_image.url width=80 height=100 crop='thumb' alt='Kata image thumbnail' %}
+                                    </p>
                                 </a>
                             </div>
                         </div>
                         <div class="mr-2">
                             <a>
                                 <p class="thumbnail">
-                                    {% cloudinary obj.syllabus_image.url width=80 height=100 crop='thumb' %}</p>
+                                    {% cloudinary obj.syllabus_image.url width=80 height=100 crop='thumb' alt='Syllabus Image' %}
+                                </p>
                             </a>
                         </div>
                     </div>

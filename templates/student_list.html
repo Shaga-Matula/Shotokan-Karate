@@ -4,12 +4,12 @@
 <!-- Body tag included in header/Use of symantic HTML: Section, Main, Header, Article, ul,li  -->
 <main>
     <header class="d-flex justify-content-center align-content-center flex-column">
-        <h1 class="text-center text-white">Student List</h1>
+        <h1 class="text-center text-white fw-bold">Student List</h1>
         <!-- Dynamic Search Engin in JavaScript -->
         <search class="input-group container d-flex justify-content-center align-content-center flex-column">
             <div class="form-outline ">
                 <input type="search" id="searchInput" class="form-control" oninput="searchCards()" />
-                <label class="form-label text-white" for="searchInput">Search : Type in Name</label>
+                <label class="form-label text-white fw-bold" for="searchInput">Search : Type in Name</label>
                 <!-- Here is a listener for the search bar -->
                 <script>
                     document.getElementById("searchInput").addEventListener("input", searchCards);

@@ -4,7 +4,6 @@ html {
 
 }
 
-
 body {
     min-height: 100vh;
     display: flex;
@@ -37,6 +36,11 @@ main {
     left: 0;
 }
 
+.shoto-color{
+font-weight: 100;
+color:crimson;
+
+}
 
 .card-width{
     max-width: 400px;
