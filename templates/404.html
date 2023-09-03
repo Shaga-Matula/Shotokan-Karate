@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="text-center"> 
+<div class="text-center loger_out paperimage "> 
     <h1>404 - NOT FOUND</h1>
     <br>
-    <h2>Whoops, looks like you broke a string!!</h2>
+    <h2>Whoops, looks like you broke my site!!</h2>
     <br><br>
-    <p><a href="index.html">Return to main website</a></p>
+    <p><a href="{% url 'home' %}">Return to main website</a></p>
 </div>
 {% endblock %}
