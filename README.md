@@ -30,7 +30,7 @@
 
 * [Ling to Shotokan github code](https://github.com/Shaga-Matula/Shotokan-Karate)
 * [Link to Shotokan Heroku](https://shotokanapp-a0f46a26c73a.herokuapp.com/)
-* [Test Users and Passwords](#test-users)
+
 
 
 ## README Table Content
@@ -142,14 +142,13 @@
 
 ### Admin (superuser):
 
-- Test User name for admin : admin , "Htmlcss1" 
 - Exclusive access to the admin panel.
 - Can manage users, sensei, kyu, and roles in the admin panel.
 - Can create, read, update and delete users, sensei, role's and kyu's in the admin panel.
 
 
 ### Teachers:
-- Test User Name for Sensei : Editor , "Bulmers1"
+
 - Exclusive access to the website's functionality.
 - Can create student profiles in the Registration Page.
 - Can read student data from the Student View Page.
@@ -159,14 +158,10 @@
 
 ### Students:
 
-- Test User for Students DaveM "Htmlcss1"
 - Exclusive access to their own information page.
 - Cannot access or modify any students' information.
 
-## Test users
-* Test User name for admin : admin , "Htmlcss1"
-* Test User Name for Sensei : Editor , "Bulmers1"
-* Test User for Students: DaveM "Htmlcss1"
+
 
 ## Landing Page
 * Upon visiting the website, the student is presented with a visually appealing landing page. The landing page features a hero image as background wallpaper that captures the essence of Shotokan Karate and immediately grabs the attention of the visitor. The navigation bar provides easy access to different sections of the website, allowing users to explore further. Additionally, a contact form is prominently displayed, enabling potential students to reach out for more information or inquiries.
@@ -599,6 +594,9 @@
 
 - Help from the comunity
 - https://code-institute-room.slack.com/archives/C026PTF46F5/p1689729640362899
+
+## Date Time
+- The data and time settings were american and after some research, I discovered a setting for settings.py TIME_ZONE = "Europe/Dublin". Thsis gave me the correct format. 
 
 
 ### Heroku Error
