@@ -50,7 +50,7 @@ color:crimson;
 }
 /* Main Backing */
 .paperimage {
-    background-image: url('/static/images/pages/japan-back.jpg');
+    background-image: url('https://res.cloudinary.com/djkxbtqkq/image/upload/v1693652361/static/images/pages/japan-back.3d21efb7d6e7.jpg');
     border-radius: 25px;
 
 }
