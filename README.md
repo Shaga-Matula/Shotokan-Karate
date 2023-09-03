@@ -115,10 +115,15 @@
     4.  [Vulnerability](#vulnerability)
 <hr>
 
-10.[Credits](#credits)
+10.[Credits and Plagiarism](#credits-and-plagiarism)
 <hr>
 
 11.[Testing](#testing)
+    1. [Lighthouse](#lighthouse)
+    2. [Validator](#validator)
+    3. [Code Institatute Pylint Tester](#code-institatute-pylint-tester)
+    4. [Wave Testing](#wave-testing)
+    5. [Manual Testing](#manual-testing)
 <hr>
 
 # Project Introduction
@@ -130,6 +135,10 @@
 
 
 * In this project, there are three types of users: admin (superuser), teachers, and students. Each user type has exclusive navbar access to specific functionalities and pages. Here's a breakdown of the access and functionalities for each user type:
+
+* Password Change:
+- To change your password, log in to the admin panel as an Admin.
+- Please note that future functionality is planned for a future date.
 
 ### Admin (superuser):
 
@@ -640,7 +649,9 @@
 -   <img src="static/images/readme/accessfixerror.png" height="100" alt="Bug Fix User Access">
 
 
-# Credits
+# Credits and Plagiarism
+
+- Big thanks to and and all the code snippets borrowed from the below links and also Code Institute Learning Modules. 
 
 <hr style="border:1px solid white">
 
@@ -768,4 +779,8 @@
 ## Wave Testing
 
 <img src="static/images/tests/wavetesting.png" width="400"  alt="Python CI Testing">
+
+## Manual Testing
+
+<img src="static/images/tests/manualtesting.png" width="600"  alt="Manual Testing">
 
